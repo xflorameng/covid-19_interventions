@@ -266,7 +266,7 @@ class TestSimulation:
             sim.household_network(3, 5, 'unknown', 1.0)
         num_households = 4
         max_household_size = 6
-        sim.household_network(num_households, max_household_size, None, 1.0)
+        sim.household_network(num_households, max_household_size, None, 1.0, False)
         assert sim.num_nodes_poor == 0
         assert sim.num_nodes_rich == 0
         assert not sim.household_grouping
@@ -284,7 +284,7 @@ class TestSimulation:
         sim = Simulation()
         num_households_poor, num_households_rich = 4, 7
         max_household_size_poor, max_household_size_rich = 6, 1
-        sim.household_network(num_households_poor, max_household_size_poor, 'poor', 1.0)
+        sim.household_network(num_households_poor, max_household_size_poor, 'poor', 1.0, False)
         assert sim.num_nodes_poor > 0
         assert sim.num_nodes_rich == 0
         assert sim.household_grouping
@@ -320,6 +320,77 @@ class TestSimulation:
             household = sim.household_dict[sim.node_dict[i].household]
             assert household['type'] in {'poor', 'rich'}
             assert i in household['members']
+
+    def test_household_network_same_age_no_household_type(self):
+        sim = Simulation()
+        num_households = 4
+        max_household_size = 6
+        sim.household_network(num_households, max_household_size, None, 1.0, True)
+        assert sim.num_nodes_poor == 0
+        assert sim.num_nodes_rich == 0
+        assert not sim.household_grouping
+        assert sim.max_household_sizes.keys() | set() == {None}
+        assert sim.max_household_sizes[None] == max_household_size
+        assert isinstance(sim.test_backlog, list)
+        assert not sim.test_backlog
+        assert sim.initial_total_output == 0
+        for i in range(sim.num_nodes):
+            household = sim.household_dict[sim.node_dict[i].household]
+            assert household['type'] is None
+            assert i in household['members']
+        for j in sim.household_dict:
+            ages = []
+            household_members = sim.household_dict[j]['members']
+            for i in household_members:
+                ages.append(sim.node_dict[i].age)
+            assert len(set(ages)) == 1
+
+    def test_household_network_same_age_with_household_types(self):
+        sim = Simulation()
+        num_households_poor, num_households_rich = 4, 7
+        max_household_size_poor, max_household_size_rich = 6, 1
+        sim.household_network(num_households_poor, max_household_size_poor, 'poor', 1.0, True)
+        assert sim.num_nodes_poor > 0
+        assert sim.num_nodes_rich == 0
+        assert sim.household_grouping
+        assert sim.max_household_sizes.keys() | set() == {'poor'}
+        assert sim.max_household_sizes['poor'] == max_household_size_poor
+        assert len(sim.household_dict) == num_households_poor
+        assert isinstance(sim.test_backlog, dict)
+        assert isinstance(sim.initial_total_output, dict)
+        for household_type in {'poor', 'rich'}:
+            assert isinstance(sim.test_backlog[household_type], list)
+            assert not sim.test_backlog[household_type]
+            assert sim.initial_total_output[household_type] == 0
+        for i in range(sim.num_nodes):
+            household = sim.household_dict[sim.node_dict[i].household]
+            assert household['type'] == 'poor'
+            assert i in household['members']
+        sim.household_network(num_households_rich, max_household_size_rich, 'rich', 1.0)
+        assert sim.num_nodes_poor > 0
+        assert sim.num_nodes_rich > 0
+        assert sim.num_nodes == sim.num_nodes_poor + sim.num_nodes_rich
+        assert sim.household_grouping
+        assert sim.max_household_sizes.keys() | set() == {'poor', 'rich'}
+        assert sim.max_household_sizes['poor'] == max_household_size_poor
+        assert sim.max_household_sizes['rich'] == max_household_size_rich
+        assert len(sim.household_dict) == num_households_poor + num_households_rich
+        assert isinstance(sim.test_backlog, dict)
+        assert isinstance(sim.initial_total_output, dict)
+        for household_type in {'poor', 'rich'}:
+            assert isinstance(sim.test_backlog[household_type], list)
+            assert not sim.test_backlog[household_type]
+            assert sim.initial_total_output[household_type] == 0
+        for i in range(sim.num_nodes):
+            household = sim.household_dict[sim.node_dict[i].household]
+            assert household['type'] in {'poor', 'rich'}
+            assert i in household['members']
+        for j in sim.household_dict:
+            ages = []
+            household_members = sim.household_dict[j]['members']
+            for i in household_members:
+                ages.append(sim.node_dict[i].age)
+            assert len(set(ages)) == 1
 
     def test_add_dict_employed_idx_to_node_idx(self):
         sim = Simulation()
@@ -2387,6 +2458,9 @@ class TestSimulation:
             assert total_subsidy_normalized_none[t] == ((sim.total_subsidy['poor'][t] + sim.total_subsidy['rich'][t])
                                                         / (sim.total_output['poor'][0] + sim.total_output['rich'][0]))
             assert total_subsidy_normalized_rich[t] == sim.total_subsidy['rich'][t] / sim.total_output['rich'][0]
+
+    def test_plot_age_dist(self):
+        assert True
 
     def test_plot_p_despair(self):
         assert True
