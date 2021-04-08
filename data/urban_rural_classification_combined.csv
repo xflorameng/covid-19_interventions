@@ -1,0 +1,3222 @@
+county_id,county_name,state,percent_rural_population,county_rurality
+01001,Autauga,Alabama,42.0,mostly urban
+01003,Baldwin,Alabama,42.28,mostly urban
+01005,Barbour,Alabama,67.79,mostly rural
+01007,Bibb,Alabama,68.35,mostly rural
+01009,Blount,Alabama,89.95,mostly rural
+01011,Bullock,Alabama,51.37,mostly rural
+01013,Butler,Alabama,71.23,mostly rural
+01015,Calhoun,Alabama,33.7,mostly urban
+01017,Chambers,Alabama,49.15,mostly urban
+01019,Cherokee,Alabama,85.74,mostly rural
+01021,Chilton,Alabama,86.74,mostly rural
+01023,Choctaw,Alabama,100.0,completely rural
+01025,Clarke,Alabama,75.98,mostly rural
+01027,Clay,Alabama,100.0,completely rural
+01029,Cleburne,Alabama,100.0,completely rural
+01031,Coffee,Alabama,47.2,mostly urban
+01033,Colbert,Alabama,43.89,mostly urban
+01035,Conecuh,Alabama,80.95,mostly rural
+01037,Coosa,Alabama,100.0,completely rural
+01039,Covington,Alabama,69.65,mostly rural
+01041,Crenshaw,Alabama,100.0,completely rural
+01043,Cullman,Alabama,73.24,mostly rural
+01045,Dale,Alabama,50.89,mostly rural
+01047,Dallas,Alabama,45.64,mostly urban
+01049,DeKalb,Alabama,90.13,mostly rural
+01051,Elmore,Alabama,54.19,mostly rural
+01053,Escambia,Alabama,63.51,mostly rural
+01055,Etowah,Alabama,37.48,mostly urban
+01057,Fayette,Alabama,80.23,mostly rural
+01059,Franklin,Alabama,70.37,mostly rural
+01061,Geneva,Alabama,89.64,mostly rural
+01063,Greene,Alabama,100.0,completely rural
+01065,Hale,Alabama,89.17,mostly rural
+01067,Henry,Alabama,87.75,mostly rural
+01069,Houston,Alabama,33.8,mostly urban
+01071,Jackson,Alabama,77.02,mostly rural
+01073,Jefferson,Alabama,9.83,mostly urban
+01075,Lamar,Alabama,100.0,completely rural
+01077,Lauderdale,Alabama,49.3,mostly urban
+01079,Lawrence,Alabama,91.29,mostly rural
+01081,Lee,Alabama,27.41,mostly urban
+01083,Limestone,Alabama,57.61,mostly rural
+01085,Lowndes,Alabama,100.0,completely rural
+01087,Macon,Alabama,55.55,mostly rural
+01089,Madison,Alabama,16.44,mostly urban
+01091,Marengo,Alabama,69.32,mostly rural
+01093,Marion,Alabama,88.85,mostly rural
+01095,Marshall,Alabama,53.27,mostly rural
+01097,Mobile,Alabama,20.02,mostly urban
+01099,Monroe,Alabama,79.04,mostly rural
+01101,Montgomery,Alabama,10.49,mostly urban
+01103,Morgan,Alabama,38.6,mostly urban
+01105,Perry,Alabama,100.0,completely rural
+01107,Pickens,Alabama,100.0,completely rural
+01109,Pike,Alabama,51.68,mostly rural
+01111,Randolph,Alabama,81.34,mostly rural
+01113,Russell,Alabama,35.41,mostly urban
+01115,St. Clair,Alabama,72.8,mostly rural
+01117,Shelby,Alabama,22.94,mostly urban
+01119,Sumter,Alabama,100.0,completely rural
+01121,Talladega,Alabama,55.82,mostly rural
+01123,Tallapoosa,Alabama,74.23,mostly rural
+01125,Tuscaloosa,Alabama,25.51,mostly urban
+01127,Walker,Alabama,74.09,mostly rural
+01129,Washington,Alabama,100.0,completely rural
+01131,Wilcox,Alabama,100.0,completely rural
+01133,Winston,Alabama,84.89,mostly rural
+02013,Aleutians East,Alaska,100.0,completely rural
+02016,Aleutians West,Alaska,100.0,completely rural
+02020,Anchorage,Alaska,4.12,mostly urban
+02050,Bethel,Alaska,73.94,mostly rural
+02060,Bristol Bay,Alaska,100.0,completely rural
+02068,Denali,Alaska,100.0,completely rural
+02070,Dillingham,Alaska,100.0,completely rural
+02090,Fairbanks North Star,Alaska,30.87,mostly urban
+02100,Haines,Alaska,100.0,completely rural
+02105,Hoonah-Angoon,Alaska,100.0,completely rural
+02110,Juneau,Alaska,21.54,mostly urban
+02122,Kenai Peninsula,Alaska,79.34,mostly rural
+02130,Ketchikan Gateway,Alaska,23.19,mostly urban
+02150,Kodiak Island,Alaska,31.32,mostly urban
+02164,Lake and Peninsula,Alaska,100.0,completely rural
+02170,Matanuska-Susitna,Alaska,50.29,mostly rural
+02180,Nome,Alaska,66.06,mostly rural
+02185,North Slope,Alaska,59.33,mostly rural
+02188,Northwest Arctic,Alaska,57.46,mostly rural
+02195,Petersburg,Alaska,100.0,completely rural
+02198,Prince of Wales-Hyder,Alaska,100.0,completely rural
+02220,Sitka,Alaska,20.88,mostly urban
+02230,Skagway,Alaska,100.0,completely rural
+02240,Southeast Fairbanks,Alaska,100.0,completely rural
+02261,Valdez-Cordova,Alaska,100.0,completely rural
+02270,Wade Hampton,Alaska,100.0,completely rural
+02275,Wrangell,Alaska,100.0,completely rural
+02282,Yakutat,Alaska,100.0,completely rural
+02290,Yukon-Koyukuk,Alaska,100.0,completely rural
+04001,Apache,Arizona,74.06,mostly rural
+04003,Cochise,Arizona,36.3,mostly urban
+04005,Coconino,Arizona,31.47,mostly urban
+04007,Gila,Arizona,41.06,mostly urban
+04009,Graham,Arizona,46.44,mostly urban
+04011,Greenlee,Arizona,46.57,mostly urban
+04012,La Paz,Arizona,56.33,mostly rural
+04013,Maricopa,Arizona,2.36,mostly urban
+04015,Mohave,Arizona,22.96,mostly urban
+04017,Navajo,Arizona,54.14,mostly rural
+04019,Pima,Arizona,7.52,mostly urban
+04021,Pinal,Arizona,21.9,mostly urban
+04023,Santa Cruz,Arizona,26.88,mostly urban
+04025,Yavapai,Arizona,33.2,mostly urban
+04027,Yuma,Arizona,10.43,mostly urban
+05001,Arkansas,Arkansas,34.71,mostly urban
+05003,Ashley,Arkansas,51.68,mostly rural
+05005,Baxter,Arkansas,65.84,mostly rural
+05007,Benton,Arkansas,25.16,mostly urban
+05009,Boone,Arkansas,62.2,mostly rural
+05011,Bradley,Arkansas,49.59,mostly urban
+05013,Calhoun,Arkansas,100.0,completely rural
+05015,Carroll,Arkansas,72.83,mostly rural
+05017,Chicot,Arkansas,54.28,mostly rural
+05019,Clark,Arkansas,54.38,mostly rural
+05021,Clay,Arkansas,58.86,mostly rural
+05023,Cleburne,Arkansas,75.52,mostly rural
+05025,Cleveland,Arkansas,100.0,completely rural
+05027,Columbia,Arkansas,57.49,mostly rural
+05029,Conway,Arkansas,70.52,mostly rural
+05031,Craighead,Arkansas,32.17,mostly urban
+05033,Crawford,Arkansas,51.96,mostly rural
+05035,Crittenden,Arkansas,20.89,mostly urban
+05037,Cross,Arkansas,56.79,mostly rural
+05039,Dallas,Arkansas,52.64,mostly rural
+05041,Desha,Arkansas,31.42,mostly urban
+05043,Drew,Arkansas,48.61,mostly urban
+05045,Faulkner,Arkansas,38.76,mostly urban
+05047,Franklin,Arkansas,82.6,mostly rural
+05049,Fulton,Arkansas,92.92,mostly rural
+05051,Garland,Arkansas,36.9,mostly urban
+05053,Grant,Arkansas,75.03,mostly rural
+05055,Greene,Arkansas,41.51,mostly urban
+05057,Hempstead,Arkansas,55.77,mostly rural
+05059,Hot Spring,Arkansas,65.97,mostly rural
+05061,Howard,Arkansas,67.52,mostly rural
+05063,Independence,Arkansas,68.58,mostly rural
+05065,Izard,Arkansas,100.0,completely rural
+05067,Jackson,Arkansas,65.06,mostly rural
+05069,Jefferson,Arkansas,30.92,mostly urban
+05071,Johnson,Arkansas,71.37,mostly rural
+05073,Lafayette,Arkansas,100.0,completely rural
+05075,Lawrence,Arkansas,63.56,mostly rural
+05077,Lee,Arkansas,63.51,mostly rural
+05079,Lincoln,Arkansas,100.0,completely rural
+05081,Little River,Arkansas,68.52,mostly rural
+05083,Logan,Arkansas,71.02,mostly rural
+05085,Lonoke,Arkansas,44.81,mostly urban
+05087,Madison,Arkansas,100.0,completely rural
+05089,Marion,Arkansas,100.0,completely rural
+05091,Miller,Arkansas,40.01,mostly urban
+05093,Mississippi,Arkansas,36.27,mostly urban
+05095,Monroe,Arkansas,68.98,mostly rural
+05097,Montgomery,Arkansas,100.0,completely rural
+05099,Nevada,Arkansas,69.18,mostly rural
+05101,Newton,Arkansas,100.0,completely rural
+05103,Ouachita,Arkansas,56.35,mostly rural
+05105,Perry,Arkansas,100.0,completely rural
+05107,Phillips,Arkansas,47.97,mostly urban
+05109,Pike,Arkansas,100.0,completely rural
+05111,Poinsett,Arkansas,71.14,mostly rural
+05113,Polk,Arkansas,73.39,mostly rural
+05115,Pope,Arkansas,54.49,mostly rural
+05117,Prairie,Arkansas,100.0,completely rural
+05119,Pulaski,Arkansas,12.28,mostly urban
+05121,Randolph,Arkansas,67.42,mostly rural
+05123,St. Francis,Arkansas,51.55,mostly rural
+05125,Saline,Arkansas,36.16,mostly urban
+05127,Scott,Arkansas,70.36,mostly rural
+05129,Searcy,Arkansas,100.0,completely rural
+05131,Sebastian,Arkansas,20.81,mostly urban
+05133,Sevier,Arkansas,63.6,mostly rural
+05135,Sharp,Arkansas,80.06,mostly rural
+05137,Stone,Arkansas,100.0,completely rural
+05139,Union,Arkansas,54.5,mostly rural
+05141,Van Buren,Arkansas,100.0,completely rural
+05143,Washington,Arkansas,25.49,mostly urban
+05145,White,Arkansas,54.32,mostly rural
+05147,Woodruff,Arkansas,100.0,completely rural
+05149,Yell,Arkansas,79.13,mostly rural
+06001,Alameda,California,0.39,mostly urban
+06003,Alpine,California,100.0,completely rural
+06005,Amador,California,60.42,mostly rural
+06007,Butte,California,18.9,mostly urban
+06009,Calaveras,California,75.41,mostly rural
+06011,Colusa,California,31.72,mostly urban
+06013,Contra Costa,California,0.79,mostly urban
+06015,Del Norte,California,33.67,mostly urban
+06017,El Dorado,California,34.7,mostly urban
+06019,Fresno,California,10.81,mostly urban
+06021,Glenn,California,40.87,mostly urban
+06023,Humboldt,California,29.76,mostly urban
+06025,Imperial,California,17.42,mostly urban
+06027,Inyo,California,46.43,mostly urban
+06029,Kern,California,10.21,mostly urban
+06031,Kings,California,10.85,mostly urban
+06033,Lake,California,33.11,mostly urban
+06035,Lassen,California,70.53,mostly rural
+06037,Los Angeles,California,0.61,mostly urban
+06039,Madera,California,32.92,mostly urban
+06041,Marin,California,6.52,mostly urban
+06043,Mariposa,California,100.0,completely rural
+06045,Mendocino,California,45.23,mostly urban
+06047,Merced,California,14.27,mostly urban
+06049,Modoc,California,69.96,mostly rural
+06051,Mono,California,45.83,mostly urban
+06053,Monterey,California,9.82,mostly urban
+06055,Napa,California,13.4,mostly urban
+06057,Nevada,California,42.13,mostly urban
+06059,Orange,California,0.14,mostly urban
+06061,Placer,California,13.79,mostly urban
+06063,Plumas,California,74.02,mostly rural
+06065,Riverside,California,4.62,mostly urban
+06067,Sacramento,California,2.06,mostly urban
+06069,San Benito,California,24.0,mostly urban
+06071,San Bernardino,California,4.73,mostly urban
+06073,San Diego,California,3.3,mostly urban
+06075,San Francisco,California,0.0,mostly urban
+06077,San Joaquin,California,8.47,mostly urban
+06079,San Luis Obispo,California,16.6,mostly urban
+06081,San Mateo,California,1.89,mostly urban
+06083,Santa Barbara,California,5.02,mostly urban
+06085,Santa Clara,California,1.08,mostly urban
+06087,Santa Cruz,California,12.04,mostly urban
+06089,Shasta,California,29.29,mostly urban
+06091,Sierra,California,99.72,mostly rural
+06093,Siskiyou,California,65.83,mostly rural
+06095,Solano,California,3.72,mostly urban
+06097,Sonoma,California,12.35,mostly urban
+06099,Stanislaus,California,7.98,mostly urban
+06101,Sutter,California,14.8,mostly urban
+06103,Tehama,California,51.49,mostly rural
+06105,Trinity,California,100.0,completely rural
+06107,Tulare,California,15.48,mostly urban
+06109,Tuolumne,California,48.97,mostly urban
+06111,Ventura,California,3.12,mostly urban
+06113,Yolo,California,6.93,mostly urban
+06115,Yuba,California,26.22,mostly urban
+08001,Adams,Colorado,3.62,mostly urban
+08003,Alamosa,Colorado,36.87,mostly urban
+08005,Arapahoe,Colorado,1.58,mostly urban
+08007,Archuleta,Colorado,59.38,mostly rural
+08009,Baca,Colorado,100.0,completely rural
+08011,Bent,Colorado,37.96,mostly urban
+08013,Boulder,Colorado,8.91,mostly urban
+08014,Broomfield,Colorado,0.58,mostly urban
+08015,Chaffee,Colorado,37.41,mostly urban
+08017,Cheyenne,Colorado,100.0,completely rural
+08019,Clear Creek,Colorado,100.0,completely rural
+08021,Conejos,Colorado,100.0,completely rural
+08023,Costilla,Colorado,100.0,completely rural
+08025,Crowley,Colorado,100.0,completely rural
+08027,Custer,Colorado,100.0,completely rural
+08029,Delta,Colorado,63.17,mostly rural
+08031,Denver,Colorado,0.0,mostly urban
+08033,Dolores,Colorado,100.0,completely rural
+08035,Douglas,Colorado,10.29,mostly urban
+08037,Eagle,Colorado,19.98,mostly urban
+08039,Elbert,Colorado,100.0,completely rural
+08041,El Paso,Colorado,8.93,mostly urban
+08043,Fremont,Colorado,26.42,mostly urban
+08045,Garfield,Colorado,24.1,mostly urban
+08047,Gilpin,Colorado,100.0,completely rural
+08049,Grand,Colorado,82.6,mostly rural
+08051,Gunnison,Colorado,58.61,mostly rural
+08053,Hinsdale,Colorado,100.0,completely rural
+08055,Huerfano,Colorado,56.15,mostly rural
+08057,Jackson,Colorado,100.0,completely rural
+08059,Jefferson,Colorado,6.9,mostly urban
+08061,Kiowa,Colorado,100.0,completely rural
+08063,Kit Carson,Colorado,48.69,mostly urban
+08065,Lake,Colorado,31.07,mostly urban
+08067,La Plata,Colorado,59.95,mostly rural
+08069,Larimer,Colorado,11.66,mostly urban
+08071,Las Animas,Colorado,40.79,mostly urban
+08073,Lincoln,Colorado,100.0,completely rural
+08075,Logan,Colorado,29.16,mostly urban
+08077,Mesa,Colorado,12.68,mostly urban
+08079,Mineral,Colorado,100.0,completely rural
+08081,Moffat,Colorado,27.36,mostly urban
+08083,Montezuma,Colorado,67.18,mostly rural
+08085,Montrose,Colorado,44.99,mostly urban
+08087,Morgan,Colorado,32.55,mostly urban
+08089,Otero,Colorado,34.41,mostly urban
+08091,Ouray,Colorado,100.0,completely rural
+08093,Park,Colorado,100.0,completely rural
+08095,Phillips,Colorado,100.0,completely rural
+08097,Pitkin,Colorado,44.2,mostly urban
+08099,Prowers,Colorado,37.89,mostly urban
+08101,Pueblo,Colorado,14.15,mostly urban
+08103,Rio Blanco,Colorado,100.0,completely rural
+08105,Rio Grande,Colorado,62.54,mostly rural
+08107,Routt,Colorado,45.18,mostly urban
+08109,Saguache,Colorado,100.0,completely rural
+08111,San Juan,Colorado,100.0,completely rural
+08113,San Miguel,Colorado,100.0,completely rural
+08115,Sedgwick,Colorado,100.0,completely rural
+08117,Summit,Colorado,19.52,mostly urban
+08119,Teller,Colorado,62.6,mostly rural
+08121,Washington,Colorado,100.0,completely rural
+08123,Weld,Colorado,20.46,mostly urban
+08125,Yuma,Colorado,64.91,mostly rural
+09001,Fairfield,Connecticut,4.58,mostly urban
+09003,Hartford,Connecticut,5.41,mostly urban
+09005,Litchfield,Connecticut,41.45,mostly urban
+09007,Middlesex,Connecticut,24.54,mostly urban
+09009,New Haven,Connecticut,3.64,mostly urban
+09011,New London,Connecticut,25.81,mostly urban
+09013,Tolland,Connecticut,38.21,mostly urban
+09015,Windham,Connecticut,49.76,mostly urban
+10001,Kent,Delaware,26.97,mostly urban
+10003,New Castle,Delaware,4.6,mostly urban
+10005,Sussex,Delaware,41.3,mostly urban
+11001,District of Columbia,District of Columbia,0.0,mostly urban
+12001,Alachua,Florida,21.19,mostly urban
+12003,Baker,Florida,59.49,mostly rural
+12005,Bay,Florida,12.0,mostly urban
+12007,Bradford,Florida,75.53,mostly rural
+12009,Brevard,Florida,5.07,mostly urban
+12011,Broward,Florida,0.02,mostly urban
+12013,Calhoun,Florida,67.51,mostly rural
+12015,Charlotte,Florida,8.88,mostly urban
+12017,Citrus,Florida,34.52,mostly urban
+12019,Clay,Florida,14.97,mostly urban
+12021,Collier,Florida,8.49,mostly urban
+12023,Columbia,Florida,62.06,mostly rural
+12027,DeSoto,Florida,46.24,mostly urban
+12029,Dixie,Florida,77.02,mostly rural
+12031,Duval,Florida,2.91,mostly urban
+12033,Escambia,Florida,8.3,mostly urban
+12035,Flagler,Florida,10.32,mostly urban
+12037,Franklin,Florida,68.04,mostly rural
+12039,Gadsden,Florida,65.38,mostly rural
+12041,Gilchrist,Florida,83.92,mostly rural
+12043,Glades,Florida,70.64,mostly rural
+12045,Gulf,Florida,77.09,mostly rural
+12047,Hamilton,Florida,63.48,mostly rural
+12049,Hardee,Florida,47.81,mostly urban
+12051,Hendry,Florida,37.89,mostly urban
+12053,Hernando,Florida,19.38,mostly urban
+12055,Highlands,Florida,21.07,mostly urban
+12057,Hillsborough,Florida,3.51,mostly urban
+12059,Holmes,Florida,78.77,mostly rural
+12061,Indian River,Florida,4.97,mostly urban
+12063,Jackson,Florida,75.36,mostly rural
+12065,Jefferson,Florida,100.0,completely rural
+12067,Lafayette,Florida,100.0,completely rural
+12069,Lake,Florida,19.25,mostly urban
+12071,Lee,Florida,5.82,mostly urban
+12073,Leon,Florida,12.31,mostly urban
+12075,Levy,Florida,92.05,mostly rural
+12077,Liberty,Florida,100.0,completely rural
+12079,Madison,Florida,80.01,mostly rural
+12081,Manatee,Florida,5.79,mostly urban
+12083,Marion,Florida,31.03,mostly urban
+12085,Martin,Florida,8.48,mostly urban
+12086,Miami-Dade,Florida,0.4,mostly urban
+12087,Monroe,Florida,8.71,mostly urban
+12089,Nassau,Florida,48.15,mostly urban
+12091,Okaloosa,Florida,12.1,mostly urban
+12093,Okeechobee,Florida,36.55,mostly urban
+12095,Orange,Florida,2.04,mostly urban
+12097,Osceola,Florida,7.82,mostly urban
+12099,Palm Beach,Florida,1.04,mostly urban
+12101,Pasco,Florida,9.47,mostly urban
+12103,Pinellas,Florida,0.28,mostly urban
+12105,Polk,Florida,13.51,mostly urban
+12107,Putnam,Florida,56.16,mostly rural
+12109,St. Johns,Florida,23.77,mostly urban
+12111,St. Lucie,Florida,3.36,mostly urban
+12113,Santa Rosa,Florida,20.99,mostly urban
+12115,Sarasota,Florida,4.32,mostly urban
+12117,Seminole,Florida,3.16,mostly urban
+12119,Sumter,Florida,34.96,mostly urban
+12121,Suwannee,Florida,83.17,mostly rural
+12123,Taylor,Florida,69.28,mostly rural
+12125,Union,Florida,67.45,mostly rural
+12127,Volusia,Florida,9.94,mostly urban
+12129,Wakulla,Florida,61.68,mostly rural
+12131,Walton,Florida,63.13,mostly rural
+12133,Washington,Florida,84.55,mostly rural
+13001,Appling,Georgia,71.44,mostly rural
+13003,Atkinson,Georgia,100.0,completely rural
+13005,Bacon,Georgia,69.29,mostly rural
+13007,Baker,Georgia,100.0,completely rural
+13009,Baldwin,Georgia,35.14,mostly urban
+13011,Banks,Georgia,93.83,mostly rural
+13013,Barrow,Georgia,30.06,mostly urban
+13015,Bartow,Georgia,35.23,mostly urban
+13017,Ben Hill,Georgia,34.0,mostly urban
+13019,Berrien,Georgia,76.14,mostly rural
+13021,Bibb,Georgia,14.41,mostly urban
+13023,Bleckley,Georgia,51.59,mostly rural
+13025,Brantley,Georgia,99.45,mostly rural
+13027,Brooks,Georgia,71.04,mostly rural
+13029,Bryan,Georgia,52.34,mostly rural
+13031,Bulloch,Georgia,48.28,mostly urban
+13033,Burke,Georgia,75.0,mostly rural
+13035,Butts,Georgia,77.94,mostly rural
+13037,Calhoun,Georgia,100.0,completely rural
+13039,Camden,Georgia,31.44,mostly urban
+13043,Candler,Georgia,66.97,mostly rural
+13045,Carroll,Georgia,41.83,mostly urban
+13047,Catoosa,Georgia,28.1,mostly urban
+13049,Charlton,Georgia,51.02,mostly rural
+13051,Chatham,Georgia,4.5,mostly urban
+13053,Chattahoochee,Georgia,29.52,mostly urban
+13055,Chattooga,Georgia,57.56,mostly rural
+13057,Cherokee,Georgia,17.1,mostly urban
+13059,Clarke,Georgia,5.86,mostly urban
+13061,Clay,Georgia,100.0,completely rural
+13063,Clayton,Georgia,0.89,mostly urban
+13065,Clinch,Georgia,60.43,mostly rural
+13067,Cobb,Georgia,0.25,mostly urban
+13069,Coffee,Georgia,66.58,mostly rural
+13071,Colquitt,Georgia,58.95,mostly rural
+13073,Columbia,Georgia,16.23,mostly urban
+13075,Cook,Georgia,59.41,mostly rural
+13077,Coweta,Georgia,32.93,mostly urban
+13079,Crawford,Georgia,100.0,completely rural
+13081,Crisp,Georgia,47.03,mostly urban
+13083,Dade,Georgia,72.13,mostly rural
+13085,Dawson,Georgia,80.31,mostly rural
+13087,Decatur,Georgia,56.48,mostly rural
+13089,DeKalb,Georgia,0.26,mostly urban
+13091,Dodge,Georgia,72.23,mostly rural
+13093,Dooly,Georgia,53.67,mostly rural
+13095,Dougherty,Georgia,13.96,mostly urban
+13097,Douglas,Georgia,15.76,mostly urban
+13099,Early,Georgia,65.95,mostly rural
+13101,Echols,Georgia,100.0,completely rural
+13103,Effingham,Georgia,67.05,mostly rural
+13105,Elbert,Georgia,70.62,mostly rural
+13107,Emanuel,Georgia,66.88,mostly rural
+13109,Evans,Georgia,61.28,mostly rural
+13111,Fannin,Georgia,100.0,completely rural
+13113,Fayette,Georgia,18.18,mostly urban
+13115,Floyd,Georgia,36.82,mostly urban
+13117,Forsyth,Georgia,9.92,mostly urban
+13119,Franklin,Georgia,88.93,mostly rural
+13121,Fulton,Georgia,1.08,mostly urban
+13123,Gilmer,Georgia,87.64,mostly rural
+13125,Glascock,Georgia,100.0,completely rural
+13127,Glynn,Georgia,20.57,mostly urban
+13129,Gordon,Georgia,51.56,mostly rural
+13131,Grady,Georgia,62.36,mostly rural
+13133,Greene,Georgia,82.75,mostly rural
+13135,Gwinnett,Georgia,0.49,mostly urban
+13137,Habersham,Georgia,58.76,mostly rural
+13139,Hall,Georgia,20.56,mostly urban
+13141,Hancock,Georgia,61.59,mostly rural
+13143,Haralson,Georgia,77.36,mostly rural
+13145,Harris,Georgia,96.68,mostly rural
+13147,Hart,Georgia,74.47,mostly rural
+13149,Heard,Georgia,100.0,completely rural
+13151,Henry,Georgia,13.85,mostly urban
+13153,Houston,Georgia,9.96,mostly urban
+13155,Irwin,Georgia,64.71,mostly rural
+13157,Jackson,Georgia,60.01,mostly rural
+13159,Jasper,Georgia,81.76,mostly rural
+13161,Jeff Davis,Georgia,69.51,mostly rural
+13163,Jefferson,Georgia,80.67,mostly rural
+13165,Jenkins,Georgia,66.1,mostly rural
+13167,Johnson,Georgia,65.41,mostly rural
+13169,Jones,Georgia,67.71,mostly rural
+13171,Lamar,Georgia,60.87,mostly rural
+13173,Lanier,Georgia,71.13,mostly rural
+13175,Laurens,Georgia,56.64,mostly rural
+13177,Lee,Georgia,36.23,mostly urban
+13179,Liberty,Georgia,23.16,mostly urban
+13181,Lincoln,Georgia,100.0,completely rural
+13183,Long,Georgia,81.34,mostly rural
+13185,Lowndes,Georgia,27.2,mostly urban
+13187,Lumpkin,Georgia,83.94,mostly rural
+13189,McDuffie,Georgia,60.96,mostly rural
+13191,McIntosh,Georgia,74.31,mostly rural
+13193,Macon,Georgia,53.19,mostly rural
+13195,Madison,Georgia,91.88,mostly rural
+13197,Marion,Georgia,100.0,completely rural
+13199,Meriwether,Georgia,83.28,mostly rural
+13201,Miller,Georgia,100.0,completely rural
+13205,Mitchell,Georgia,54.51,mostly rural
+13207,Monroe,Georgia,80.23,mostly rural
+13209,Montgomery,Georgia,98.71,mostly rural
+13211,Morgan,Georgia,75.37,mostly rural
+13213,Murray,Georgia,70.13,mostly rural
+13215,Muscogee,Georgia,2.98,mostly urban
+13217,Newton,Georgia,31.24,mostly urban
+13219,Oconee,Georgia,50.32,mostly rural
+13221,Oglethorpe,Georgia,99.25,mostly rural
+13223,Paulding,Georgia,20.05,mostly urban
+13225,Peach,Georgia,38.22,mostly urban
+13227,Pickens,Georgia,73.1,mostly rural
+13229,Pierce,Georgia,79.35,mostly rural
+13231,Pike,Georgia,98.96,mostly rural
+13233,Polk,Georgia,51.42,mostly rural
+13235,Pulaski,Georgia,66.7,mostly rural
+13237,Putnam,Georgia,80.95,mostly rural
+13239,Quitman,Georgia,73.1,mostly rural
+13241,Rabun,Georgia,79.28,mostly rural
+13243,Randolph,Georgia,50.63,mostly rural
+13245,Richmond,Georgia,9.22,mostly urban
+13247,Rockdale,Georgia,14.93,mostly urban
+13249,Schley,Georgia,100.0,completely rural
+13251,Screven,Georgia,78.92,mostly rural
+13253,Seminole,Georgia,68.55,mostly rural
+13255,Spalding,Georgia,41.62,mostly urban
+13257,Stephens,Georgia,58.56,mostly rural
+13259,Stewart,Georgia,100.0,completely rural
+13261,Sumter,Georgia,41.78,mostly urban
+13263,Talbot,Georgia,93.88,mostly rural
+13265,Taliaferro,Georgia,100.0,completely rural
+13267,Tattnall,Georgia,68.24,mostly rural
+13269,Taylor,Georgia,100.0,completely rural
+13271,Telfair,Georgia,46.99,mostly urban
+13273,Terrell,Georgia,52.06,mostly rural
+13275,Thomas,Georgia,46.02,mostly urban
+13277,Tift,Georgia,40.78,mostly urban
+13279,Toombs,Georgia,51.06,mostly rural
+13281,Towns,Georgia,100.0,completely rural
+13283,Treutlen,Georgia,58.87,mostly rural
+13285,Troup,Georgia,44.3,mostly urban
+13287,Turner,Georgia,49.73,mostly urban
+13289,Twiggs,Georgia,100.0,completely rural
+13291,Union,Georgia,100.0,completely rural
+13293,Upson,Georgia,46.91,mostly urban
+13295,Walker,Georgia,43.85,mostly urban
+13297,Walton,Georgia,42.66,mostly urban
+13299,Ware,Georgia,29.44,mostly urban
+13301,Warren,Georgia,100.0,completely rural
+13303,Washington,Georgia,65.6,mostly rural
+13305,Wayne,Georgia,57.94,mostly rural
+13307,Webster,Georgia,100.0,completely rural
+13309,Wheeler,Georgia,100.0,completely rural
+13311,White,Georgia,83.79,mostly rural
+13313,Whitfield,Georgia,29.08,mostly urban
+13315,Wilcox,Georgia,100.0,completely rural
+13317,Wilkes,Georgia,67.37,mostly rural
+13319,Wilkinson,Georgia,100.0,completely rural
+13321,Worth,Georgia,69.16,mostly rural
+15001,Hawaii,Hawaii,37.99,mostly urban
+15003,Honolulu,Hawaii,0.86,mostly urban
+15005,Kalawao,Hawaii,100.0,completely rural
+15007,Kauai,Hawaii,12.86,mostly urban
+15009,Maui,Hawaii,14.57,mostly urban
+16001,Ada,Idaho,5.47,mostly urban
+16003,Adams,Idaho,100.0,completely rural
+16005,Bannock,Idaho,15.73,mostly urban
+16007,Bear Lake,Idaho,100.0,completely rural
+16009,Benewah,Idaho,71.91,mostly rural
+16011,Bingham,Idaho,56.03,mostly rural
+16013,Blaine,Idaho,32.77,mostly urban
+16015,Boise,Idaho,100.0,completely rural
+16017,Bonner,Idaho,72.45,mostly rural
+16019,Bonneville,Idaho,12.95,mostly urban
+16021,Boundary,Idaho,76.18,mostly rural
+16023,Butte,Idaho,100.0,completely rural
+16025,Camas,Idaho,100.0,completely rural
+16027,Canyon,Idaho,19.87,mostly urban
+16029,Caribou,Idaho,59.89,mostly rural
+16031,Cassia,Idaho,51.51,mostly rural
+16033,Clark,Idaho,100.0,completely rural
+16035,Clearwater,Idaho,58.61,mostly rural
+16037,Custer,Idaho,100.0,completely rural
+16039,Elmore,Idaho,26.88,mostly urban
+16041,Franklin,Idaho,66.19,mostly rural
+16043,Fremont,Idaho,72.04,mostly rural
+16045,Gem,Idaho,45.02,mostly urban
+16047,Gooding,Idaho,58.08,mostly rural
+16049,Idaho,Idaho,80.64,mostly rural
+16051,Jefferson,Idaho,66.61,mostly rural
+16053,Jerome,Idaho,51.32,mostly rural
+16055,Kootenai,Idaho,24.24,mostly urban
+16057,Latah,Idaho,34.99,mostly urban
+16059,Lemhi,Idaho,61.14,mostly rural
+16061,Lewis,Idaho,100.0,completely rural
+16063,Lincoln,Idaho,100.0,completely rural
+16065,Madison,Idaho,28.46,mostly urban
+16067,Minidoka,Idaho,44.22,mostly urban
+16069,Nez Perce,Idaho,19.16,mostly urban
+16071,Oneida,Idaho,100.0,completely rural
+16073,Owyhee,Idaho,77.29,mostly rural
+16075,Payette,Idaho,42.67,mostly urban
+16077,Power,Idaho,42.59,mostly urban
+16079,Shoshone,Idaho,56.04,mostly rural
+16081,Teton,Idaho,100.0,completely rural
+16083,Twin Falls,Idaho,27.99,mostly urban
+16085,Valley,Idaho,100.0,completely rural
+16087,Washington,Idaho,45.57,mostly urban
+17001,Adams,Illinois,32.6,mostly urban
+17003,Alexander,Illinois,61.86,mostly rural
+17005,Bond,Illinois,60.74,mostly rural
+17007,Boone,Illinois,19.36,mostly urban
+17009,Brown,Illinois,41.07,mostly urban
+17011,Bureau,Illinois,57.39,mostly rural
+17013,Calhoun,Illinois,100.0,completely rural
+17015,Carroll,Illinois,81.87,mostly rural
+17017,Cass,Illinois,52.13,mostly rural
+17019,Champaign,Illinois,12.71,mostly urban
+17021,Christian,Illinois,43.45,mostly urban
+17023,Clark,Illinois,59.54,mostly rural
+17025,Clay,Illinois,64.73,mostly rural
+17027,Clinton,Illinois,48.76,mostly urban
+17029,Coles,Illinois,24.29,mostly urban
+17031,Cook,Illinois,0.05,mostly urban
+17033,Crawford,Illinois,60.17,mostly rural
+17035,Cumberland,Illinois,100.0,completely rural
+17037,DeKalb,Illinois,20.31,mostly urban
+17039,De Witt,Illinois,48.75,mostly urban
+17041,Douglas,Illinois,61.64,mostly rural
+17043,DuPage,Illinois,0.05,mostly urban
+17045,Edgar,Illinois,51.8,mostly rural
+17047,Edwards,Illinois,100.0,completely rural
+17049,Effingham,Illinois,59.7,mostly rural
+17051,Fayette,Illinois,66.99,mostly rural
+17053,Ford,Illinois,41.78,mostly urban
+17055,Franklin,Illinois,48.58,mostly urban
+17057,Fulton,Illinois,60.03,mostly rural
+17059,Gallatin,Illinois,100.0,completely rural
+17061,Greene,Illinois,70.85,mostly rural
+17063,Grundy,Illinois,24.38,mostly urban
+17065,Hamilton,Illinois,68.1,mostly rural
+17067,Hancock,Illinois,70.97,mostly rural
+17069,Hardin,Illinois,100.0,completely rural
+17071,Henderson,Illinois,99.66,mostly rural
+17073,Henry,Illinois,50.28,mostly rural
+17075,Iroquois,Illinois,71.74,mostly rural
+17077,Jackson,Illinois,37.17,mostly urban
+17079,Jasper,Illinois,69.86,mostly rural
+17081,Jefferson,Illinois,58.77,mostly rural
+17083,Jersey,Illinois,60.57,mostly rural
+17085,Jo Daviess,Illinois,72.59,mostly rural
+17087,Johnson,Illinois,100.0,completely rural
+17089,Kane,Illinois,3.56,mostly urban
+17091,Kankakee,Illinois,24.46,mostly urban
+17093,Kendall,Illinois,10.42,mostly urban
+17095,Knox,Illinois,24.32,mostly urban
+17097,Lake,Illinois,1.27,mostly urban
+17099,LaSalle,Illinois,30.21,mostly urban
+17101,Lawrence,Illinois,58.02,mostly rural
+17103,Lee,Illinois,53.21,mostly rural
+17105,Livingston,Illinois,40.8,mostly urban
+17107,Logan,Illinois,39.86,mostly urban
+17109,McDonough,Illinois,29.5,mostly urban
+17111,McHenry,Illinois,9.88,mostly urban
+17113,McLean,Illinois,16.5,mostly urban
+17115,Macon,Illinois,15.26,mostly urban
+17117,Macoupin,Illinois,58.51,mostly rural
+17119,Madison,Illinois,13.34,mostly urban
+17121,Marion,Illinois,45.06,mostly urban
+17123,Marshall,Illinois,100.0,completely rural
+17125,Mason,Illinois,77.49,mostly rural
+17127,Massac,Illinois,50.51,mostly rural
+17129,Menard,Illinois,75.69,mostly rural
+17131,Mercer,Illinois,77.76,mostly rural
+17133,Monroe,Illinois,41.36,mostly urban
+17135,Montgomery,Illinois,41.62,mostly urban
+17137,Morgan,Illinois,36.23,mostly urban
+17139,Moultrie,Illinois,69.24,mostly rural
+17141,Ogle,Illinois,47.1,mostly urban
+17143,Peoria,Illinois,14.65,mostly urban
+17145,Perry,Illinois,43.64,mostly urban
+17147,Piatt,Illinois,67.66,mostly rural
+17149,Pike,Illinois,72.31,mostly rural
+17151,Pope,Illinois,100.0,completely rural
+17153,Pulaski,Illinois,100.0,completely rural
+17155,Putnam,Illinois,100.0,completely rural
+17157,Randolph,Illinois,42.64,mostly urban
+17159,Richland,Illinois,43.47,mostly urban
+17161,Rock Island,Illinois,10.92,mostly urban
+17163,St. Clair,Illinois,9.75,mostly urban
+17165,Saline,Illinois,43.66,mostly urban
+17167,Sangamon,Illinois,14.13,mostly urban
+17169,Schuyler,Illinois,57.64,mostly rural
+17171,Scott,Illinois,100.0,completely rural
+17173,Shelby,Illinois,77.73,mostly rural
+17175,Stark,Illinois,100.0,completely rural
+17177,Stephenson,Illinois,40.09,mostly urban
+17179,Tazewell,Illinois,20.42,mostly urban
+17181,Union,Illinois,65.87,mostly rural
+17183,Vermilion,Illinois,31.26,mostly urban
+17185,Wabash,Illinois,38.9,mostly urban
+17187,Warren,Illinois,45.48,mostly urban
+17189,Washington,Illinois,73.65,mostly rural
+17191,Wayne,Illinois,69.93,mostly rural
+17193,White,Illinois,62.03,mostly rural
+17195,Whiteside,Illinois,37.34,mostly urban
+17197,Will,Illinois,3.93,mostly urban
+17199,Williamson,Illinois,34.8,mostly urban
+17201,Winnebago,Illinois,7.91,mostly urban
+17203,Woodford,Illinois,54.89,mostly rural
+18001,Adams,Indiana,53.67,mostly rural
+18003,Allen,Indiana,11.88,mostly urban
+18005,Bartholomew,Indiana,33.7,mostly urban
+18007,Benton,Indiana,100.0,completely rural
+18009,Blackford,Indiana,50.61,mostly rural
+18011,Boone,Indiana,34.41,mostly urban
+18013,Brown,Indiana,100.0,completely rural
+18015,Carroll,Indiana,81.4,mostly rural
+18017,Cass,Indiana,44.67,mostly urban
+18019,Clark,Indiana,20.51,mostly urban
+18021,Clay,Indiana,60.89,mostly rural
+18023,Clinton,Indiana,49.78,mostly urban
+18025,Crawford,Indiana,100.0,completely rural
+18027,Daviess,Indiana,60.28,mostly rural
+18029,Dearborn,Indiana,53.06,mostly rural
+18031,Decatur,Indiana,53.8,mostly rural
+18033,DeKalb,Indiana,42.3,mostly urban
+18035,Delaware,Indiana,22.81,mostly urban
+18037,Dubois,Indiana,49.25,mostly urban
+18039,Elkhart,Indiana,20.59,mostly urban
+18041,Fayette,Indiana,36.78,mostly urban
+18043,Floyd,Indiana,20.33,mostly urban
+18045,Fountain,Indiana,65.95,mostly rural
+18047,Franklin,Indiana,88.86,mostly rural
+18049,Fulton,Indiana,64.92,mostly rural
+18051,Gibson,Indiana,53.62,mostly rural
+18053,Grant,Indiana,28.91,mostly urban
+18055,Greene,Indiana,74.84,mostly rural
+18057,Hamilton,Indiana,5.64,mostly urban
+18059,Hancock,Indiana,30.45,mostly urban
+18061,Harrison,Indiana,85.85,mostly rural
+18063,Hendricks,Indiana,17.85,mostly urban
+18065,Henry,Indiana,42.86,mostly urban
+18067,Howard,Indiana,21.54,mostly urban
+18069,Huntington,Indiana,50.96,mostly rural
+18071,Jackson,Indiana,43.73,mostly urban
+18073,Jasper,Indiana,68.04,mostly rural
+18075,Jay,Indiana,55.65,mostly rural
+18077,Jefferson,Indiana,45.1,mostly urban
+18079,Jennings,Indiana,60.2,mostly rural
+18081,Johnson,Indiana,13.9,mostly urban
+18083,Knox,Indiana,36.21,mostly urban
+18085,Kosciusko,Indiana,46.6,mostly urban
+18087,LaGrange,Indiana,91.62,mostly rural
+18089,Lake,Indiana,3.97,mostly urban
+18091,LaPorte,Indiana,35.63,mostly urban
+18093,Lawrence,Indiana,58.45,mostly rural
+18095,Madison,Indiana,23.09,mostly urban
+18097,Marion,Indiana,0.6,mostly urban
+18099,Marshall,Indiana,63.35,mostly rural
+18101,Martin,Indiana,72.29,mostly rural
+18103,Miami,Indiana,46.49,mostly urban
+18105,Monroe,Indiana,21.25,mostly urban
+18107,Montgomery,Indiana,52.75,mostly rural
+18109,Morgan,Indiana,49.14,mostly urban
+18111,Newton,Indiana,100.0,completely rural
+18113,Noble,Indiana,68.05,mostly rural
+18115,Ohio,Indiana,100.0,completely rural
+18117,Orange,Indiana,83.46,mostly rural
+18119,Owen,Indiana,100.0,completely rural
+18121,Parke,Indiana,74.98,mostly rural
+18123,Perry,Indiana,55.04,mostly rural
+18125,Pike,Indiana,100.0,completely rural
+18127,Porter,Indiana,20.75,mostly urban
+18129,Posey,Indiana,66.76,mostly rural
+18131,Pulaski,Indiana,80.94,mostly rural
+18133,Putnam,Indiana,64.8,mostly rural
+18135,Randolph,Indiana,61.87,mostly rural
+18137,Ripley,Indiana,83.24,mostly rural
+18139,Rush,Indiana,61.16,mostly rural
+18141,St. Joseph,Indiana,9.0,mostly urban
+18143,Scott,Indiana,52.71,mostly rural
+18145,Shelby,Indiana,52.05,mostly rural
+18147,Spencer,Indiana,100.0,completely rural
+18149,Starke,Indiana,82.38,mostly rural
+18151,Steuben,Indiana,67.25,mostly rural
+18153,Sullivan,Indiana,78.96,mostly rural
+18155,Switzerland,Indiana,100.0,completely rural
+18157,Tippecanoe,Indiana,14.5,mostly urban
+18159,Tipton,Indiana,61.6,mostly rural
+18161,Union,Indiana,100.0,completely rural
+18163,Vanderburgh,Indiana,9.17,mostly urban
+18165,Vermillion,Indiana,60.37,mostly rural
+18167,Vigo,Indiana,23.76,mostly urban
+18169,Wabash,Indiana,49.98,mostly urban
+18171,Warren,Indiana,77.1,mostly rural
+18173,Warrick,Indiana,29.31,mostly urban
+18175,Washington,Indiana,76.85,mostly rural
+18177,Wayne,Indiana,33.05,mostly urban
+18179,Wells,Indiana,50.56,mostly rural
+18181,White,Indiana,67.97,mostly rural
+18183,Whitley,Indiana,71.16,mostly rural
+19001,Adair,Iowa,100.0,completely rural
+19003,Adams,Iowa,100.0,completely rural
+19005,Allamakee,Iowa,73.96,mostly rural
+19007,Appanoose,Iowa,58.25,mostly rural
+19009,Audubon,Iowa,100.0,completely rural
+19011,Benton,Iowa,80.66,mostly rural
+19013,Black Hawk,Iowa,13.48,mostly urban
+19015,Boone,Iowa,50.63,mostly rural
+19017,Bremer,Iowa,64.49,mostly rural
+19019,Buchanan,Iowa,68.54,mostly rural
+19021,Buena Vista,Iowa,43.91,mostly urban
+19023,Butler,Iowa,100.0,completely rural
+19025,Calhoun,Iowa,100.0,completely rural
+19027,Carroll,Iowa,52.04,mostly rural
+19029,Cass,Iowa,53.63,mostly rural
+19031,Cedar,Iowa,83.42,mostly rural
+19033,Cerro Gordo,Iowa,20.59,mostly urban
+19035,Cherokee,Iowa,61.38,mostly rural
+19037,Chickasaw,Iowa,73.53,mostly rural
+19039,Clarke,Iowa,48.1,mostly urban
+19041,Clay,Iowa,34.29,mostly urban
+19043,Clayton,Iowa,96.6,mostly rural
+19045,Clinton,Iowa,32.23,mostly urban
+19047,Crawford,Iowa,51.8,mostly rural
+19049,Dallas,Iowa,30.59,mostly urban
+19051,Davis,Iowa,100.0,completely rural
+19053,Decatur,Iowa,100.0,completely rural
+19055,Delaware,Iowa,71.47,mostly rural
+19057,Des Moines,Iowa,26.74,mostly urban
+19059,Dickinson,Iowa,35.05,mostly urban
+19061,Dubuque,Iowa,27.02,mostly urban
+19063,Emmet,Iowa,39.9,mostly urban
+19065,Fayette,Iowa,70.58,mostly rural
+19067,Floyd,Iowa,52.73,mostly rural
+19069,Franklin,Iowa,60.24,mostly rural
+19071,Fremont,Iowa,100.0,completely rural
+19073,Greene,Iowa,58.16,mostly rural
+19075,Grundy,Iowa,100.0,completely rural
+19077,Guthrie,Iowa,100.0,completely rural
+19079,Hamilton,Iowa,50.48,mostly rural
+19081,Hancock,Iowa,70.02,mostly rural
+19083,Hardin,Iowa,71.08,mostly rural
+19085,Harrison,Iowa,81.12,mostly rural
+19087,Henry,Iowa,57.13,mostly rural
+19089,Howard,Iowa,62.99,mostly rural
+19091,Humboldt,Iowa,46.58,mostly urban
+19093,Ida,Iowa,100.0,completely rural
+19095,Iowa,Iowa,82.18,mostly rural
+19097,Jackson,Iowa,53.27,mostly rural
+19099,Jasper,Iowa,57.51,mostly rural
+19101,Jefferson,Iowa,38.73,mostly urban
+19103,Johnson,Iowa,18.54,mostly urban
+19105,Jones,Iowa,57.96,mostly rural
+19107,Keokuk,Iowa,100.0,completely rural
+19109,Kossuth,Iowa,65.64,mostly rural
+19111,Lee,Iowa,40.62,mostly urban
+19113,Linn,Iowa,12.75,mostly urban
+19115,Louisa,Iowa,100.0,completely rural
+19117,Lucas,Iowa,56.25,mostly rural
+19119,Lyon,Iowa,100.0,completely rural
+19121,Madison,Iowa,67.84,mostly rural
+19123,Mahaska,Iowa,43.95,mostly urban
+19125,Marion,Iowa,48.69,mostly urban
+19127,Marshall,Iowa,33.93,mostly urban
+19129,Mills,Iowa,59.57,mostly rural
+19131,Mitchell,Iowa,67.2,mostly rural
+19133,Monona,Iowa,71.2,mostly rural
+19135,Monroe,Iowa,55.17,mostly rural
+19137,Montgomery,Iowa,47.89,mostly urban
+19139,Muscatine,Iowa,25.55,mostly urban
+19141,O'Brien,Iowa,66.27,mostly rural
+19143,Osceola,Iowa,58.37,mostly rural
+19145,Page,Iowa,33.35,mostly urban
+19147,Palo Alto,Iowa,61.49,mostly rural
+19149,Plymouth,Iowa,62.94,mostly rural
+19151,Pocahontas,Iowa,100.0,completely rural
+19153,Polk,Iowa,4.91,mostly urban
+19155,Pottawattamie,Iowa,26.42,mostly urban
+19157,Poweshiek,Iowa,51.99,mostly rural
+19159,Ringgold,Iowa,100.0,completely rural
+19161,Sac,Iowa,100.0,completely rural
+19163,Scott,Iowa,13.51,mostly urban
+19165,Shelby,Iowa,59.45,mostly rural
+19167,Sioux,Iowa,50.82,mostly rural
+19169,Story,Iowa,16.94,mostly urban
+19171,Tama,Iowa,72.4,mostly rural
+19173,Taylor,Iowa,100.0,completely rural
+19175,Union,Iowa,39.23,mostly urban
+19177,Van Buren,Iowa,100.0,completely rural
+19179,Wapello,Iowa,30.47,mostly urban
+19181,Warren,Iowa,41.96,mostly urban
+19183,Washington,Iowa,69.46,mostly rural
+19185,Wayne,Iowa,100.0,completely rural
+19187,Webster,Iowa,33.91,mostly urban
+19189,Winnebago,Iowa,66.12,mostly rural
+19191,Winneshiek,Iowa,58.98,mostly rural
+19193,Woodbury,Iowa,17.46,mostly urban
+19195,Worth,Iowa,100.0,completely rural
+19197,Wright,Iowa,56.8,mostly rural
+20001,Allen,Kansas,57.15,mostly rural
+20003,Anderson,Kansas,58.82,mostly rural
+20005,Atchison,Kansas,34.15,mostly urban
+20007,Barber,Kansas,100.0,completely rural
+20009,Barton,Kansas,31.76,mostly urban
+20011,Bourbon,Kansas,47.97,mostly urban
+20013,Brown,Kansas,68.44,mostly rural
+20015,Butler,Kansas,40.47,mostly urban
+20017,Chase,Kansas,100.0,completely rural
+20019,Chautauqua,Kansas,100.0,completely rural
+20021,Cherokee,Kansas,49.06,mostly urban
+20023,Cheyenne,Kansas,100.0,completely rural
+20025,Clark,Kansas,100.0,completely rural
+20027,Clay,Kansas,49.54,mostly urban
+20029,Cloud,Kansas,43.98,mostly urban
+20031,Coffey,Kansas,70.9,mostly rural
+20033,Comanche,Kansas,100.0,completely rural
+20035,Cowley,Kansas,31.0,mostly urban
+20037,Crawford,Kansas,34.93,mostly urban
+20039,Decatur,Kansas,100.0,completely rural
+20041,Dickinson,Kansas,64.29,mostly rural
+20043,Doniphan,Kansas,70.2,mostly rural
+20045,Douglas,Kansas,11.01,mostly urban
+20047,Edwards,Kansas,100.0,completely rural
+20049,Elk,Kansas,100.0,completely rural
+20051,Ellis,Kansas,25.56,mostly urban
+20053,Ellsworth,Kansas,54.1,mostly rural
+20055,Finney,Kansas,18.58,mostly urban
+20057,Ford,Kansas,19.3,mostly urban
+20059,Franklin,Kansas,52.1,mostly rural
+20061,Geary,Kansas,11.67,mostly urban
+20063,Gove,Kansas,100.0,completely rural
+20065,Graham,Kansas,100.0,completely rural
+20067,Grant,Kansas,19.8,mostly urban
+20069,Gray,Kansas,100.0,completely rural
+20071,Greeley,Kansas,100.0,completely rural
+20073,Greenwood,Kansas,61.26,mostly rural
+20075,Hamilton,Kansas,100.0,completely rural
+20077,Harper,Kansas,100.0,completely rural
+20079,Harvey,Kansas,30.92,mostly urban
+20081,Haskell,Kansas,100.0,completely rural
+20083,Hodgeman,Kansas,100.0,completely rural
+20085,Jackson,Kansas,75.9,mostly rural
+20087,Jefferson,Kansas,98.82,mostly rural
+20089,Jewell,Kansas,100.0,completely rural
+20091,Johnson,Kansas,3.83,mostly urban
+20093,Kearny,Kansas,100.0,completely rural
+20095,Kingman,Kansas,62.1,mostly rural
+20097,Kiowa,Kansas,100.0,completely rural
+20099,Labette,Kansas,52.34,mostly rural
+20101,Lane,Kansas,100.0,completely rural
+20103,Leavenworth,Kansas,29.06,mostly urban
+20105,Lincoln,Kansas,100.0,completely rural
+20107,Linn,Kansas,100.0,completely rural
+20109,Logan,Kansas,100.0,completely rural
+20111,Lyon,Kansas,26.3,mostly urban
+20113,McPherson,Kansas,43.5,mostly urban
+20115,Marion,Kansas,77.76,mostly rural
+20117,Marshall,Kansas,70.97,mostly rural
+20119,Meade,Kansas,100.0,completely rural
+20121,Miami,Kansas,50.95,mostly rural
+20123,Mitchell,Kansas,48.3,mostly urban
+20125,Montgomery,Kansas,43.42,mostly urban
+20127,Morris,Kansas,100.0,completely rural
+20129,Morton,Kansas,100.0,completely rural
+20131,Nemaha,Kansas,75.24,mostly rural
+20133,Neosho,Kansas,45.14,mostly urban
+20135,Ness,Kansas,100.0,completely rural
+20137,Norton,Kansas,48.99,mostly urban
+20139,Osage,Kansas,83.53,mostly rural
+20141,Osborne,Kansas,100.0,completely rural
+20143,Ottawa,Kansas,100.0,completely rural
+20145,Pawnee,Kansas,31.68,mostly urban
+20147,Phillips,Kansas,53.76,mostly rural
+20149,Pottawatomie,Kansas,58.92,mostly rural
+20151,Pratt,Kansas,32.21,mostly urban
+20153,Rawlins,Kansas,100.0,completely rural
+20155,Reno,Kansas,31.3,mostly urban
+20157,Republic,Kansas,100.0,completely rural
+20159,Rice,Kansas,63.78,mostly rural
+20161,Riley,Kansas,13.85,mostly urban
+20163,Rooks,Kansas,100.0,completely rural
+20165,Rush,Kansas,100.0,completely rural
+20167,Russell,Kansas,41.06,mostly urban
+20169,Saline,Kansas,14.59,mostly urban
+20171,Scott,Kansas,26.11,mostly urban
+20173,Sedgwick,Kansas,7.66,mostly urban
+20175,Seward,Kansas,11.43,mostly urban
+20177,Shawnee,Kansas,15.82,mostly urban
+20179,Sheridan,Kansas,100.0,completely rural
+20181,Sherman,Kansas,24.24,mostly urban
+20183,Smith,Kansas,100.0,completely rural
+20185,Stafford,Kansas,100.0,completely rural
+20187,Stanton,Kansas,100.0,completely rural
+20189,Stevens,Kansas,31.24,mostly urban
+20191,Sumner,Kansas,62.85,mostly rural
+20193,Thomas,Kansas,30.85,mostly urban
+20195,Trego,Kansas,100.0,completely rural
+20197,Wabaunsee,Kansas,100.0,completely rural
+20199,Wallace,Kansas,100.0,completely rural
+20201,Washington,Kansas,100.0,completely rural
+20203,Wichita,Kansas,100.0,completely rural
+20205,Wilson,Kansas,72.69,mostly rural
+20207,Woodson,Kansas,100.0,completely rural
+20209,Wyandotte,Kansas,6.06,mostly urban
+21001,Adair,Kentucky,75.46,mostly rural
+21003,Allen,Kentucky,78.7,mostly rural
+21005,Anderson,Kentucky,41.7,mostly urban
+21007,Ballard,Kentucky,100.0,completely rural
+21009,Barren,Kentucky,63.28,mostly rural
+21011,Bath,Kentucky,100.0,completely rural
+21013,Bell,Kentucky,62.48,mostly rural
+21015,Boone,Kentucky,13.27,mostly urban
+21017,Bourbon,Kentucky,44.75,mostly urban
+21019,Boyd,Kentucky,25.32,mostly urban
+21021,Boyle,Kentucky,34.82,mostly urban
+21023,Bracken,Kentucky,100.0,completely rural
+21025,Breathitt,Kentucky,81.5,mostly rural
+21027,Breckinridge,Kentucky,100.0,completely rural
+21029,Bullitt,Kentucky,30.41,mostly urban
+21031,Butler,Kentucky,100.0,completely rural
+21033,Caldwell,Kentucky,54.64,mostly rural
+21035,Calloway,Kentucky,48.72,mostly urban
+21037,Campbell,Kentucky,15.3,mostly urban
+21039,Carlisle,Kentucky,100.0,completely rural
+21041,Carroll,Kentucky,52.22,mostly rural
+21043,Carter,Kentucky,79.38,mostly rural
+21045,Casey,Kentucky,100.0,completely rural
+21047,Christian,Kentucky,28.56,mostly urban
+21049,Clark,Kentucky,27.47,mostly urban
+21051,Clay,Kentucky,78.57,mostly rural
+21053,Clinton,Kentucky,100.0,completely rural
+21055,Crittenden,Kentucky,70.82,mostly rural
+21057,Cumberland,Kentucky,100.0,completely rural
+21059,Daviess,Kentucky,27.02,mostly urban
+21061,Edmonson,Kentucky,100.0,completely rural
+21063,Elliott,Kentucky,100.0,completely rural
+21065,Estill,Kentucky,76.12,mostly rural
+21067,Fayette,Kentucky,3.07,mostly urban
+21069,Fleming,Kentucky,80.52,mostly rural
+21071,Floyd,Kentucky,83.87,mostly rural
+21073,Franklin,Kentucky,27.55,mostly urban
+21075,Fulton,Kentucky,64.44,mostly rural
+21077,Gallatin,Kentucky,100.0,completely rural
+21079,Garrard,Kentucky,77.89,mostly rural
+21081,Grant,Kentucky,64.99,mostly rural
+21083,Graves,Kentucky,69.41,mostly rural
+21085,Grayson,Kentucky,73.58,mostly rural
+21087,Green,Kentucky,100.0,completely rural
+21089,Greenup,Kentucky,39.29,mostly urban
+21091,Hancock,Kentucky,89.31,mostly rural
+21093,Hardin,Kentucky,34.21,mostly urban
+21095,Harlan,Kentucky,54.16,mostly rural
+21097,Harrison,Kentucky,65.93,mostly rural
+21099,Hart,Kentucky,87.19,mostly rural
+21101,Henderson,Kentucky,38.2,mostly urban
+21103,Henry,Kentucky,100.0,completely rural
+21105,Hickman,Kentucky,100.0,completely rural
+21107,Hopkins,Kentucky,47.12,mostly urban
+21109,Jackson,Kentucky,100.0,completely rural
+21111,Jefferson,Kentucky,1.37,mostly urban
+21113,Jessamine,Kentucky,25.9,mostly urban
+21115,Johnson,Kentucky,73.02,mostly rural
+21117,Kenton,Kentucky,6.98,mostly urban
+21119,Knott,Kentucky,100.0,completely rural
+21121,Knox,Kentucky,62.92,mostly rural
+21123,Larue,Kentucky,75.95,mostly rural
+21125,Laurel,Kentucky,56.84,mostly rural
+21127,Lawrence,Kentucky,77.11,mostly rural
+21129,Lee,Kentucky,100.0,completely rural
+21131,Leslie,Kentucky,100.0,completely rural
+21133,Letcher,Kentucky,100.0,completely rural
+21135,Lewis,Kentucky,100.0,completely rural
+21137,Lincoln,Kentucky,81.66,mostly rural
+21139,Livingston,Kentucky,95.38,mostly rural
+21141,Logan,Kentucky,74.98,mostly rural
+21143,Lyon,Kentucky,100.0,completely rural
+21145,McCracken,Kentucky,27.82,mostly urban
+21147,McCreary,Kentucky,100.0,completely rural
+21149,McLean,Kentucky,100.0,completely rural
+21151,Madison,Kentucky,38.52,mostly urban
+21153,Magoffin,Kentucky,100.0,completely rural
+21155,Marion,Kentucky,71.51,mostly rural
+21157,Marshall,Kentucky,85.86,mostly rural
+21159,Martin,Kentucky,100.0,completely rural
+21161,Mason,Kentucky,55.4,mostly rural
+21163,Meade,Kentucky,85.9,mostly rural
+21165,Menifee,Kentucky,100.0,completely rural
+21167,Mercer,Kentucky,59.14,mostly rural
+21169,Metcalfe,Kentucky,100.0,completely rural
+21171,Monroe,Kentucky,100.0,completely rural
+21173,Montgomery,Kentucky,59.11,mostly rural
+21175,Morgan,Kentucky,100.0,completely rural
+21177,Muhlenberg,Kentucky,68.43,mostly rural
+21179,Nelson,Kentucky,56.94,mostly rural
+21181,Nicholas,Kentucky,100.0,completely rural
+21183,Ohio,Kentucky,73.49,mostly rural
+21185,Oldham,Kentucky,20.33,mostly urban
+21187,Owen,Kentucky,100.0,completely rural
+21189,Owsley,Kentucky,100.0,completely rural
+21191,Pendleton,Kentucky,100.0,completely rural
+21193,Perry,Kentucky,74.07,mostly rural
+21195,Pike,Kentucky,87.8,mostly rural
+21197,Powell,Kentucky,67.11,mostly rural
+21199,Pulaski,Kentucky,53.95,mostly rural
+21201,Robertson,Kentucky,100.0,completely rural
+21203,Rockcastle,Kentucky,83.72,mostly rural
+21205,Rowan,Kentucky,68.79,mostly rural
+21207,Russell,Kentucky,100.0,completely rural
+21209,Scott,Kentucky,32.46,mostly urban
+21211,Shelby,Kentucky,47.01,mostly urban
+21213,Simpson,Kentucky,45.22,mostly urban
+21215,Spencer,Kentucky,100.0,completely rural
+21217,Taylor,Kentucky,52.19,mostly rural
+21219,Todd,Kentucky,100.0,completely rural
+21221,Trigg,Kentucky,79.36,mostly rural
+21223,Trimble,Kentucky,94.7,mostly rural
+21225,Union,Kentucky,65.28,mostly rural
+21227,Warren,Kentucky,31.18,mostly urban
+21229,Washington,Kentucky,100.0,completely rural
+21231,Wayne,Kentucky,67.73,mostly rural
+21233,Webster,Kentucky,100.0,completely rural
+21235,Whitley,Kentucky,65.16,mostly rural
+21237,Wolfe,Kentucky,100.0,completely rural
+21239,Woodford,Kentucky,36.16,mostly urban
+22001,Acadia,Louisiana,51.7,mostly rural
+22003,Allen,Louisiana,69.42,mostly rural
+22005,Ascension,Louisiana,13.22,mostly urban
+22007,Assumption,Louisiana,44.99,mostly urban
+22009,Avoyelles,Louisiana,63.78,mostly rural
+22011,Beauregard,Louisiana,66.49,mostly rural
+22013,Bienville,Louisiana,79.84,mostly rural
+22015,Bossier,Louisiana,24.34,mostly urban
+22017,Caddo,Louisiana,14.44,mostly urban
+22019,Calcasieu,Louisiana,20.5,mostly urban
+22021,Caldwell,Louisiana,100.0,completely rural
+22023,Cameron,Louisiana,100.0,completely rural
+22025,Catahoula,Louisiana,100.0,completely rural
+22027,Claiborne,Louisiana,82.36,mostly rural
+22029,Concordia,Louisiana,33.45,mostly urban
+22031,De Soto,Louisiana,77.26,mostly rural
+22033,East Baton Rouge,Louisiana,6.88,mostly urban
+22035,East Carroll,Louisiana,34.58,mostly urban
+22037,East Feliciana,Louisiana,100.0,completely rural
+22039,Evangeline,Louisiana,61.09,mostly rural
+22041,Franklin,Louisiana,74.19,mostly rural
+22043,Grant,Louisiana,85.59,mostly rural
+22045,Iberia,Louisiana,28.14,mostly urban
+22047,Iberville,Louisiana,59.21,mostly rural
+22049,Jackson,Louisiana,65.53,mostly rural
+22051,Jefferson,Louisiana,1.14,mostly urban
+22053,Jefferson Davis,Louisiana,50.7,mostly rural
+22055,Lafayette,Louisiana,8.32,mostly urban
+22057,Lafourche,Louisiana,24.22,mostly urban
+22059,La Salle,Louisiana,73.19,mostly rural
+22061,Lincoln,Louisiana,40.68,mostly urban
+22063,Livingston,Louisiana,41.12,mostly urban
+22065,Madison,Louisiana,22.44,mostly urban
+22067,Morehouse,Louisiana,50.04,mostly rural
+22069,Natchitoches,Louisiana,50.05,mostly rural
+22071,Orleans,Louisiana,0.59,mostly urban
+22073,Ouachita,Louisiana,24.19,mostly urban
+22075,Plaquemines,Louisiana,19.54,mostly urban
+22077,Pointe Coupee,Louisiana,57.81,mostly rural
+22079,Rapides,Louisiana,39.53,mostly urban
+22081,Red River,Louisiana,100.0,completely rural
+22083,Richland,Louisiana,66.05,mostly rural
+22085,Sabine,Louisiana,88.2,mostly rural
+22087,St. Bernard,Louisiana,4.25,mostly urban
+22089,St. Charles,Louisiana,11.49,mostly urban
+22091,St. Helena,Louisiana,100.0,completely rural
+22093,St. James,Louisiana,27.7,mostly urban
+22095,St. John the Baptist,Louisiana,13.45,mostly urban
+22097,St. Landry,Louisiana,48.17,mostly urban
+22099,St. Martin,Louisiana,49.57,mostly urban
+22101,St. Mary,Louisiana,13.04,mostly urban
+22103,St. Tammany,Louisiana,23.22,mostly urban
+22105,Tangipahoa,Louisiana,40.93,mostly urban
+22107,Tensas,Louisiana,100.0,completely rural
+22109,Terrebonne,Louisiana,20.63,mostly urban
+22111,Union,Louisiana,82.91,mostly rural
+22113,Vermilion,Louisiana,54.62,mostly rural
+22115,Vernon,Louisiana,49.9,mostly urban
+22117,Washington,Louisiana,66.67,mostly rural
+22119,Webster,Louisiana,53.04,mostly rural
+22121,West Baton Rouge,Louisiana,30.46,mostly urban
+22123,West Carroll,Louisiana,100.0,completely rural
+22125,West Feliciana,Louisiana,100.0,completely rural
+22127,Winn,Louisiana,64.89,mostly rural
+23001,Androscoggin,Maine,43.37,mostly urban
+23003,Aroostook,Maine,80.27,mostly rural
+23005,Cumberland,Maine,36.1,mostly urban
+23007,Franklin,Maine,83.0,mostly rural
+23009,Hancock,Maine,90.11,mostly rural
+23011,Kennebec,Maine,62.83,mostly rural
+23013,Knox,Maine,67.93,mostly rural
+23015,Lincoln,Maine,100.0,completely rural
+23017,Oxford,Maine,83.11,mostly rural
+23019,Penobscot,Maine,57.65,mostly rural
+23021,Piscataquis,Maine,100.0,completely rural
+23023,Sagadahoc,Maine,61.68,mostly rural
+23025,Somerset,Maine,80.48,mostly rural
+23027,Waldo,Maine,91.34,mostly rural
+23029,Washington,Maine,92.38,mostly rural
+23031,York,Maine,56.84,mostly rural
+24001,Allegany,Maryland,27.25,mostly urban
+24003,Anne Arundel,Maryland,5.3,mostly urban
+24005,Baltimore,Maryland,6.53,mostly urban
+24009,Calvert,Maryland,38.71,mostly urban
+24011,Caroline,Maryland,76.0,mostly rural
+24013,Carroll,Maryland,39.51,mostly urban
+24015,Cecil,Maryland,42.1,mostly urban
+24017,Charles,Maryland,29.5,mostly urban
+24019,Dorchester,Maryland,56.22,mostly rural
+24021,Frederick,Maryland,25.21,mostly urban
+24023,Garrett,Maryland,83.9,mostly rural
+24025,Harford,Maryland,17.76,mostly urban
+24027,Howard,Maryland,9.25,mostly urban
+24029,Kent,Maryland,72.59,mostly rural
+24031,Montgomery,Maryland,2.38,mostly urban
+24033,Prince George's,Maryland,1.97,mostly urban
+24035,Queen Anne's,Maryland,54.49,mostly rural
+24037,St. Mary's,Maryland,50.42,mostly rural
+24039,Somerset,Maryland,45.79,mostly urban
+24041,Talbot,Maryland,54.66,mostly rural
+24043,Washington,Maryland,29.49,mostly urban
+24045,Wicomico,Maryland,25.81,mostly urban
+24047,Worcester,Maryland,35.53,mostly urban
+24510,Baltimore,Maryland,0.0,mostly urban
+25001,Barnstable,Massachusetts,7.48,mostly urban
+25003,Berkshire,Massachusetts,31.59,mostly urban
+25005,Bristol,Massachusetts,9.83,mostly urban
+25007,Dukes,Massachusetts,39.03,mostly urban
+25009,Essex,Massachusetts,4.24,mostly urban
+25011,Franklin,Massachusetts,54.43,mostly rural
+25013,Hampden,Massachusetts,8.57,mostly urban
+25015,Hampshire,Massachusetts,27.44,mostly urban
+25017,Middlesex,Massachusetts,3.03,mostly urban
+25019,Nantucket,Massachusetts,18.9,mostly urban
+25021,Norfolk,Massachusetts,1.24,mostly urban
+25023,Plymouth,Massachusetts,10.31,mostly urban
+25025,Suffolk,Massachusetts,0.07,mostly urban
+25027,Worcester,Massachusetts,18.39,mostly urban
+26001,Alcona,Michigan,98.92,mostly rural
+26003,Alger,Michigan,69.04,mostly rural
+26005,Allegan,Michigan,64.47,mostly rural
+26007,Alpena,Michigan,51.83,mostly rural
+26009,Antrim,Michigan,100.0,completely rural
+26011,Arenac,Michigan,100.0,completely rural
+26013,Baraga,Michigan,100.0,completely rural
+26015,Barry,Michigan,77.13,mostly rural
+26017,Bay,Michigan,30.31,mostly urban
+26019,Benzie,Michigan,100.0,completely rural
+26021,Berrien,Michigan,32.86,mostly urban
+26023,Branch,Michigan,62.7,mostly rural
+26025,Calhoun,Michigan,30.98,mostly urban
+26027,Cass,Michigan,71.18,mostly rural
+26029,Charlevoix,Michigan,70.4,mostly rural
+26031,Cheboygan,Michigan,82.73,mostly rural
+26033,Chippewa,Michigan,48.94,mostly urban
+26035,Clare,Michigan,70.64,mostly rural
+26037,Clinton,Michigan,52.93,mostly rural
+26039,Crawford,Michigan,72.59,mostly rural
+26041,Delta,Michigan,43.75,mostly urban
+26043,Dickinson,Michigan,32.77,mostly urban
+26045,Eaton,Michigan,37.97,mostly urban
+26047,Emmet,Michigan,74.89,mostly rural
+26049,Genesee,Michigan,16.76,mostly urban
+26051,Gladwin,Michigan,88.58,mostly rural
+26053,Gogebic,Michigan,68.17,mostly rural
+26055,Grand Traverse,Michigan,48.02,mostly urban
+26057,Gratiot,Michigan,60.16,mostly rural
+26059,Hillsdale,Michigan,69.13,mostly rural
+26061,Houghton,Michigan,37.82,mostly urban
+26063,Huron,Michigan,89.46,mostly rural
+26065,Ingham,Michigan,13.21,mostly urban
+26067,Ionia,Michigan,60.54,mostly rural
+26069,Iosco,Michigan,58.91,mostly rural
+26071,Iron,Michigan,72.85,mostly rural
+26073,Isabella,Michigan,46.59,mostly urban
+26075,Jackson,Michigan,41.82,mostly urban
+26077,Kalamazoo,Michigan,17.55,mostly urban
+26079,Kalkaska,Michigan,84.45,mostly rural
+26081,Kent,Michigan,15.68,mostly urban
+26083,Keweenaw,Michigan,100.0,completely rural
+26085,Lake,Michigan,100.0,completely rural
+26087,Lapeer,Michigan,77.35,mostly rural
+26089,Leelanau,Michigan,91.26,mostly rural
+26091,Lenawee,Michigan,51.82,mostly rural
+26093,Livingston,Michigan,36.91,mostly urban
+26095,Luce,Michigan,51.36,mostly rural
+26097,Mackinac,Michigan,77.22,mostly rural
+26099,Macomb,Michigan,2.81,mostly urban
+26101,Manistee,Michigan,61.16,mostly rural
+26103,Marquette,Michigan,41.49,mostly urban
+26105,Mason,Michigan,62.69,mostly rural
+26107,Mecosta,Michigan,66.73,mostly rural
+26109,Menominee,Michigan,64.33,mostly rural
+26111,Midland,Michigan,42.78,mostly urban
+26113,Missaukee,Michigan,100.0,completely rural
+26115,Monroe,Michigan,37.56,mostly urban
+26117,Montcalm,Michigan,84.62,mostly rural
+26119,Montmorency,Michigan,100.0,completely rural
+26121,Muskegon,Michigan,23.31,mostly urban
+26123,Newaygo,Michigan,83.84,mostly rural
+26125,Oakland,Michigan,4.79,mostly urban
+26127,Oceana,Michigan,89.89,mostly rural
+26129,Ogemaw,Michigan,100.0,completely rural
+26131,Ontonagon,Michigan,100.0,completely rural
+26133,Osceola,Michigan,100.0,completely rural
+26135,Oscoda,Michigan,100.0,completely rural
+26137,Otsego,Michigan,65.66,mostly rural
+26139,Ottawa,Michigan,20.32,mostly urban
+26141,Presque Isle,Michigan,80.86,mostly rural
+26143,Roscommon,Michigan,66.05,mostly rural
+26145,Saginaw,Michigan,31.12,mostly urban
+26147,St. Clair,Michigan,38.65,mostly urban
+26149,St. Joseph,Michigan,54.43,mostly rural
+26151,Sanilac,Michigan,90.2,mostly rural
+26153,Schoolcraft,Michigan,58.96,mostly rural
+26155,Shiawassee,Michigan,54.98,mostly rural
+26157,Tuscola,Michigan,84.16,mostly rural
+26159,Van Buren,Michigan,70.86,mostly rural
+26161,Washtenaw,Michigan,16.45,mostly urban
+26163,Wayne,Michigan,0.7,mostly urban
+26165,Wexford,Michigan,64.29,mostly rural
+27001,Aitkin,Minnesota,100.0,completely rural
+27003,Anoka,Minnesota,13.5,mostly urban
+27005,Becker,Minnesota,75.47,mostly rural
+27007,Beltrami,Minnesota,67.09,mostly rural
+27009,Benton,Minnesota,40.01,mostly urban
+27011,Big Stone,Minnesota,100.0,completely rural
+27013,Blue Earth,Minnesota,26.89,mostly urban
+27015,Brown,Minnesota,34.94,mostly urban
+27017,Carlton,Minnesota,55.17,mostly rural
+27019,Carver,Minnesota,18.83,mostly urban
+27021,Cass,Minnesota,100.0,completely rural
+27023,Chippewa,Minnesota,50.34,mostly rural
+27025,Chisago,Minnesota,55.59,mostly rural
+27027,Clay,Minnesota,27.92,mostly urban
+27029,Clearwater,Minnesota,100.0,completely rural
+27031,Cook,Minnesota,100.0,completely rural
+27033,Cottonwood,Minnesota,62.27,mostly rural
+27035,Crow Wing,Minnesota,62.74,mostly rural
+27037,Dakota,Minnesota,4.93,mostly urban
+27039,Dodge,Minnesota,51.76,mostly rural
+27041,Douglas,Minnesota,52.84,mostly rural
+27043,Faribault,Minnesota,77.62,mostly rural
+27045,Fillmore,Minnesota,93.28,mostly rural
+27047,Freeborn,Minnesota,42.83,mostly urban
+27049,Goodhue,Minnesota,47.04,mostly urban
+27051,Grant,Minnesota,100.0,completely rural
+27053,Hennepin,Minnesota,2.22,mostly urban
+27055,Houston,Minnesota,57.39,mostly rural
+27057,Hubbard,Minnesota,83.37,mostly rural
+27059,Isanti,Minnesota,62.26,mostly rural
+27061,Itasca,Minnesota,79.39,mostly rural
+27063,Jackson,Minnesota,69.13,mostly rural
+27065,Kanabec,Minnesota,77.4,mostly rural
+27067,Kandiyohi,Minnesota,44.53,mostly urban
+27069,Kittson,Minnesota,100.0,completely rural
+27071,Koochiching,Minnesota,47.0,mostly urban
+27073,Lac qui Parle,Minnesota,100.0,completely rural
+27075,Lake,Minnesota,66.98,mostly rural
+27077,Lake of the Woods,Minnesota,100.0,completely rural
+27079,Le Sueur,Minnesota,62.16,mostly rural
+27081,Lincoln,Minnesota,100.0,completely rural
+27083,Lyon,Minnesota,47.93,mostly urban
+27085,McLeod,Minnesota,46.56,mostly urban
+27087,Mahnomen,Minnesota,100.0,completely rural
+27089,Marshall,Minnesota,100.0,completely rural
+27091,Martin,Minnesota,54.04,mostly rural
+27093,Meeker,Minnesota,65.52,mostly rural
+27095,Mille Lacs,Minnesota,70.82,mostly rural
+27097,Morrison,Minnesota,72.82,mostly rural
+27099,Mower,Minnesota,35.9,mostly urban
+27101,Murray,Minnesota,100.0,completely rural
+27103,Nicollet,Minnesota,25.57,mostly urban
+27105,Nobles,Minnesota,40.99,mostly urban
+27107,Norman,Minnesota,100.0,completely rural
+27109,Olmsted,Minnesota,16.59,mostly urban
+27111,Otter Tail,Minnesota,73.59,mostly rural
+27113,Pennington,Minnesota,36.23,mostly urban
+27115,Pine,Minnesota,89.3,mostly rural
+27117,Pipestone,Minnesota,57.29,mostly rural
+27119,Polk,Minnesota,48.47,mostly urban
+27121,Pope,Minnesota,100.0,completely rural
+27123,Ramsey,Minnesota,0.19,mostly urban
+27125,Red Lake,Minnesota,100.0,completely rural
+27127,Redwood,Minnesota,69.13,mostly rural
+27129,Renville,Minnesota,100.0,completely rural
+27131,Rice,Minnesota,25.93,mostly urban
+27133,Rock,Minnesota,52.31,mostly rural
+27135,Roseau,Minnesota,82.32,mostly rural
+27137,St. Louis,Minnesota,37.11,mostly urban
+27139,Scott,Minnesota,17.24,mostly urban
+27141,Sherburne,Minnesota,44.19,mostly urban
+27143,Sibley,Minnesota,100.0,completely rural
+27145,Stearns,Minnesota,36.93,mostly urban
+27147,Steele,Minnesota,30.57,mostly urban
+27149,Stevens,Minnesota,47.33,mostly urban
+27151,Swift,Minnesota,67.38,mostly rural
+27153,Todd,Minnesota,78.39,mostly rural
+27155,Traverse,Minnesota,100.0,completely rural
+27157,Wabasha,Minnesota,64.54,mostly rural
+27159,Wadena,Minnesota,66.99,mostly rural
+27161,Waseca,Minnesota,50.16,mostly rural
+27163,Washington,Minnesota,14.47,mostly urban
+27165,Watonwan,Minnesota,59.1,mostly rural
+27167,Wilkin,Minnesota,50.14,mostly rural
+27169,Winona,Minnesota,34.53,mostly urban
+27171,Wright,Minnesota,32.51,mostly urban
+27173,Yellow Medicine,Minnesota,80.82,mostly rural
+28001,Adams,Mississippi,37.23,mostly urban
+28003,Alcorn,Mississippi,66.35,mostly rural
+28005,Amite,Mississippi,100.0,completely rural
+28007,Attala,Mississippi,64.31,mostly rural
+28009,Benton,Mississippi,100.0,completely rural
+28011,Bolivar,Mississippi,53.96,mostly rural
+28013,Calhoun,Mississippi,100.0,completely rural
+28015,Carroll,Mississippi,100.0,completely rural
+28017,Chickasaw,Mississippi,85.3,mostly rural
+28019,Choctaw,Mississippi,100.0,completely rural
+28021,Claiborne,Mississippi,100.0,completely rural
+28023,Clarke,Mississippi,100.0,completely rural
+28025,Clay,Mississippi,55.54,mostly rural
+28027,Coahoma,Mississippi,32.0,mostly urban
+28029,Copiah,Mississippi,65.58,mostly rural
+28031,Covington,Mississippi,100.0,completely rural
+28033,DeSoto,Mississippi,20.43,mostly urban
+28035,Forrest,Mississippi,29.64,mostly urban
+28037,Franklin,Mississippi,100.0,completely rural
+28039,George,Mississippi,88.32,mostly rural
+28041,Greene,Mississippi,100.0,completely rural
+28043,Grenada,Mississippi,52.15,mostly rural
+28045,Hancock,Mississippi,42.56,mostly urban
+28047,Harrison,Mississippi,22.84,mostly urban
+28049,Hinds,Mississippi,15.28,mostly urban
+28051,Holmes,Mississippi,86.85,mostly rural
+28053,Humphreys,Mississippi,49.85,mostly urban
+28055,Issaquena,Mississippi,100.0,completely rural
+28057,Itawamba,Mississippi,86.25,mostly rural
+28059,Jackson,Mississippi,27.26,mostly urban
+28061,Jasper,Mississippi,100.0,completely rural
+28063,Jefferson,Mississippi,100.0,completely rural
+28065,Jefferson Davis,Mississippi,100.0,completely rural
+28067,Jones,Mississippi,61.44,mostly rural
+28069,Kemper,Mississippi,100.0,completely rural
+28071,Lafayette,Mississippi,45.58,mostly urban
+28073,Lamar,Mississippi,50.36,mostly rural
+28075,Lauderdale,Mississippi,48.26,mostly urban
+28077,Lawrence,Mississippi,100.0,completely rural
+28079,Leake,Mississippi,81.19,mostly rural
+28081,Lee,Mississippi,45.36,mostly urban
+28083,Leflore,Mississippi,17.68,mostly urban
+28085,Lincoln,Mississippi,69.5,mostly rural
+28087,Lowndes,Mississippi,42.6,mostly urban
+28089,Madison,Mississippi,27.98,mostly urban
+28091,Marion,Mississippi,73.07,mostly rural
+28093,Marshall,Mississippi,83.42,mostly rural
+28095,Monroe,Mississippi,69.63,mostly rural
+28097,Montgomery,Mississippi,59.84,mostly rural
+28099,Neshoba,Mississippi,73.85,mostly rural
+28101,Newton,Mississippi,87.06,mostly rural
+28103,Noxubee,Mississippi,74.03,mostly rural
+28105,Oktibbeha,Mississippi,36.42,mostly urban
+28107,Panola,Mississippi,78.94,mostly rural
+28109,Pearl River,Mississippi,69.93,mostly rural
+28111,Perry,Mississippi,100.0,completely rural
+28113,Pike,Mississippi,59.44,mostly rural
+28115,Pontotoc,Mississippi,83.95,mostly rural
+28117,Prentiss,Mississippi,76.06,mostly rural
+28119,Quitman,Mississippi,57.0,mostly rural
+28121,Rankin,Mississippi,33.91,mostly urban
+28123,Scott,Mississippi,72.17,mostly rural
+28125,Sharkey,Mississippi,100.0,completely rural
+28127,Simpson,Mississippi,84.84,mostly rural
+28129,Smith,Mississippi,100.0,completely rural
+28131,Stone,Mississippi,78.81,mostly rural
+28133,Sunflower,Mississippi,45.76,mostly urban
+28135,Tallahatchie,Mississippi,80.95,mostly rural
+28137,Tate,Mississippi,77.39,mostly rural
+28139,Tippah,Mississippi,83.84,mostly rural
+28141,Tishomingo,Mississippi,100.0,completely rural
+28143,Tunica,Mississippi,66.02,mostly rural
+28145,Union,Mississippi,75.56,mostly rural
+28147,Walthall,Mississippi,100.0,completely rural
+28149,Warren,Mississippi,40.89,mostly urban
+28151,Washington,Mississippi,17.52,mostly urban
+28153,Wayne,Mississippi,79.64,mostly rural
+28155,Webster,Mississippi,100.0,completely rural
+28157,Wilkinson,Mississippi,100.0,completely rural
+28159,Winston,Mississippi,75.91,mostly rural
+28161,Yalobusha,Mississippi,79.32,mostly rural
+28163,Yazoo,Mississippi,44.61,mostly urban
+29001,Adair,Missouri,37.85,mostly urban
+29003,Andrew,Missouri,61.28,mostly rural
+29005,Atchison,Missouri,100.0,completely rural
+29007,Audrain,Missouri,41.2,mostly urban
+29009,Barry,Missouri,73.26,mostly rural
+29011,Barton,Missouri,63.96,mostly rural
+29013,Bates,Missouri,77.27,mostly rural
+29015,Benton,Missouri,86.54,mostly rural
+29017,Bollinger,Missouri,100.0,completely rural
+29019,Boone,Missouri,18.79,mostly urban
+29021,Buchanan,Missouri,13.37,mostly urban
+29023,Butler,Missouri,52.18,mostly rural
+29025,Caldwell,Missouri,100.0,completely rural
+29027,Callaway,Missouri,62.03,mostly rural
+29029,Camden,Missouri,74.23,mostly rural
+29031,Cape Girardeau,Missouri,30.5,mostly urban
+29033,Carroll,Missouri,64.54,mostly rural
+29035,Carter,Missouri,100.0,completely rural
+29037,Cass,Missouri,32.4,mostly urban
+29039,Cedar,Missouri,75.3,mostly rural
+29041,Chariton,Missouri,100.0,completely rural
+29043,Christian,Missouri,44.8,mostly urban
+29045,Clark,Missouri,100.0,completely rural
+29047,Clay,Missouri,9.82,mostly urban
+29049,Clinton,Missouri,76.21,mostly rural
+29051,Cole,Missouri,29.07,mostly urban
+29053,Cooper,Missouri,53.2,mostly rural
+29055,Crawford,Missouri,73.31,mostly rural
+29057,Dade,Missouri,100.0,completely rural
+29059,Dallas,Missouri,81.93,mostly rural
+29061,Daviess,Missouri,100.0,completely rural
+29063,DeKalb,Missouri,62.4,mostly rural
+29065,Dent,Missouri,68.57,mostly rural
+29067,Douglas,Missouri,79.12,mostly rural
+29069,Dunklin,Missouri,50.46,mostly rural
+29071,Franklin,Missouri,55.6,mostly rural
+29073,Gasconade,Missouri,80.87,mostly rural
+29075,Gentry,Missouri,100.0,completely rural
+29077,Greene,Missouri,14.0,mostly urban
+29079,Grundy,Missouri,45.46,mostly urban
+29081,Harrison,Missouri,70.39,mostly rural
+29083,Henry,Missouri,49.55,mostly urban
+29085,Hickory,Missouri,100.0,completely rural
+29087,Holt,Missouri,100.0,completely rural
+29089,Howard,Missouri,64.06,mostly rural
+29091,Howell,Missouri,72.17,mostly rural
+29093,Iron,Missouri,74.85,mostly rural
+29095,Jackson,Missouri,3.84,mostly urban
+29097,Jasper,Missouri,23.69,mostly urban
+29099,Jefferson,Missouri,30.2,mostly urban
+29101,Johnson,Missouri,50.44,mostly rural
+29103,Knox,Missouri,100.0,completely rural
+29105,Laclede,Missouri,60.51,mostly rural
+29107,Lafayette,Missouri,56.95,mostly rural
+29109,Lawrence,Missouri,58.69,mostly rural
+29111,Lewis,Missouri,100.0,completely rural
+29113,Lincoln,Missouri,74.83,mostly rural
+29115,Linn,Missouri,66.45,mostly rural
+29117,Livingston,Missouri,36.6,mostly urban
+29119,McDonald,Missouri,99.99,mostly rural
+29121,Macon,Missouri,67.79,mostly rural
+29123,Madison,Missouri,65.51,mostly rural
+29125,Maries,Missouri,100.0,completely rural
+29127,Marion,Missouri,24.77,mostly urban
+29129,Mercer,Missouri,100.0,completely rural
+29131,Miller,Missouri,79.78,mostly rural
+29133,Mississippi,Missouri,32.7,mostly urban
+29135,Moniteau,Missouri,52.7,mostly rural
+29137,Monroe,Missouri,100.0,completely rural
+29139,Montgomery,Missouri,78.51,mostly rural
+29141,Morgan,Missouri,100.0,completely rural
+29143,New Madrid,Missouri,56.86,mostly rural
+29145,Newton,Missouri,64.44,mostly rural
+29147,Nodaway,Missouri,43.43,mostly urban
+29149,Oregon,Missouri,80.53,mostly rural
+29151,Osage,Missouri,100.0,completely rural
+29153,Ozark,Missouri,100.0,completely rural
+29155,Pemiscot,Missouri,49.27,mostly urban
+29157,Perry,Missouri,55.62,mostly rural
+29159,Pettis,Missouri,37.78,mostly urban
+29161,Phelps,Missouri,46.22,mostly urban
+29163,Pike,Missouri,54.38,mostly rural
+29165,Platte,Missouri,15.81,mostly urban
+29167,Polk,Missouri,68.87,mostly rural
+29169,Pulaski,Missouri,44.03,mostly urban
+29171,Putnam,Missouri,100.0,completely rural
+29173,Ralls,Missouri,96.11,mostly rural
+29175,Randolph,Missouri,45.18,mostly urban
+29177,Ray,Missouri,75.22,mostly rural
+29179,Reynolds,Missouri,100.0,completely rural
+29181,Ripley,Missouri,100.0,completely rural
+29183,St. Charles,Missouri,5.83,mostly urban
+29185,St. Clair,Missouri,100.0,completely rural
+29186,Ste. Genevieve,Missouri,76.14,mostly rural
+29187,St. Francois,Missouri,39.76,mostly urban
+29189,St. Louis,Missouri,1.14,mostly urban
+29195,Saline,Missouri,45.81,mostly urban
+29197,Schuyler,Missouri,100.0,completely rural
+29199,Scotland,Missouri,100.0,completely rural
+29201,Scott,Missouri,41.55,mostly urban
+29203,Shannon,Missouri,100.0,completely rural
+29205,Shelby,Missouri,100.0,completely rural
+29207,Stoddard,Missouri,69.79,mostly rural
+29209,Stone,Missouri,88.69,mostly rural
+29211,Sullivan,Missouri,100.0,completely rural
+29213,Taney,Missouri,43.86,mostly urban
+29215,Texas,Missouri,99.21,mostly rural
+29217,Vernon,Missouri,58.26,mostly rural
+29219,Warren,Missouri,63.04,mostly rural
+29221,Washington,Missouri,80.48,mostly rural
+29223,Wayne,Missouri,100.0,completely rural
+29225,Webster,Missouri,73.93,mostly rural
+29227,Worth,Missouri,100.0,completely rural
+29229,Wright,Missouri,76.63,mostly rural
+29510,St. Louis,Missouri,0.0,mostly urban
+30001,Beaverhead,Montana,50.15,mostly rural
+30003,Big Horn,Montana,71.91,mostly rural
+30005,Blaine,Montana,100.0,completely rural
+30007,Broadwater,Montana,100.0,completely rural
+30009,Carbon,Montana,100.0,completely rural
+30011,Carter,Montana,100.0,completely rural
+30013,Cascade,Montana,19.82,mostly urban
+30015,Chouteau,Montana,100.0,completely rural
+30017,Custer,Montana,17.91,mostly urban
+30019,Daniels,Montana,100.0,completely rural
+30021,Dawson,Montana,27.57,mostly urban
+30023,Deer Lodge,Montana,33.64,mostly urban
+30025,Fallon,Montana,100.0,completely rural
+30027,Fergus,Montana,47.44,mostly urban
+30029,Flathead,Montana,51.48,mostly rural
+30031,Gallatin,Montana,33.54,mostly urban
+30033,Garfield,Montana,100.0,completely rural
+30035,Glacier,Montana,44.01,mostly urban
+30037,Golden Valley,Montana,100.0,completely rural
+30039,Granite,Montana,100.0,completely rural
+30041,Hill,Montana,40.0,mostly urban
+30043,Jefferson,Montana,100.0,completely rural
+30045,Judith Basin,Montana,100.0,completely rural
+30047,Lake,Montana,83.43,mostly rural
+30049,Lewis and Clark,Montana,28.93,mostly urban
+30051,Liberty,Montana,100.0,completely rural
+30053,Lincoln,Montana,79.79,mostly rural
+30055,McCone,Montana,100.0,completely rural
+30057,Madison,Montana,100.0,completely rural
+30059,Meagher,Montana,100.0,completely rural
+30061,Mineral,Montana,100.0,completely rural
+30063,Missoula,Montana,22.33,mostly urban
+30065,Musselshell,Montana,100.0,completely rural
+30067,Park,Montana,47.74,mostly urban
+30069,Petroleum,Montana,100.0,completely rural
+30071,Phillips,Montana,100.0,completely rural
+30073,Pondera,Montana,58.1,mostly rural
+30075,Powder River,Montana,100.0,completely rural
+30077,Powell,Montana,54.22,mostly rural
+30079,Prairie,Montana,100.0,completely rural
+30081,Ravalli,Montana,84.63,mostly rural
+30083,Richland,Montana,44.2,mostly urban
+30085,Roosevelt,Montana,39.73,mostly urban
+30087,Rosebud,Montana,100.0,completely rural
+30089,Sanders,Montana,100.0,completely rural
+30091,Sheridan,Montana,100.0,completely rural
+30093,Silver Bow,Montana,11.44,mostly urban
+30095,Stillwater,Montana,100.0,completely rural
+30097,Sweet Grass,Montana,100.0,completely rural
+30099,Teton,Montana,100.0,completely rural
+30101,Toole,Montana,42.96,mostly urban
+30103,Treasure,Montana,100.0,completely rural
+30105,Valley,Montana,55.2,mostly rural
+30107,Wheatland,Montana,100.0,completely rural
+30109,Wibaux,Montana,100.0,completely rural
+30111,Yellowstone,Montana,16.69,mostly urban
+31001,Adams,Nebraska,22.48,mostly urban
+31003,Antelope,Nebraska,100.0,completely rural
+31005,Arthur,Nebraska,100.0,completely rural
+31007,Banner,Nebraska,100.0,completely rural
+31009,Blaine,Nebraska,100.0,completely rural
+31011,Boone,Nebraska,100.0,completely rural
+31013,Box Butte,Nebraska,24.96,mostly urban
+31015,Boyd,Nebraska,100.0,completely rural
+31017,Brown,Nebraska,100.0,completely rural
+31019,Buffalo,Nebraska,32.26,mostly urban
+31021,Burt,Nebraska,100.0,completely rural
+31023,Butler,Nebraska,65.71,mostly rural
+31025,Cass,Nebraska,72.96,mostly rural
+31027,Cedar,Nebraska,100.0,completely rural
+31029,Chase,Nebraska,100.0,completely rural
+31031,Cherry,Nebraska,52.51,mostly rural
+31033,Cheyenne,Nebraska,36.26,mostly urban
+31035,Clay,Nebraska,100.0,completely rural
+31037,Colfax,Nebraska,40.51,mostly urban
+31039,Cuming,Nebraska,65.2,mostly rural
+31041,Custer,Nebraska,67.67,mostly rural
+31043,Dakota,Nebraska,21.09,mostly urban
+31045,Dawes,Nebraska,39.94,mostly urban
+31047,Dawson,Nebraska,26.65,mostly urban
+31049,Deuel,Nebraska,100.0,completely rural
+31051,Dixon,Nebraska,100.0,completely rural
+31053,Dodge,Nebraska,25.13,mostly urban
+31055,Douglas,Nebraska,2.17,mostly urban
+31057,Dundy,Nebraska,100.0,completely rural
+31059,Fillmore,Nebraska,100.0,completely rural
+31061,Franklin,Nebraska,100.0,completely rural
+31063,Frontier,Nebraska,100.0,completely rural
+31065,Furnas,Nebraska,100.0,completely rural
+31067,Gage,Nebraska,44.4,mostly urban
+31069,Garden,Nebraska,100.0,completely rural
+31071,Garfield,Nebraska,100.0,completely rural
+31073,Gosper,Nebraska,100.0,completely rural
+31075,Grant,Nebraska,100.0,completely rural
+31077,Greeley,Nebraska,100.0,completely rural
+31079,Hall,Nebraska,14.62,mostly urban
+31081,Hamilton,Nebraska,51.05,mostly rural
+31083,Harlan,Nebraska,100.0,completely rural
+31085,Hayes,Nebraska,100.0,completely rural
+31087,Hitchcock,Nebraska,100.0,completely rural
+31089,Holt,Nebraska,64.71,mostly rural
+31091,Hooker,Nebraska,100.0,completely rural
+31093,Howard,Nebraska,100.0,completely rural
+31095,Jefferson,Nebraska,48.16,mostly urban
+31097,Johnson,Nebraska,100.0,completely rural
+31099,Kearney,Nebraska,54.55,mostly rural
+31101,Keith,Nebraska,47.13,mostly urban
+31103,Keya Paha,Nebraska,100.0,completely rural
+31105,Kimball,Nebraska,100.0,completely rural
+31107,Knox,Nebraska,100.0,completely rural
+31109,Lancaster,Nebraska,8.25,mostly urban
+31111,Lincoln,Nebraska,30.52,mostly urban
+31113,Logan,Nebraska,100.0,completely rural
+31115,Loup,Nebraska,100.0,completely rural
+31117,McPherson,Nebraska,100.0,completely rural
+31119,Madison,Nebraska,27.9,mostly urban
+31121,Merrick,Nebraska,58.89,mostly rural
+31123,Morrill,Nebraska,100.0,completely rural
+31125,Nance,Nebraska,100.0,completely rural
+31127,Nemaha,Nebraska,52.07,mostly rural
+31129,Nuckolls,Nebraska,100.0,completely rural
+31131,Otoe,Nebraska,55.11,mostly rural
+31133,Pawnee,Nebraska,100.0,completely rural
+31135,Perkins,Nebraska,100.0,completely rural
+31137,Phelps,Nebraska,41.88,mostly urban
+31139,Pierce,Nebraska,100.0,completely rural
+31141,Platte,Nebraska,31.43,mostly urban
+31143,Polk,Nebraska,100.0,completely rural
+31145,Red Willow,Nebraska,31.59,mostly urban
+31147,Richardson,Nebraska,50.58,mostly rural
+31149,Rock,Nebraska,100.0,completely rural
+31151,Saline,Nebraska,51.07,mostly rural
+31153,Sarpy,Nebraska,5.27,mostly urban
+31155,Saunders,Nebraska,66.49,mostly rural
+31157,Scotts Bluff,Nebraska,29.82,mostly urban
+31159,Seward,Nebraska,60.38,mostly rural
+31161,Sheridan,Nebraska,100.0,completely rural
+31163,Sherman,Nebraska,100.0,completely rural
+31165,Sioux,Nebraska,100.0,completely rural
+31167,Stanton,Nebraska,73.49,mostly rural
+31169,Thayer,Nebraska,100.0,completely rural
+31171,Thomas,Nebraska,100.0,completely rural
+31173,Thurston,Nebraska,100.0,completely rural
+31175,Valley,Nebraska,100.0,completely rural
+31177,Washington,Nebraska,61.23,mostly rural
+31179,Wayne,Nebraska,42.08,mostly urban
+31181,Webster,Nebraska,100.0,completely rural
+31183,Wheeler,Nebraska,100.0,completely rural
+31185,York,Nebraska,44.14,mostly urban
+32001,Churchill,Nevada,34.71,mostly urban
+32003,Clark,Nevada,1.31,mostly urban
+32005,Douglas,Nevada,31.55,mostly urban
+32007,Elko,Nevada,37.85,mostly urban
+32009,Esmeralda,Nevada,100.0,completely rural
+32011,Eureka,Nevada,100.0,completely rural
+32013,Humboldt,Nevada,37.88,mostly urban
+32015,Lander,Nevada,39.05,mostly urban
+32017,Lincoln,Nevada,100.0,completely rural
+32019,Lyon,Nevada,36.94,mostly urban
+32021,Mineral,Nevada,31.92,mostly urban
+32023,Nye,Nevada,35.27,mostly urban
+32027,Pershing,Nevada,100.0,completely rural
+32029,Storey,Nevada,92.64,mostly rural
+32031,Washoe,Nevada,4.27,mostly urban
+32033,White Pine,Nevada,53.33,mostly rural
+32510,Carson City,Nevada,4.84,mostly urban
+33001,Belknap,New Hampshire,66.28,mostly rural
+33003,Carroll,New Hampshire,90.2,mostly rural
+33005,Cheshire,New Hampshire,65.02,mostly rural
+33007,Coos,New Hampshire,66.24,mostly rural
+33009,Grafton,New Hampshire,68.72,mostly rural
+33011,Hillsborough,New Hampshire,21.19,mostly urban
+33013,Merrimack,New Hampshire,54.61,mostly rural
+33015,Rockingham,New Hampshire,24.9,mostly urban
+33017,Strafford,New Hampshire,32.4,mostly urban
+33019,Sullivan,New Hampshire,64.16,mostly rural
+34001,Atlantic,New Jersey,12.71,mostly urban
+34003,Bergen,New Jersey,0.1,mostly urban
+34005,Burlington,New Jersey,6.66,mostly urban
+34007,Camden,New Jersey,1.62,mostly urban
+34009,Cape May,New Jersey,17.45,mostly urban
+34011,Cumberland,New Jersey,23.03,mostly urban
+34013,Essex,New Jersey,0.01,mostly urban
+34015,Gloucester,New Jersey,8.35,mostly urban
+34017,Hudson,New Jersey,0.0,mostly urban
+34019,Hunterdon,New Jersey,49.57,mostly urban
+34021,Mercer,New Jersey,3.48,mostly urban
+34023,Middlesex,New Jersey,0.67,mostly urban
+34025,Monmouth,New Jersey,3.73,mostly urban
+34027,Morris,New Jersey,6.77,mostly urban
+34029,Ocean,New Jersey,2.9,mostly urban
+34031,Passaic,New Jersey,2.41,mostly urban
+34033,Salem,New Jersey,45.3,mostly urban
+34035,Somerset,New Jersey,5.79,mostly urban
+34037,Sussex,New Jersey,39.85,mostly urban
+34039,Union,New Jersey,0.0,mostly urban
+34041,Warren,New Jersey,37.56,mostly urban
+35001,Bernalillo,New Mexico,4.2,mostly urban
+35003,Catron,New Mexico,100.0,completely rural
+35005,Chaves,New Mexico,24.25,mostly urban
+35006,Cibola,New Mexico,55.34,mostly rural
+35007,Colfax,New Mexico,52.36,mostly rural
+35009,Curry,New Mexico,14.07,mostly urban
+35011,De Baca,New Mexico,100.0,completely rural
+35013,Doña Ana,New Mexico,19.29,mostly urban
+35015,Eddy,New Mexico,20.85,mostly urban
+35017,Grant,New Mexico,42.35,mostly urban
+35019,Guadalupe,New Mexico,44.08,mostly urban
+35021,Harding,New Mexico,100.0,completely rural
+35023,Hidalgo,New Mexico,100.0,completely rural
+35025,Lea,New Mexico,21.03,mostly urban
+35027,Lincoln,New Mexico,53.18,mostly rural
+35028,Los Alamos,New Mexico,11.24,mostly urban
+35029,Luna,New Mexico,40.61,mostly urban
+35031,McKinley,New Mexico,57.38,mostly rural
+35033,Mora,New Mexico,100.0,completely rural
+35035,Otero,New Mexico,29.59,mostly urban
+35037,Quay,New Mexico,41.57,mostly urban
+35039,Rio Arriba,New Mexico,49.76,mostly urban
+35041,Roosevelt,New Mexico,36.46,mostly urban
+35043,Sandoval,New Mexico,17.06,mostly urban
+35045,San Juan,New Mexico,33.66,mostly urban
+35047,San Miguel,New Mexico,46.9,mostly urban
+35049,Santa Fe,New Mexico,25.16,mostly urban
+35051,Sierra,New Mexico,33.95,mostly urban
+35053,Socorro,New Mexico,49.68,mostly urban
+35055,Taos,New Mexico,58.45,mostly rural
+35057,Torrance,New Mexico,98.79,mostly rural
+35059,Union,New Mexico,100.0,completely rural
+35061,Valencia,New Mexico,16.73,mostly urban
+36001,Albany,New York,9.7,mostly urban
+36003,Allegany,New York,78.74,mostly rural
+36005,Bronx,New York,0.0,mostly urban
+36007,Broome,New York,26.06,mostly urban
+36009,Cattaraugus,New York,61.75,mostly rural
+36011,Cayuga,New York,55.78,mostly rural
+36013,Chautauqua,New York,43.86,mostly urban
+36015,Chemung,New York,24.18,mostly urban
+36017,Chenango,New York,83.41,mostly rural
+36019,Clinton,New York,64.16,mostly rural
+36021,Columbia,New York,73.3,mostly rural
+36023,Cortland,New York,44.27,mostly urban
+36025,Delaware,New York,78.36,mostly rural
+36027,Dutchess,New York,25.4,mostly urban
+36029,Erie,New York,9.4,mostly urban
+36031,Essex,New York,74.86,mostly rural
+36033,Franklin,New York,62.68,mostly rural
+36035,Fulton,New York,50.37,mostly rural
+36037,Genesee,New York,59.89,mostly rural
+36039,Greene,New York,73.14,mostly rural
+36041,Hamilton,New York,100.0,completely rural
+36043,Herkimer,New York,51.81,mostly rural
+36045,Jefferson,New York,48.05,mostly urban
+36047,Kings,New York,0.0,mostly urban
+36049,Lewis,New York,86.85,mostly rural
+36051,Livingston,New York,54.65,mostly rural
+36053,Madison,New York,58.95,mostly rural
+36055,Monroe,New York,6.45,mostly urban
+36057,Montgomery,New York,40.94,mostly urban
+36059,Nassau,New York,0.19,mostly urban
+36061,New York,New York,0.0,mostly urban
+36063,Niagara,New York,22.44,mostly urban
+36065,Oneida,New York,32.98,mostly urban
+36067,Onondaga,New York,12.59,mostly urban
+36069,Ontario,New York,47.47,mostly urban
+36071,Orange,New York,22.34,mostly urban
+36073,Orleans,New York,60.88,mostly rural
+36075,Oswego,New York,61.75,mostly rural
+36077,Otsego,New York,70.57,mostly rural
+36079,Putnam,New York,20.55,mostly urban
+36081,Queens,New York,0.0,mostly urban
+36083,Rensselaer,New York,30.51,mostly urban
+36085,Richmond,New York,0.0,mostly urban
+36087,Rockland,New York,0.72,mostly urban
+36089,St. Lawrence,New York,61.99,mostly rural
+36091,Saratoga,New York,29.96,mostly urban
+36093,Schenectady,New York,8.16,mostly urban
+36095,Schoharie,New York,82.85,mostly rural
+36097,Schuyler,New York,81.15,mostly rural
+36099,Seneca,New York,58.66,mostly rural
+36101,Steuben,New York,60.37,mostly rural
+36103,Suffolk,New York,2.6,mostly urban
+36105,Sullivan,New York,74.17,mostly rural
+36107,Tioga,New York,65.66,mostly rural
+36109,Tompkins,New York,43.34,mostly urban
+36111,Ulster,New York,46.04,mostly urban
+36113,Warren,New York,33.93,mostly urban
+36115,Washington,New York,67.9,mostly rural
+36117,Wayne,New York,60.7,mostly rural
+36119,Westchester,New York,3.27,mostly urban
+36121,Wyoming,New York,64.08,mostly rural
+36123,Yates,New York,71.22,mostly rural
+37001,Alamance,North Carolina,28.56,mostly urban
+37003,Alexander,North Carolina,72.78,mostly rural
+37005,Alleghany,North Carolina,100.0,completely rural
+37007,Anson,North Carolina,78.51,mostly rural
+37009,Ashe,North Carolina,84.86,mostly rural
+37011,Avery,North Carolina,88.78,mostly rural
+37013,Beaufort,North Carolina,65.6,mostly rural
+37015,Bertie,North Carolina,83.24,mostly rural
+37017,Bladen,North Carolina,91.23,mostly rural
+37019,Brunswick,North Carolina,42.96,mostly urban
+37021,Buncombe,North Carolina,24.08,mostly urban
+37023,Burke,North Carolina,42.65,mostly urban
+37025,Cabarrus,North Carolina,19.25,mostly urban
+37027,Caldwell,North Carolina,34.43,mostly urban
+37029,Camden,North Carolina,99.55,mostly rural
+37031,Carteret,North Carolina,32.6,mostly urban
+37033,Caswell,North Carolina,99.19,mostly rural
+37035,Catawba,North Carolina,30.3,mostly urban
+37037,Chatham,North Carolina,65.92,mostly rural
+37039,Cherokee,North Carolina,100.0,completely rural
+37041,Chowan,North Carolina,67.62,mostly rural
+37043,Clay,North Carolina,100.0,completely rural
+37045,Cleveland,North Carolina,55.79,mostly rural
+37047,Columbus,North Carolina,80.59,mostly rural
+37049,Craven,North Carolina,27.71,mostly urban
+37051,Cumberland,North Carolina,13.37,mostly urban
+37053,Currituck,North Carolina,98.31,mostly rural
+37055,Dare,North Carolina,28.96,mostly urban
+37057,Davidson,North Carolina,47.38,mostly urban
+37059,Davie,North Carolina,70.29,mostly rural
+37061,Duplin,North Carolina,86.46,mostly rural
+37063,Durham,North Carolina,5.63,mostly urban
+37065,Edgecombe,North Carolina,45.31,mostly urban
+37067,Forsyth,North Carolina,7.35,mostly urban
+37069,Franklin,North Carolina,85.32,mostly rural
+37071,Gaston,North Carolina,19.65,mostly urban
+37073,Gates,North Carolina,100.0,completely rural
+37075,Graham,North Carolina,100.0,completely rural
+37077,Granville,North Carolina,54.75,mostly rural
+37079,Greene,North Carolina,100.0,completely rural
+37081,Guilford,North Carolina,12.69,mostly urban
+37083,Halifax,North Carolina,54.71,mostly rural
+37085,Harnett,North Carolina,55.92,mostly rural
+37087,Haywood,North Carolina,55.44,mostly rural
+37089,Henderson,North Carolina,33.27,mostly urban
+37091,Hertford,North Carolina,68.64,mostly rural
+37093,Hoke,North Carolina,43.15,mostly urban
+37095,Hyde,North Carolina,100.0,completely rural
+37097,Iredell,North Carolina,37.91,mostly urban
+37099,Jackson,North Carolina,73.09,mostly rural
+37101,Johnston,North Carolina,52.04,mostly rural
+37103,Jones,North Carolina,100.0,completely rural
+37105,Lee,North Carolina,42.76,mostly urban
+37107,Lenoir,North Carolina,45.01,mostly urban
+37109,Lincoln,North Carolina,54.55,mostly rural
+37111,McDowell,North Carolina,70.3,mostly rural
+37113,Macon,North Carolina,80.01,mostly rural
+37115,Madison,North Carolina,90.62,mostly rural
+37117,Martin,North Carolina,78.12,mostly rural
+37119,Mecklenburg,North Carolina,1.07,mostly urban
+37121,Mitchell,North Carolina,82.64,mostly rural
+37123,Montgomery,North Carolina,76.84,mostly rural
+37125,Moore,North Carolina,50.66,mostly rural
+37127,Nash,North Carolina,47.56,mostly urban
+37129,New Hanover,North Carolina,2.21,mostly urban
+37131,Northampton,North Carolina,89.37,mostly rural
+37133,Onslow,North Carolina,26.35,mostly urban
+37135,Orange,North Carolina,28.53,mostly urban
+37137,Pamlico,North Carolina,100.0,completely rural
+37139,Pasquotank,North Carolina,41.32,mostly urban
+37141,Pender,North Carolina,68.76,mostly rural
+37143,Perquimans,North Carolina,100.0,completely rural
+37145,Person,North Carolina,75.52,mostly rural
+37147,Pitt,North Carolina,25.44,mostly urban
+37149,Polk,North Carolina,92.27,mostly rural
+37151,Randolph,North Carolina,56.24,mostly rural
+37153,Richmond,North Carolina,45.53,mostly urban
+37155,Robeson,North Carolina,62.61,mostly rural
+37157,Rockingham,North Carolina,61.94,mostly rural
+37159,Rowan,North Carolina,38.82,mostly urban
+37161,Rutherford,North Carolina,61.04,mostly rural
+37163,Sampson,North Carolina,84.96,mostly rural
+37165,Scotland,North Carolina,48.39,mostly urban
+37167,Stanly,North Carolina,67.71,mostly rural
+37169,Stokes,North Carolina,75.7,mostly rural
+37171,Surry,North Carolina,68.81,mostly rural
+37173,Swain,North Carolina,100.0,completely rural
+37175,Transylvania,North Carolina,59.64,mostly rural
+37177,Tyrrell,North Carolina,100.0,completely rural
+37179,Union,North Carolina,27.29,mostly urban
+37181,Vance,North Carolina,54.08,mostly rural
+37183,Wake,North Carolina,6.1,mostly urban
+37185,Warren,North Carolina,100.0,completely rural
+37187,Washington,North Carolina,67.76,mostly rural
+37189,Watauga,North Carolina,55.44,mostly rural
+37191,Wayne,North Carolina,46.4,mostly urban
+37193,Wilkes,North Carolina,72.79,mostly rural
+37195,Wilson,North Carolina,38.66,mostly urban
+37197,Yadkin,North Carolina,84.68,mostly rural
+37199,Yancey,North Carolina,100.0,completely rural
+38001,Adams,North Dakota,100.0,completely rural
+38003,Barnes,North Dakota,39.55,mostly urban
+38005,Benson,North Dakota,100.0,completely rural
+38007,Billings,North Dakota,100.0,completely rural
+38009,Bottineau,North Dakota,100.0,completely rural
+38011,Bowman,North Dakota,100.0,completely rural
+38013,Burke,North Dakota,100.0,completely rural
+38015,Burleigh,North Dakota,18.55,mostly urban
+38017,Cass,North Dakota,10.43,mostly urban
+38019,Cavalier,North Dakota,100.0,completely rural
+38021,Dickey,North Dakota,100.0,completely rural
+38023,Divide,North Dakota,100.0,completely rural
+38025,Dunn,North Dakota,100.0,completely rural
+38027,Eddy,North Dakota,100.0,completely rural
+38029,Emmons,North Dakota,100.0,completely rural
+38031,Foster,North Dakota,100.0,completely rural
+38033,Golden Valley,North Dakota,100.0,completely rural
+38035,Grand Forks,North Dakota,16.77,mostly urban
+38037,Grant,North Dakota,100.0,completely rural
+38039,Griggs,North Dakota,100.0,completely rural
+38041,Hettinger,North Dakota,100.0,completely rural
+38043,Kidder,North Dakota,100.0,completely rural
+38045,LaMoure,North Dakota,100.0,completely rural
+38047,Logan,North Dakota,100.0,completely rural
+38049,McHenry,North Dakota,100.0,completely rural
+38051,McIntosh,North Dakota,100.0,completely rural
+38053,McKenzie,North Dakota,100.0,completely rural
+38055,McLean,North Dakota,100.0,completely rural
+38057,Mercer,North Dakota,64.99,mostly rural
+38059,Morton,North Dakota,31.86,mostly urban
+38061,Mountrail,North Dakota,100.0,completely rural
+38063,Nelson,North Dakota,100.0,completely rural
+38065,Oliver,North Dakota,100.0,completely rural
+38067,Pembina,North Dakota,100.0,completely rural
+38069,Pierce,North Dakota,35.18,mostly urban
+38071,Ramsey,North Dakota,34.99,mostly urban
+38073,Ransom,North Dakota,100.0,completely rural
+38075,Renville,North Dakota,100.0,completely rural
+38077,Richland,North Dakota,52.0,mostly rural
+38079,Rolette,North Dakota,100.0,completely rural
+38081,Sargent,North Dakota,100.0,completely rural
+38083,Sheridan,North Dakota,100.0,completely rural
+38085,Sioux,North Dakota,100.0,completely rural
+38087,Slope,North Dakota,100.0,completely rural
+38089,Stark,North Dakota,27.33,mostly urban
+38091,Steele,North Dakota,100.0,completely rural
+38093,Stutsman,North Dakota,27.56,mostly urban
+38095,Towner,North Dakota,100.0,completely rural
+38097,Traill,North Dakota,100.0,completely rural
+38099,Walsh,North Dakota,62.06,mostly rural
+38101,Ward,North Dakota,21.9,mostly urban
+38103,Wells,North Dakota,100.0,completely rural
+38105,Williams,North Dakota,32.46,mostly urban
+39001,Adams,Ohio,89.03,mostly rural
+39003,Allen,Ohio,25.89,mostly urban
+39005,Ashland,Ohio,61.94,mostly rural
+39007,Ashtabula,Ohio,46.37,mostly urban
+39009,Athens,Ohio,43.17,mostly urban
+39011,Auglaize,Ohio,39.14,mostly urban
+39013,Belmont,Ohio,54.66,mostly rural
+39015,Brown,Ohio,76.56,mostly rural
+39017,Butler,Ohio,9.34,mostly urban
+39019,Carroll,Ohio,70.95,mostly rural
+39021,Champaign,Ohio,70.82,mostly rural
+39023,Clark,Ohio,23.61,mostly urban
+39025,Clermont,Ohio,22.72,mostly urban
+39027,Clinton,Ohio,54.64,mostly rural
+39029,Columbiana,Ohio,43.86,mostly urban
+39031,Coshocton,Ohio,61.47,mostly rural
+39033,Crawford,Ohio,35.26,mostly urban
+39035,Cuyahoga,Ohio,0.58,mostly urban
+39037,Darke,Ohio,66.3,mostly rural
+39039,Defiance,Ohio,43.85,mostly urban
+39041,Delaware,Ohio,19.31,mostly urban
+39043,Erie,Ohio,26.48,mostly urban
+39045,Fairfield,Ohio,34.71,mostly urban
+39047,Fayette,Ohio,47.75,mostly urban
+39049,Franklin,Ohio,1.35,mostly urban
+39051,Fulton,Ohio,56.16,mostly rural
+39053,Gallia,Ohio,81.35,mostly rural
+39055,Geauga,Ohio,63.97,mostly rural
+39057,Greene,Ohio,14.91,mostly urban
+39059,Guernsey,Ohio,61.42,mostly rural
+39061,Hamilton,Ohio,2.23,mostly urban
+39063,Hancock,Ohio,31.11,mostly urban
+39065,Hardin,Ohio,55.38,mostly rural
+39067,Harrison,Ohio,84.11,mostly rural
+39069,Henry,Ohio,69.08,mostly rural
+39071,Highland,Ohio,73.0,mostly rural
+39073,Hocking,Ohio,70.84,mostly rural
+39075,Holmes,Ohio,92.99,mostly rural
+39077,Huron,Ohio,50.3,mostly rural
+39079,Jackson,Ohio,64.58,mostly rural
+39081,Jefferson,Ohio,38.98,mostly urban
+39083,Knox,Ohio,55.7,mostly rural
+39085,Lake,Ohio,6.53,mostly urban
+39087,Lawrence,Ohio,45.92,mostly urban
+39089,Licking,Ohio,35.53,mostly urban
+39091,Logan,Ohio,56.91,mostly rural
+39093,Lorain,Ohio,11.74,mostly urban
+39095,Lucas,Ohio,4.66,mostly urban
+39097,Madison,Ohio,48.49,mostly urban
+39099,Mahoning,Ohio,15.16,mostly urban
+39101,Marion,Ohio,30.25,mostly urban
+39103,Medina,Ohio,29.79,mostly urban
+39105,Meigs,Ohio,81.3,mostly rural
+39107,Mercer,Ohio,61.36,mostly rural
+39109,Miami,Ohio,30.8,mostly urban
+39111,Monroe,Ohio,97.65,mostly rural
+39113,Montgomery,Ohio,4.33,mostly urban
+39115,Morgan,Ohio,81.49,mostly rural
+39117,Morrow,Ohio,88.84,mostly rural
+39119,Muskingum,Ohio,47.03,mostly urban
+39121,Noble,Ohio,62.53,mostly rural
+39123,Ottawa,Ohio,49.45,mostly urban
+39125,Paulding,Ohio,81.9,mostly rural
+39127,Perry,Ohio,75.24,mostly rural
+39129,Pickaway,Ohio,49.87,mostly urban
+39131,Pike,Ohio,74.24,mostly rural
+39133,Portage,Ohio,32.81,mostly urban
+39135,Preble,Ohio,69.22,mostly rural
+39137,Putnam,Ohio,84.66,mostly rural
+39139,Richland,Ohio,32.05,mostly urban
+39141,Ross,Ohio,58.67,mostly rural
+39143,Sandusky,Ohio,44.14,mostly urban
+39145,Scioto,Ohio,54.28,mostly rural
+39147,Seneca,Ohio,47.51,mostly urban
+39149,Shelby,Ohio,51.11,mostly rural
+39151,Stark,Ohio,13.53,mostly urban
+39153,Summit,Ohio,3.88,mostly urban
+39155,Trumbull,Ohio,27.27,mostly urban
+39157,Tuscarawas,Ohio,41.58,mostly urban
+39159,Union,Ohio,49.95,mostly urban
+39161,Van Wert,Ohio,50.73,mostly rural
+39163,Vinton,Ohio,100.0,completely rural
+39165,Warren,Ohio,17.27,mostly urban
+39167,Washington,Ohio,56.56,mostly rural
+39169,Wayne,Ohio,51.0,mostly rural
+39171,Williams,Ohio,63.63,mostly rural
+39173,Wood,Ohio,29.55,mostly urban
+39175,Wyandot,Ohio,57.42,mostly rural
+40001,Adair,Oklahoma,83.3,mostly rural
+40003,Alfalfa,Oklahoma,100.0,completely rural
+40005,Atoka,Oklahoma,100.0,completely rural
+40007,Beaver,Oklahoma,100.0,completely rural
+40009,Beckham,Oklahoma,32.66,mostly urban
+40011,Blaine,Oklahoma,57.43,mostly rural
+40013,Bryan,Oklahoma,61.33,mostly rural
+40015,Caddo,Oklahoma,79.97,mostly rural
+40017,Canadian,Oklahoma,22.51,mostly urban
+40019,Carter,Oklahoma,56.08,mostly rural
+40021,Cherokee,Oklahoma,60.05,mostly rural
+40023,Choctaw,Oklahoma,66.93,mostly rural
+40025,Cimarron,Oklahoma,100.0,completely rural
+40027,Cleveland,Oklahoma,16.88,mostly urban
+40029,Coal,Oklahoma,100.0,completely rural
+40031,Comanche,Oklahoma,21.79,mostly urban
+40033,Cotton,Oklahoma,59.53,mostly rural
+40035,Craig,Oklahoma,60.06,mostly rural
+40037,Creek,Oklahoma,53.94,mostly rural
+40039,Custer,Oklahoma,30.33,mostly urban
+40041,Delaware,Oklahoma,81.12,mostly rural
+40043,Dewey,Oklahoma,100.0,completely rural
+40045,Ellis,Oklahoma,100.0,completely rural
+40047,Garfield,Oklahoma,21.41,mostly urban
+40049,Garvin,Oklahoma,68.7,mostly rural
+40051,Grady,Oklahoma,63.89,mostly rural
+40053,Grant,Oklahoma,100.0,completely rural
+40055,Greer,Oklahoma,52.65,mostly rural
+40057,Harmon,Oklahoma,100.0,completely rural
+40059,Harper,Oklahoma,100.0,completely rural
+40061,Haskell,Oklahoma,77.74,mostly rural
+40063,Hughes,Oklahoma,58.81,mostly rural
+40065,Jackson,Oklahoma,24.75,mostly urban
+40067,Jefferson,Oklahoma,100.0,completely rural
+40069,Johnston,Oklahoma,100.0,completely rural
+40071,Kay,Oklahoma,24.47,mostly urban
+40073,Kingfisher,Oklahoma,72.44,mostly rural
+40075,Kiowa,Oklahoma,61.66,mostly rural
+40077,Latimer,Oklahoma,73.29,mostly rural
+40079,Le Flore,Oklahoma,72.9,mostly rural
+40081,Lincoln,Oklahoma,92.11,mostly rural
+40083,Logan,Oklahoma,55.37,mostly rural
+40085,Love,Oklahoma,100.0,completely rural
+40087,McClain,Oklahoma,77.17,mostly rural
+40089,McCurtain,Oklahoma,69.25,mostly rural
+40091,McIntosh,Oklahoma,87.3,mostly rural
+40093,Major,Oklahoma,100.0,completely rural
+40095,Marshall,Oklahoma,72.1,mostly rural
+40097,Mayes,Oklahoma,77.4,mostly rural
+40099,Murray,Oklahoma,45.7,mostly urban
+40101,Muskogee,Oklahoma,41.12,mostly urban
+40103,Noble,Oklahoma,56.3,mostly rural
+40105,Nowata,Oklahoma,57.93,mostly rural
+40107,Okfuskee,Oklahoma,74.14,mostly rural
+40109,Oklahoma,Oklahoma,6.28,mostly urban
+40111,Okmulgee,Oklahoma,48.55,mostly urban
+40113,Osage,Oklahoma,59.47,mostly rural
+40115,Ottawa,Oklahoma,49.31,mostly urban
+40117,Pawnee,Oklahoma,81.13,mostly rural
+40119,Payne,Oklahoma,33.73,mostly urban
+40121,Pittsburg,Oklahoma,51.92,mostly rural
+40123,Pontotoc,Oklahoma,53.59,mostly rural
+40125,Pottawatomie,Oklahoma,50.67,mostly rural
+40127,Pushmataha,Oklahoma,100.0,completely rural
+40129,Roger Mills,Oklahoma,100.0,completely rural
+40131,Rogers,Oklahoma,50.3,mostly rural
+40133,Seminole,Oklahoma,64.67,mostly rural
+40135,Sequoyah,Oklahoma,66.62,mostly rural
+40137,Stephens,Oklahoma,43.32,mostly urban
+40139,Texas,Oklahoma,45.07,mostly urban
+40141,Tillman,Oklahoma,51.21,mostly rural
+40143,Tulsa,Oklahoma,4.78,mostly urban
+40145,Wagoner,Oklahoma,37.47,mostly urban
+40147,Washington,Oklahoma,23.88,mostly urban
+40149,Washita,Oklahoma,75.27,mostly rural
+40151,Woods,Oklahoma,36.7,mostly urban
+40153,Woodward,Oklahoma,43.51,mostly urban
+41001,Baker,Oregon,41.01,mostly urban
+41003,Benton,Oregon,18.76,mostly urban
+41005,Clackamas,Oregon,18.08,mostly urban
+41007,Clatsop,Oregon,38.97,mostly urban
+41009,Columbia,Oregon,43.61,mostly urban
+41011,Coos,Oregon,38.35,mostly urban
+41013,Crook,Oregon,48.02,mostly urban
+41015,Curry,Oregon,38.73,mostly urban
+41017,Deschutes,Oregon,27.64,mostly urban
+41019,Douglas,Oregon,41.18,mostly urban
+41021,Gilliam,Oregon,100.0,completely rural
+41023,Grant,Oregon,100.0,completely rural
+41025,Harney,Oregon,44.34,mostly urban
+41027,Hood River,Oregon,52.17,mostly rural
+41029,Jackson,Oregon,20.05,mostly urban
+41031,Jefferson,Oregon,63.12,mostly rural
+41033,Josephine,Oregon,44.96,mostly urban
+41035,Klamath,Oregon,37.58,mostly urban
+41037,Lake,Oregon,63.33,mostly rural
+41039,Lane,Oregon,17.52,mostly urban
+41041,Lincoln,Oregon,37.59,mostly urban
+41043,Linn,Oregon,31.64,mostly urban
+41045,Malheur,Oregon,48.42,mostly urban
+41047,Marion,Oregon,13.09,mostly urban
+41049,Morrow,Oregon,45.87,mostly urban
+41051,Multnomah,Oregon,1.34,mostly urban
+41053,Polk,Oregon,19.93,mostly urban
+41055,Sherman,Oregon,100.0,completely rural
+41057,Tillamook,Oregon,69.6,mostly rural
+41059,Umatilla,Oregon,29.07,mostly urban
+41061,Union,Oregon,42.1,mostly urban
+41063,Wallowa,Oregon,100.0,completely rural
+41065,Wasco,Oregon,33.07,mostly urban
+41067,Washington,Oregon,5.59,mostly urban
+41069,Wheeler,Oregon,100.0,completely rural
+41071,Yamhill,Oregon,22.6,mostly urban
+42001,Adams,Pennsylvania,53.68,mostly rural
+42003,Allegheny,Pennsylvania,2.49,mostly urban
+42005,Armstrong,Pennsylvania,67.49,mostly rural
+42007,Beaver,Pennsylvania,25.83,mostly urban
+42009,Bedford,Pennsylvania,83.79,mostly rural
+42011,Berks,Pennsylvania,23.74,mostly urban
+42013,Blair,Pennsylvania,23.43,mostly urban
+42015,Bradford,Pennsylvania,72.17,mostly rural
+42017,Bucks,Pennsylvania,8.83,mostly urban
+42019,Butler,Pennsylvania,41.96,mostly urban
+42021,Cambria,Pennsylvania,32.01,mostly urban
+42023,Cameron,Pennsylvania,47.35,mostly urban
+42025,Carbon,Pennsylvania,47.16,mostly urban
+42027,Centre,Pennsylvania,32.22,mostly urban
+42029,Chester,Pennsylvania,13.28,mostly urban
+42031,Clarion,Pennsylvania,76.56,mostly rural
+42033,Clearfield,Pennsylvania,53.85,mostly rural
+42035,Clinton,Pennsylvania,45.69,mostly urban
+42037,Columbia,Pennsylvania,40.85,mostly urban
+42039,Crawford,Pennsylvania,63.7,mostly rural
+42041,Cumberland,Pennsylvania,22.18,mostly urban
+42043,Dauphin,Pennsylvania,13.32,mostly urban
+42045,Delaware,Pennsylvania,0.46,mostly urban
+42047,Elk,Pennsylvania,55.68,mostly rural
+42049,Erie,Pennsylvania,20.02,mostly urban
+42051,Fayette,Pennsylvania,47.9,mostly urban
+42053,Forest,Pennsylvania,100.0,completely rural
+42055,Franklin,Pennsylvania,40.35,mostly urban
+42057,Fulton,Pennsylvania,100.0,completely rural
+42059,Greene,Pennsylvania,66.83,mostly rural
+42061,Huntingdon,Pennsylvania,68.66,mostly rural
+42063,Indiana,Pennsylvania,60.07,mostly rural
+42065,Jefferson,Pennsylvania,61.46,mostly rural
+42067,Juniata,Pennsylvania,82.25,mostly rural
+42069,Lackawanna,Pennsylvania,16.31,mostly urban
+42071,Lancaster,Pennsylvania,21.26,mostly urban
+42073,Lawrence,Pennsylvania,40.32,mostly urban
+42075,Lebanon,Pennsylvania,26.56,mostly urban
+42077,Lehigh,Pennsylvania,7.93,mostly urban
+42079,Luzerne,Pennsylvania,19.98,mostly urban
+42081,Lycoming,Pennsylvania,36.28,mostly urban
+42083,McKean,Pennsylvania,63.54,mostly rural
+42085,Mercer,Pennsylvania,44.49,mostly urban
+42087,Mifflin,Pennsylvania,50.47,mostly rural
+42089,Monroe,Pennsylvania,38.35,mostly urban
+42091,Montgomery,Pennsylvania,2.93,mostly urban
+42093,Montour,Pennsylvania,53.77,mostly rural
+42095,Northampton,Pennsylvania,12.77,mostly urban
+42097,Northumberland,Pennsylvania,34.86,mostly urban
+42099,Perry,Pennsylvania,88.5,mostly rural
+42101,Philadelphia,Pennsylvania,0.0,mostly urban
+42103,Pike,Pennsylvania,70.76,mostly rural
+42105,Potter,Pennsylvania,100.0,completely rural
+42107,Schuylkill,Pennsylvania,36.46,mostly urban
+42109,Snyder,Pennsylvania,66.82,mostly rural
+42111,Somerset,Pennsylvania,70.8,mostly rural
+42113,Sullivan,Pennsylvania,100.0,completely rural
+42115,Susquehanna,Pennsylvania,84.03,mostly rural
+42117,Tioga,Pennsylvania,90.11,mostly rural
+42119,Union,Pennsylvania,42.81,mostly urban
+42121,Venango,Pennsylvania,54.76,mostly rural
+42123,Warren,Pennsylvania,55.04,mostly rural
+42125,Washington,Pennsylvania,30.82,mostly urban
+42127,Wayne,Pennsylvania,88.09,mostly rural
+42129,Westmoreland,Pennsylvania,25.36,mostly urban
+42131,Wyoming,Pennsylvania,83.46,mostly rural
+42133,York,Pennsylvania,24.72,mostly urban
+44001,Bristol,Rhode Island,1.14,mostly urban
+44003,Kent,Rhode Island,7.99,mostly urban
+44005,Newport,Rhode Island,12.09,mostly urban
+44007,Providence,Rhode Island,5.51,mostly urban
+44009,Washington,Rhode Island,30.82,mostly urban
+45001,Abbeville,South Carolina,78.58,mostly rural
+45003,Aiken,South Carolina,37.0,mostly urban
+45005,Allendale,South Carolina,68.26,mostly rural
+45007,Anderson,South Carolina,37.93,mostly urban
+45009,Bamberg,South Carolina,54.51,mostly rural
+45011,Barnwell,South Carolina,82.54,mostly rural
+45013,Beaufort,South Carolina,19.65,mostly urban
+45015,Berkeley,South Carolina,28.95,mostly urban
+45017,Calhoun,South Carolina,100.0,completely rural
+45019,Charleston,South Carolina,10.88,mostly urban
+45021,Cherokee,South Carolina,61.05,mostly rural
+45023,Chester,South Carolina,71.78,mostly rural
+45025,Chesterfield,South Carolina,73.77,mostly rural
+45027,Clarendon,South Carolina,85.71,mostly rural
+45029,Colleton,South Carolina,75.57,mostly rural
+45031,Darlington,South Carolina,57.76,mostly rural
+45033,Dillon,South Carolina,69.51,mostly rural
+45035,Dorchester,South Carolina,19.48,mostly urban
+45037,Edgefield,South Carolina,73.31,mostly rural
+45039,Fairfield,South Carolina,78.31,mostly rural
+45041,Florence,South Carolina,38.52,mostly urban
+45043,Georgetown,South Carolina,41.52,mostly urban
+45045,Greenville,South Carolina,12.61,mostly urban
+45047,Greenwood,South Carolina,39.75,mostly urban
+45049,Hampton,South Carolina,78.47,mostly rural
+45051,Horry,South Carolina,30.38,mostly urban
+45053,Jasper,South Carolina,66.67,mostly rural
+45055,Kershaw,South Carolina,57.68,mostly rural
+45057,Lancaster,South Carolina,49.95,mostly urban
+45059,Laurens,South Carolina,64.19,mostly rural
+45061,Lee,South Carolina,71.95,mostly rural
+45063,Lexington,South Carolina,25.28,mostly urban
+45065,McCormick,South Carolina,100.0,completely rural
+45067,Marion,South Carolina,60.75,mostly rural
+45069,Marlboro,South Carolina,55.05,mostly rural
+45071,Newberry,South Carolina,67.85,mostly rural
+45073,Oconee,South Carolina,64.92,mostly rural
+45075,Orangeburg,South Carolina,63.78,mostly rural
+45077,Pickens,South Carolina,35.79,mostly urban
+45079,Richland,South Carolina,9.07,mostly urban
+45081,Saluda,South Carolina,80.53,mostly rural
+45083,Spartanburg,South Carolina,27.43,mostly urban
+45085,Sumter,South Carolina,31.97,mostly urban
+45087,Union,South Carolina,65.36,mostly rural
+45089,Williamsburg,South Carolina,81.94,mostly rural
+45091,York,South Carolina,22.95,mostly urban
+46003,Aurora,South Dakota,100.0,completely rural
+46005,Beadle,South Dakota,27.37,mostly urban
+46007,Bennett,South Dakota,100.0,completely rural
+46009,Bon Homme,South Dakota,100.0,completely rural
+46011,Brookings,South Dakota,29.67,mostly urban
+46013,Brown,South Dakota,28.89,mostly urban
+46015,Brule,South Dakota,100.0,completely rural
+46017,Buffalo,South Dakota,100.0,completely rural
+46019,Butte,South Dakota,48.17,mostly urban
+46021,Campbell,South Dakota,100.0,completely rural
+46023,Charles Mix,South Dakota,100.0,completely rural
+46025,Clark,South Dakota,100.0,completely rural
+46027,Clay,South Dakota,24.32,mostly urban
+46029,Codington,South Dakota,22.46,mostly urban
+46031,Corson,South Dakota,100.0,completely rural
+46033,Custer,South Dakota,100.0,completely rural
+46035,Davison,South Dakota,23.32,mostly urban
+46037,Day,South Dakota,100.0,completely rural
+46039,Deuel,South Dakota,100.0,completely rural
+46041,Dewey,South Dakota,64.08,mostly rural
+46043,Douglas,South Dakota,100.0,completely rural
+46045,Edmunds,South Dakota,100.0,completely rural
+46047,Fall River,South Dakota,49.96,mostly urban
+46049,Faulk,South Dakota,100.0,completely rural
+46051,Grant,South Dakota,55.37,mostly rural
+46053,Gregory,South Dakota,100.0,completely rural
+46055,Haakon,South Dakota,100.0,completely rural
+46057,Hamlin,South Dakota,100.0,completely rural
+46059,Hand,South Dakota,100.0,completely rural
+46061,Hanson,South Dakota,100.0,completely rural
+46063,Harding,South Dakota,100.0,completely rural
+46065,Hughes,South Dakota,25.27,mostly urban
+46067,Hutchinson,South Dakota,100.0,completely rural
+46069,Hyde,South Dakota,100.0,completely rural
+46071,Jackson,South Dakota,100.0,completely rural
+46073,Jerauld,South Dakota,100.0,completely rural
+46075,Jones,South Dakota,100.0,completely rural
+46077,Kingsbury,South Dakota,100.0,completely rural
+46079,Lake,South Dakota,44.88,mostly urban
+46081,Lawrence,South Dakota,36.88,mostly urban
+46083,Lincoln,South Dakota,29.27,mostly urban
+46085,Lyman,South Dakota,100.0,completely rural
+46087,McCook,South Dakota,100.0,completely rural
+46089,McPherson,South Dakota,100.0,completely rural
+46091,Marshall,South Dakota,100.0,completely rural
+46093,Meade,South Dakota,38.0,mostly urban
+46095,Mellette,South Dakota,100.0,completely rural
+46097,Miner,South Dakota,100.0,completely rural
+46099,Minnehaha,South Dakota,13.64,mostly urban
+46101,Moody,South Dakota,100.0,completely rural
+46103,Pennington,South Dakota,20.8,mostly urban
+46105,Perkins,South Dakota,100.0,completely rural
+46107,Potter,South Dakota,100.0,completely rural
+46109,Roberts,South Dakota,100.0,completely rural
+46111,Sanborn,South Dakota,100.0,completely rural
+46113,Shannon,South Dakota,79.98,mostly rural
+46115,Spink,South Dakota,100.0,completely rural
+46117,Stanley,South Dakota,42.52,mostly urban
+46119,Sully,South Dakota,100.0,completely rural
+46121,Todd,South Dakota,100.0,completely rural
+46123,Tripp,South Dakota,48.49,mostly urban
+46125,Turner,South Dakota,100.0,completely rural
+46127,Union,South Dakota,61.39,mostly rural
+46129,Walworth,South Dakota,36.43,mostly urban
+46135,Yankton,South Dakota,34.77,mostly urban
+46137,Ziebach,South Dakota,73.55,mostly rural
+47001,Anderson,Tennessee,34.66,mostly urban
+47003,Bedford,Tennessee,55.6,mostly rural
+47005,Benton,Tennessee,78.46,mostly rural
+47007,Bledsoe,Tennessee,100.0,completely rural
+47009,Blount,Tennessee,32.63,mostly urban
+47011,Bradley,Tennessee,32.97,mostly urban
+47013,Campbell,Tennessee,55.02,mostly rural
+47015,Cannon,Tennessee,81.13,mostly rural
+47017,Carroll,Tennessee,83.06,mostly rural
+47019,Carter,Tennessee,40.97,mostly urban
+47021,Cheatham,Tennessee,82.96,mostly rural
+47023,Chester,Tennessee,65.24,mostly rural
+47025,Claiborne,Tennessee,71.55,mostly rural
+47027,Clay,Tennessee,100.0,completely rural
+47029,Cocke,Tennessee,67.53,mostly rural
+47031,Coffee,Tennessee,47.29,mostly urban
+47033,Crockett,Tennessee,67.38,mostly rural
+47035,Cumberland,Tennessee,60.89,mostly rural
+47037,Davidson,Tennessee,3.41,mostly urban
+47039,Decatur,Tennessee,100.0,completely rural
+47041,DeKalb,Tennessee,78.37,mostly rural
+47043,Dickson,Tennessee,67.75,mostly rural
+47045,Dyer,Tennessee,42.86,mostly urban
+47047,Fayette,Tennessee,79.04,mostly rural
+47049,Fentress,Tennessee,100.0,completely rural
+47051,Franklin,Tennessee,69.62,mostly rural
+47053,Gibson,Tennessee,47.71,mostly urban
+47055,Giles,Tennessee,73.75,mostly rural
+47057,Grainger,Tennessee,100.0,completely rural
+47059,Greene,Tennessee,65.19,mostly rural
+47061,Grundy,Tennessee,100.0,completely rural
+47063,Hamblen,Tennessee,21.87,mostly urban
+47065,Hamilton,Tennessee,10.02,mostly urban
+47067,Hancock,Tennessee,100.0,completely rural
+47069,Hardeman,Tennessee,80.21,mostly rural
+47071,Hardin,Tennessee,67.93,mostly rural
+47073,Hawkins,Tennessee,57.86,mostly rural
+47075,Haywood,Tennessee,47.42,mostly urban
+47077,Henderson,Tennessee,76.38,mostly rural
+47079,Henry,Tennessee,66.85,mostly rural
+47081,Hickman,Tennessee,100.0,completely rural
+47083,Houston,Tennessee,100.0,completely rural
+47085,Humphreys,Tennessee,82.49,mostly rural
+47087,Jackson,Tennessee,100.0,completely rural
+47089,Jefferson,Tennessee,59.49,mostly rural
+47091,Johnson,Tennessee,85.21,mostly rural
+47093,Knox,Tennessee,10.92,mostly urban
+47095,Lake,Tennessee,100.0,completely rural
+47097,Lauderdale,Tennessee,58.66,mostly rural
+47099,Lawrence,Tennessee,75.88,mostly rural
+47101,Lewis,Tennessee,70.19,mostly rural
+47103,Lincoln,Tennessee,72.49,mostly rural
+47105,Loudon,Tennessee,40.61,mostly urban
+47107,McMinn,Tennessee,60.34,mostly rural
+47109,McNairy,Tennessee,85.27,mostly rural
+47111,Macon,Tennessee,79.57,mostly rural
+47113,Madison,Tennessee,25.83,mostly urban
+47115,Marion,Tennessee,77.02,mostly rural
+47117,Marshall,Tennessee,65.82,mostly rural
+47119,Maury,Tennessee,41.59,mostly urban
+47121,Meigs,Tennessee,100.0,completely rural
+47123,Monroe,Tennessee,76.08,mostly rural
+47125,Montgomery,Tennessee,19.74,mostly urban
+47127,Moore,Tennessee,99.87,mostly rural
+47129,Morgan,Tennessee,99.89,mostly rural
+47131,Obion,Tennessee,61.58,mostly rural
+47133,Overton,Tennessee,84.22,mostly rural
+47135,Perry,Tennessee,100.0,completely rural
+47137,Pickett,Tennessee,100.0,completely rural
+47139,Polk,Tennessee,100.0,completely rural
+47141,Putnam,Tennessee,34.98,mostly urban
+47143,Rhea,Tennessee,68.02,mostly rural
+47145,Roane,Tennessee,50.99,mostly rural
+47147,Robertson,Tennessee,53.24,mostly rural
+47149,Rutherford,Tennessee,17.02,mostly urban
+47151,Scott,Tennessee,80.56,mostly rural
+47153,Sequatchie,Tennessee,73.8,mostly rural
+47155,Sevier,Tennessee,56.65,mostly rural
+47157,Shelby,Tennessee,2.76,mostly urban
+47159,Smith,Tennessee,82.88,mostly rural
+47161,Stewart,Tennessee,100.0,completely rural
+47163,Sullivan,Tennessee,25.56,mostly urban
+47165,Sumner,Tennessee,27.88,mostly urban
+47167,Tipton,Tennessee,55.13,mostly rural
+47169,Trousdale,Tennessee,100.0,completely rural
+47171,Unicoi,Tennessee,44.67,mostly urban
+47173,Union,Tennessee,100.0,completely rural
+47175,Van Buren,Tennessee,100.0,completely rural
+47177,Warren,Tennessee,61.38,mostly rural
+47179,Washington,Tennessee,26.42,mostly urban
+47181,Wayne,Tennessee,100.0,completely rural
+47183,Weakley,Tennessee,67.01,mostly rural
+47185,White,Tennessee,78.17,mostly rural
+47187,Williamson,Tennessee,19.39,mostly urban
+47189,Wilson,Tennessee,38.47,mostly urban
+48001,Anderson,Texas,67.06,mostly rural
+48003,Andrews,Texas,16.5,mostly urban
+48005,Angelina,Texas,43.08,mostly urban
+48007,Aransas,Texas,27.26,mostly urban
+48009,Archer,Texas,88.99,mostly rural
+48011,Armstrong,Texas,100.0,completely rural
+48013,Atascosa,Texas,60.71,mostly rural
+48015,Austin,Texas,66.34,mostly rural
+48017,Bailey,Texas,28.75,mostly urban
+48019,Bandera,Texas,100.0,completely rural
+48021,Bastrop,Texas,63.85,mostly rural
+48023,Baylor,Texas,100.0,completely rural
+48025,Bee,Texas,42.98,mostly urban
+48027,Bell,Texas,15.19,mostly urban
+48029,Bexar,Texas,4.54,mostly urban
+48031,Blanco,Texas,100.0,completely rural
+48033,Borden,Texas,100.0,completely rural
+48035,Bosque,Texas,81.22,mostly rural
+48037,Bowie,Texas,35.42,mostly urban
+48039,Brazoria,Texas,22.53,mostly urban
+48041,Brazos,Texas,12.06,mostly urban
+48043,Brewster,Texas,34.87,mostly urban
+48045,Briscoe,Texas,100.0,completely rural
+48047,Brooks,Texas,31.76,mostly urban
+48049,Brown,Texas,40.4,mostly urban
+48051,Burleson,Texas,76.66,mostly rural
+48053,Burnet,Texas,55.67,mostly rural
+48055,Caldwell,Texas,42.29,mostly urban
+48057,Calhoun,Texas,44.73,mostly urban
+48059,Callahan,Texas,72.18,mostly rural
+48061,Cameron,Texas,8.42,mostly urban
+48063,Camp,Texas,61.48,mostly rural
+48065,Carson,Texas,95.2,mostly rural
+48067,Cass,Texas,74.01,mostly rural
+48069,Castro,Texas,45.76,mostly urban
+48071,Chambers,Texas,45.72,mostly urban
+48073,Cherokee,Texas,63.05,mostly rural
+48075,Childress,Texas,33.15,mostly urban
+48077,Clay,Texas,74.6,mostly rural
+48079,Cochran,Texas,100.0,completely rural
+48081,Coke,Texas,100.0,completely rural
+48083,Coleman,Texas,51.55,mostly rural
+48085,Collin,Texas,5.24,mostly urban
+48087,Collingsworth,Texas,100.0,completely rural
+48089,Colorado,Texas,62.61,mostly rural
+48091,Comal,Texas,46.15,mostly urban
+48093,Comanche,Texas,71.46,mostly rural
+48095,Concho,Texas,100.0,completely rural
+48097,Cooke,Texas,59.03,mostly rural
+48099,Coryell,Texas,19.42,mostly urban
+48101,Cottle,Texas,100.0,completely rural
+48103,Crane,Texas,10.7,mostly urban
+48105,Crockett,Texas,22.75,mostly urban
+48107,Crosby,Texas,100.0,completely rural
+48109,Culberson,Texas,100.0,completely rural
+48111,Dallam,Texas,23.54,mostly urban
+48113,Dallas,Texas,0.69,mostly urban
+48115,Dawson,Texas,16.29,mostly urban
+48117,Deaf Smith,Texas,17.71,mostly urban
+48119,Delta,Texas,100.0,completely rural
+48121,Denton,Texas,6.91,mostly urban
+48123,DeWitt,Texas,49.62,mostly urban
+48125,Dickens,Texas,100.0,completely rural
+48127,Dimmit,Texas,39.48,mostly urban
+48129,Donley,Texas,100.0,completely rural
+48131,Duval,Texas,67.04,mostly rural
+48133,Eastland,Texas,60.35,mostly rural
+48135,Ector,Texas,9.46,mostly urban
+48137,Edwards,Texas,100.0,completely rural
+48139,Ellis,Texas,31.98,mostly urban
+48141,El Paso,Texas,2.17,mostly urban
+48143,Erath,Texas,46.32,mostly urban
+48145,Falls,Texas,67.36,mostly rural
+48147,Fannin,Texas,70.53,mostly rural
+48149,Fayette,Texas,67.14,mostly rural
+48151,Fisher,Texas,100.0,completely rural
+48153,Floyd,Texas,53.32,mostly rural
+48155,Foard,Texas,100.0,completely rural
+48157,Fort Bend,Texas,5.54,mostly urban
+48159,Franklin,Texas,69.13,mostly rural
+48161,Freestone,Texas,66.48,mostly rural
+48163,Frio,Texas,22.18,mostly urban
+48165,Gaines,Texas,63.04,mostly rural
+48167,Galveston,Texas,6.15,mostly urban
+48169,Garza,Texas,22.33,mostly urban
+48171,Gillespie,Texas,53.65,mostly rural
+48173,Glasscock,Texas,100.0,completely rural
+48175,Goliad,Texas,100.0,completely rural
+48177,Gonzales,Texas,65.28,mostly rural
+48179,Gray,Texas,19.39,mostly urban
+48181,Grayson,Texas,43.15,mostly urban
+48183,Gregg,Texas,13.36,mostly urban
+48185,Grimes,Texas,68.9,mostly rural
+48187,Guadalupe,Texas,26.16,mostly urban
+48189,Hale,Texas,23.1,mostly urban
+48191,Hall,Texas,100.0,completely rural
+48193,Hamilton,Texas,64.38,mostly rural
+48195,Hansford,Texas,40.33,mostly urban
+48197,Hardeman,Texas,100.0,completely rural
+48199,Hardin,Texas,51.55,mostly rural
+48201,Harris,Texas,1.21,mostly urban
+48203,Harrison,Texas,56.05,mostly rural
+48205,Hartley,Texas,57.26,mostly rural
+48207,Haskell,Texas,47.62,mostly urban
+48209,Hays,Texas,31.71,mostly urban
+48211,Hemphill,Texas,26.95,mostly urban
+48213,Henderson,Texas,60.11,mostly rural
+48215,Hidalgo,Texas,5.14,mostly urban
+48217,Hill,Texas,76.27,mostly rural
+48219,Hockley,Texas,39.85,mostly urban
+48221,Hood,Texas,32.85,mostly urban
+48223,Hopkins,Texas,59.63,mostly rural
+48225,Houston,Texas,73.49,mostly rural
+48227,Howard,Texas,20.06,mostly urban
+48229,Hudspeth,Texas,100.0,completely rural
+48231,Hunt,Texas,56.63,mostly rural
+48233,Hutchinson,Texas,22.56,mostly urban
+48235,Irion,Texas,100.0,completely rural
+48237,Jack,Texas,53.22,mostly rural
+48239,Jackson,Texas,61.82,mostly rural
+48241,Jasper,Texas,78.19,mostly rural
+48243,Jeff Davis,Texas,100.0,completely rural
+48245,Jefferson,Texas,8.4,mostly urban
+48247,Jim Hogg,Texas,17.4,mostly urban
+48249,Jim Wells,Texas,40.09,mostly urban
+48251,Johnson,Texas,37.87,mostly urban
+48253,Jones,Texas,85.15,mostly rural
+48255,Karnes,Texas,38.39,mostly urban
+48257,Kaufman,Texas,48.82,mostly urban
+48259,Kendall,Texas,58.16,mostly rural
+48261,Kenedy,Texas,100.0,completely rural
+48263,Kent,Texas,100.0,completely rural
+48265,Kerr,Texas,41.1,mostly urban
+48267,Kimble,Texas,44.3,mostly urban
+48269,King,Texas,100.0,completely rural
+48271,Kinney,Texas,20.46,mostly urban
+48273,Kleberg,Texas,18.87,mostly urban
+48275,Knox,Texas,100.0,completely rural
+48277,Lamar,Texas,47.08,mostly urban
+48279,Lamb,Texas,57.69,mostly rural
+48281,Lampasas,Texas,68.27,mostly rural
+48283,La Salle,Texas,46.35,mostly urban
+48285,Lavaca,Texas,81.32,mostly rural
+48287,Lee,Texas,69.72,mostly rural
+48289,Leon,Texas,100.0,completely rural
+48291,Liberty,Texas,63.23,mostly rural
+48293,Limestone,Texas,53.62,mostly rural
+48295,Lipscomb,Texas,100.0,completely rural
+48297,Live Oak,Texas,100.0,completely rural
+48299,Llano,Texas,45.18,mostly urban
+48301,Loving,Texas,100.0,completely rural
+48303,Lubbock,Texas,11.34,mostly urban
+48305,Lynn,Texas,56.72,mostly rural
+48307,McCulloch,Texas,35.33,mostly urban
+48309,McLennan,Texas,23.35,mostly urban
+48311,McMullen,Texas,100.0,completely rural
+48313,Madison,Texas,67.4,mostly rural
+48315,Marion,Texas,100.0,completely rural
+48317,Martin,Texas,100.0,completely rural
+48319,Mason,Texas,100.0,completely rural
+48321,Matagorda,Texas,36.42,mostly urban
+48323,Maverick,Texas,9.26,mostly urban
+48325,Medina,Texas,61.56,mostly rural
+48327,Menard,Texas,100.0,completely rural
+48329,Midland,Texas,12.29,mostly urban
+48331,Milam,Texas,56.18,mostly rural
+48333,Mills,Texas,100.0,completely rural
+48335,Mitchell,Texas,36.74,mostly urban
+48337,Montague,Texas,58.94,mostly rural
+48339,Montgomery,Texas,22.73,mostly urban
+48341,Moore,Texas,16.81,mostly urban
+48343,Morris,Texas,78.42,mostly rural
+48345,Motley,Texas,100.0,completely rural
+48347,Nacogdoches,Texas,46.46,mostly urban
+48349,Navarro,Texas,52.66,mostly rural
+48351,Newton,Texas,100.0,completely rural
+48353,Nolan,Texas,32.66,mostly urban
+48355,Nueces,Texas,6.45,mostly urban
+48357,Ochiltree,Texas,13.91,mostly urban
+48359,Oldham,Texas,100.0,completely rural
+48361,Orange,Texas,35.17,mostly urban
+48363,Palo Pinto,Texas,50.22,mostly rural
+48365,Panola,Texas,72.72,mostly rural
+48367,Parker,Texas,56.08,mostly rural
+48369,Parmer,Texas,60.02,mostly rural
+48371,Pecos,Texas,39.78,mostly urban
+48373,Polk,Texas,77.64,mostly rural
+48375,Potter,Texas,9.0,mostly urban
+48377,Presidio,Texas,40.47,mostly urban
+48379,Rains,Texas,93.23,mostly rural
+48381,Randall,Texas,14.38,mostly urban
+48383,Reagan,Texas,13.31,mostly urban
+48385,Real,Texas,100.0,completely rural
+48387,Red River,Texas,75.73,mostly rural
+48389,Reeves,Texas,14.5,mostly urban
+48391,Refugio,Texas,60.68,mostly rural
+48393,Roberts,Texas,100.0,completely rural
+48395,Robertson,Texas,73.85,mostly rural
+48397,Rockwall,Texas,16.04,mostly urban
+48399,Runnels,Texas,40.76,mostly urban
+48401,Rusk,Texas,65.87,mostly rural
+48403,Sabine,Texas,100.0,completely rural
+48405,San Augustine,Texas,100.0,completely rural
+48407,San Jacinto,Texas,100.0,completely rural
+48409,San Patricio,Texas,19.65,mostly urban
+48411,San Saba,Texas,49.36,mostly urban
+48413,Schleicher,Texas,100.0,completely rural
+48415,Scurry,Texas,31.7,mostly urban
+48417,Shackelford,Texas,100.0,completely rural
+48419,Shelby,Texas,79.43,mostly rural
+48421,Sherman,Texas,100.0,completely rural
+48423,Smith,Texas,31.61,mostly urban
+48425,Somervell,Texas,100.0,completely rural
+48427,Starr,Texas,23.71,mostly urban
+48429,Stephens,Texas,39.37,mostly urban
+48431,Sterling,Texas,100.0,completely rural
+48433,Stonewall,Texas,100.0,completely rural
+48435,Sutton,Texas,18.8,mostly urban
+48437,Swisher,Texas,37.57,mostly urban
+48439,Tarrant,Texas,1.29,mostly urban
+48441,Taylor,Texas,16.03,mostly urban
+48443,Terrell,Texas,100.0,completely rural
+48445,Terry,Texas,24.67,mostly urban
+48447,Throckmorton,Texas,100.0,completely rural
+48449,Titus,Texas,50.56,mostly rural
+48451,Tom Green,Texas,15.64,mostly urban
+48453,Travis,Texas,5.46,mostly urban
+48455,Trinity,Texas,77.24,mostly rural
+48457,Tyler,Texas,78.13,mostly rural
+48459,Upshur,Texas,79.3,mostly rural
+48461,Upton,Texas,100.0,completely rural
+48463,Uvalde,Texas,31.38,mostly urban
+48465,Val Verde,Texas,10.16,mostly urban
+48467,Van Zandt,Texas,75.02,mostly rural
+48469,Victoria,Texas,26.63,mostly urban
+48471,Walker,Texas,45.58,mostly urban
+48473,Waller,Texas,61.64,mostly rural
+48475,Ward,Texas,27.89,mostly urban
+48477,Washington,Texas,53.49,mostly rural
+48479,Webb,Texas,2.6,mostly urban
+48481,Wharton,Texas,49.9,mostly urban
+48483,Wheeler,Texas,100.0,completely rural
+48485,Wichita,Texas,10.67,mostly urban
+48487,Wilbarger,Texas,21.89,mostly urban
+48489,Willacy,Texas,34.58,mostly urban
+48491,Williamson,Texas,11.99,mostly urban
+48493,Wilson,Texas,85.86,mostly rural
+48495,Winkler,Texas,18.13,mostly urban
+48497,Wise,Texas,72.11,mostly rural
+48499,Wood,Texas,74.2,mostly rural
+48501,Yoakum,Texas,37.33,mostly urban
+48503,Young,Texas,33.57,mostly urban
+48505,Zapata,Texas,23.53,mostly urban
+48507,Zavala,Texas,38.03,mostly urban
+49001,Beaver,Utah,56.52,mostly rural
+49003,Box Elder,Utah,31.1,mostly urban
+49005,Cache,Utah,15.69,mostly urban
+49007,Carbon,Utah,33.71,mostly urban
+49009,Daggett,Utah,100.0,completely rural
+49011,Davis,Utah,0.92,mostly urban
+49013,Duchesne,Utah,68.21,mostly rural
+49015,Emery,Utah,73.64,mostly rural
+49017,Garfield,Utah,100.0,completely rural
+49019,Grand,Utah,25.39,mostly urban
+49021,Iron,Utah,22.55,mostly urban
+49023,Juab,Utah,43.47,mostly urban
+49025,Kane,Utah,54.92,mostly rural
+49027,Millard,Utah,73.94,mostly rural
+49029,Morgan,Utah,62.85,mostly rural
+49031,Piute,Utah,100.0,completely rural
+49033,Rich,Utah,100.0,completely rural
+49035,Salt Lake,Utah,0.9,mostly urban
+49037,San Juan,Utah,77.87,mostly rural
+49039,Sanpete,Utah,40.93,mostly urban
+49041,Sevier,Utah,64.71,mostly rural
+49043,Summit,Utah,39.2,mostly urban
+49045,Tooele,Utah,17.7,mostly urban
+49047,Uintah,Utah,46.85,mostly urban
+49049,Utah,Utah,3.33,mostly urban
+49051,Wasatch,Utah,26.85,mostly urban
+49053,Washington,Utah,15.21,mostly urban
+49055,Wayne,Utah,100.0,completely rural
+49057,Weber,Utah,5.8,mostly urban
+50001,Addison,Vermont,78.43,mostly rural
+50003,Bennington,Vermont,64.51,mostly rural
+50005,Caledonia,Vermont,74.39,mostly rural
+50007,Chittenden,Vermont,25.99,mostly urban
+50009,Essex,Vermont,100.0,completely rural
+50011,Franklin,Vermont,71.71,mostly rural
+50013,Grand Isle,Vermont,100.0,completely rural
+50015,Lamoille,Vermont,100.0,completely rural
+50017,Orange,Vermont,97.24,mostly rural
+50019,Orleans,Vermont,85.3,mostly rural
+50021,Rutland,Vermont,61.01,mostly rural
+50023,Washington,Vermont,52.81,mostly rural
+50025,Windham,Vermont,68.25,mostly rural
+50027,Windsor,Vermont,75.59,mostly rural
+51001,Accomack,Virginia,100.0,completely rural
+51003,Albemarle,Virginia,45.02,mostly urban
+51005,Alleghany,Virginia,52.39,mostly rural
+51007,Amelia,Virginia,100.0,completely rural
+51009,Amherst,Virginia,63.66,mostly rural
+51011,Appomattox,Virginia,100.0,completely rural
+51013,Arlington,Virginia,0.0,mostly urban
+51015,Augusta,Virginia,66.44,mostly rural
+51017,Bath,Virginia,100.0,completely rural
+51019,Bedford,Virginia,78.43,mostly rural
+51021,Bland,Virginia,100.0,completely rural
+51023,Botetourt,Virginia,64.1,mostly rural
+51025,Brunswick,Virginia,75.51,mostly rural
+51027,Buchanan,Virginia,100.0,completely rural
+51029,Buckingham,Virginia,100.0,completely rural
+51031,Campbell,Virginia,61.11,mostly rural
+51033,Caroline,Virginia,78.4,mostly rural
+51035,Carroll,Virginia,97.14,mostly rural
+51036,Charles City,Virginia,100.0,completely rural
+51037,Charlotte,Virginia,100.0,completely rural
+51041,Chesterfield,Virginia,5.93,mostly urban
+51043,Clarke,Virginia,69.52,mostly rural
+51045,Craig,Virginia,100.0,completely rural
+51047,Culpeper,Virginia,61.92,mostly rural
+51049,Cumberland,Virginia,96.0,mostly rural
+51051,Dickenson,Virginia,100.0,completely rural
+51053,Dinwiddie,Virginia,71.21,mostly rural
+51057,Essex,Virginia,77.28,mostly rural
+51059,Fairfax,Virginia,1.39,mostly urban
+51061,Fauquier,Virginia,57.5,mostly rural
+51063,Floyd,Virginia,100.0,completely rural
+51065,Fluvanna,Virginia,62.91,mostly rural
+51067,Franklin,Virginia,89.23,mostly rural
+51069,Frederick,Virginia,44.77,mostly urban
+51071,Giles,Virginia,66.28,mostly rural
+51073,Gloucester,Virginia,64.63,mostly rural
+51075,Goochland,Virginia,96.99,mostly rural
+51077,Grayson,Virginia,99.88,mostly rural
+51079,Greene,Virginia,51.24,mostly rural
+51081,Greensville,Virginia,87.01,mostly rural
+51083,Halifax,Virginia,77.08,mostly rural
+51085,Hanover,Virginia,39.09,mostly urban
+51087,Henrico,Virginia,4.27,mostly urban
+51089,Henry,Virginia,60.72,mostly rural
+51091,Highland,Virginia,100.0,completely rural
+51093,Isle of Wight,Virginia,57.39,mostly rural
+51095,James City,Virginia,15.85,mostly urban
+51097,King and Queen,Virginia,100.0,completely rural
+51099,King George,Virginia,73.19,mostly rural
+51101,King William,Virginia,83.21,mostly rural
+51103,Lancaster,Virginia,100.0,completely rural
+51105,Lee,Virginia,99.56,mostly rural
+51107,Loudoun,Virginia,12.6,mostly urban
+51109,Louisa,Virginia,100.0,completely rural
+51111,Lunenburg,Virginia,100.0,completely rural
+51113,Madison,Virginia,100.0,completely rural
+51115,Mathews,Virginia,100.0,completely rural
+51117,Mecklenburg,Virginia,77.81,mostly rural
+51119,Middlesex,Virginia,100.0,completely rural
+51121,Montgomery,Virginia,24.93,mostly urban
+51125,Nelson,Virginia,100.0,completely rural
+51127,New Kent,Virginia,100.0,completely rural
+51131,Northampton,Virginia,100.0,completely rural
+51133,Northumberland,Virginia,100.0,completely rural
+51135,Nottoway,Virginia,52.34,mostly rural
+51137,Orange,Virginia,57.78,mostly rural
+51139,Page,Virginia,80.16,mostly rural
+51141,Patrick,Virginia,100.0,completely rural
+51143,Pittsylvania,Virginia,85.63,mostly rural
+51145,Powhatan,Virginia,99.68,mostly rural
+51147,Prince Edward,Virginia,63.21,mostly rural
+51149,Prince George,Virginia,53.4,mostly rural
+51153,Prince William,Virginia,4.17,mostly urban
+51155,Pulaski,Virginia,46.9,mostly urban
+51157,Rappahannock,Virginia,100.0,completely rural
+51159,Richmond,Virginia,100.0,completely rural
+51161,Roanoke,Virginia,18.54,mostly urban
+51163,Rockbridge,Virginia,91.64,mostly rural
+51165,Rockingham,Virginia,59.33,mostly rural
+51167,Russell,Virginia,88.19,mostly rural
+51169,Scott,Virginia,82.12,mostly rural
+51171,Shenandoah,Virginia,66.58,mostly rural
+51173,Smyth,Virginia,75.29,mostly rural
+51175,Southampton,Virginia,97.96,mostly rural
+51177,Spotsylvania,Virginia,32.33,mostly urban
+51179,Stafford,Virginia,19.75,mostly urban
+51181,Surry,Virginia,100.0,completely rural
+51183,Sussex,Virginia,100.0,completely rural
+51185,Tazewell,Virginia,51.89,mostly rural
+51187,Warren,Virginia,50.41,mostly rural
+51191,Washington,Virginia,71.68,mostly rural
+51193,Westmoreland,Virginia,78.84,mostly rural
+51195,Wise,Virginia,56.67,mostly rural
+51197,Wythe,Virginia,75.33,mostly rural
+51199,York,Virginia,6.1,mostly urban
+51510,Alexandria,Virginia,0.0,mostly urban
+51515,Bedford,Virginia,2.06,mostly urban
+51520,Bristol,Virginia,0.04,mostly urban
+51530,Buena Vista,Virginia,3.89,mostly urban
+51540,Charlottesville,Virginia,0.0,mostly urban
+51550,Chesapeake,Virginia,7.63,mostly urban
+51570,Colonial Heights,Virginia,0.0,mostly urban
+51580,Covington,Virginia,0.0,mostly urban
+51590,Danville,Virginia,4.52,mostly urban
+51595,Emporia,Virginia,6.31,mostly urban
+51600,Fairfax,Virginia,0.0,mostly urban
+51610,Falls Church,Virginia,0.0,mostly urban
+51620,Franklin,Virginia,3.25,mostly urban
+51630,Fredericksburg,Virginia,1.17,mostly urban
+51640,Galax,Virginia,13.72,mostly urban
+51650,Hampton,Virginia,0.25,mostly urban
+51660,Harrisonburg,Virginia,0.0,mostly urban
+51670,Hopewell,Virginia,0.0,mostly urban
+51678,Lexington,Virginia,0.0,mostly urban
+51680,Lynchburg,Virginia,2.69,mostly urban
+51683,Manassas,Virginia,0.0,mostly urban
+51685,Manassas Park,Virginia,0.0,mostly urban
+51690,Martinsville,Virginia,0.0,mostly urban
+51700,Newport News,Virginia,0.03,mostly urban
+51710,Norfolk,Virginia,0.0,mostly urban
+51720,Norton,Virginia,2.58,mostly urban
+51730,Petersburg,Virginia,2.11,mostly urban
+51735,Poquoson,Virginia,6.5,mostly urban
+51740,Portsmouth,Virginia,0.0,mostly urban
+51750,Radford,Virginia,2.93,mostly urban
+51760,Richmond,Virginia,0.0,mostly urban
+51770,Roanoke,Virginia,0.01,mostly urban
+51775,Salem,Virginia,0.0,mostly urban
+51790,Staunton,Virginia,3.69,mostly urban
+51800,Suffolk,Virginia,21.63,mostly urban
+51810,Virginia Beach,Virginia,1.53,mostly urban
+51820,Waynesboro,Virginia,2.53,mostly urban
+51830,Williamsburg,Virginia,0.0,mostly urban
+51840,Winchester,Virginia,0.0,mostly urban
+53001,Adams,Washington,40.16,mostly urban
+53003,Asotin,Washington,6.65,mostly urban
+53005,Benton,Washington,10.57,mostly urban
+53007,Chelan,Washington,27.22,mostly urban
+53009,Clallam,Washington,35.45,mostly urban
+53011,Clark,Washington,13.77,mostly urban
+53013,Columbia,Washington,34.26,mostly urban
+53015,Cowlitz,Washington,28.65,mostly urban
+53017,Douglas,Washington,26.6,mostly urban
+53019,Ferry,Washington,100.0,completely rural
+53021,Franklin,Washington,13.33,mostly urban
+53023,Garfield,Washington,100.0,completely rural
+53025,Grant,Washington,38.75,mostly urban
+53027,Grays Harbor,Washington,40.11,mostly urban
+53029,Island,Washington,46.9,mostly urban
+53031,Jefferson,Washington,57.47,mostly rural
+53033,King,Washington,3.21,mostly urban
+53035,Kitsap,Washington,16.74,mostly urban
+53037,Kittitas,Washington,40.06,mostly urban
+53039,Klickitat,Washington,60.21,mostly rural
+53041,Lewis,Washington,60.65,mostly rural
+53043,Lincoln,Washington,100.0,completely rural
+53045,Mason,Washington,63.7,mostly rural
+53047,Okanogan,Washington,79.99,mostly rural
+53049,Pacific,Washington,64.77,mostly rural
+53051,Pend Oreille,Washington,83.11,mostly rural
+53053,Pierce,Washington,6.59,mostly urban
+53055,San Juan,Washington,100.0,completely rural
+53057,Skagit,Washington,29.02,mostly urban
+53059,Skamania,Washington,100.0,completely rural
+53061,Snohomish,Washington,10.82,mostly urban
+53063,Spokane,Washington,13.67,mostly urban
+53065,Stevens,Washington,79.21,mostly rural
+53067,Thurston,Washington,20.99,mostly urban
+53069,Wahkiakum,Washington,100.0,completely rural
+53071,Walla Walla,Washington,17.12,mostly urban
+53073,Whatcom,Washington,25.87,mostly urban
+53075,Whitman,Washington,27.53,mostly urban
+53077,Yakima,Washington,23.52,mostly urban
+54001,Barbour,West Virginia,83.72,mostly rural
+54003,Berkeley,West Virginia,31.63,mostly urban
+54005,Boone,West Virginia,81.41,mostly rural
+54007,Braxton,West Virginia,100.0,completely rural
+54009,Brooke,West Virginia,42.13,mostly urban
+54011,Cabell,West Virginia,21.56,mostly urban
+54013,Calhoun,West Virginia,100.0,completely rural
+54015,Clay,West Virginia,100.0,completely rural
+54017,Doddridge,West Virginia,100.0,completely rural
+54019,Fayette,West Virginia,57.87,mostly rural
+54021,Gilmer,West Virginia,60.72,mostly rural
+54023,Grant,West Virginia,78.68,mostly rural
+54025,Greenbrier,West Virginia,69.74,mostly rural
+54027,Hampshire,West Virginia,100.0,completely rural
+54029,Hancock,West Virginia,30.31,mostly urban
+54031,Hardy,West Virginia,80.52,mostly rural
+54033,Harrison,West Virginia,37.05,mostly urban
+54035,Jackson,West Virginia,71.44,mostly rural
+54037,Jefferson,West Virginia,48.37,mostly urban
+54039,Kanawha,West Virginia,25.19,mostly urban
+54041,Lewis,West Virginia,68.99,mostly rural
+54043,Lincoln,West Virginia,100.0,completely rural
+54045,Logan,West Virginia,70.75,mostly rural
+54047,McDowell,West Virginia,85.99,mostly rural
+54049,Marion,West Virginia,41.48,mostly urban
+54051,Marshall,West Virginia,48.99,mostly urban
+54053,Mason,West Virginia,65.01,mostly rural
+54055,Mercer,West Virginia,40.73,mostly urban
+54057,Mineral,West Virginia,64.59,mostly rural
+54059,Mingo,West Virginia,89.74,mostly rural
+54061,Monongalia,West Virginia,26.86,mostly urban
+54063,Monroe,West Virginia,88.52,mostly rural
+54065,Morgan,West Virginia,100.0,completely rural
+54067,Nicholas,West Virginia,87.16,mostly rural
+54069,Ohio,West Virginia,23.09,mostly urban
+54071,Pendleton,West Virginia,100.0,completely rural
+54073,Pleasants,West Virginia,54.46,mostly rural
+54075,Pocahontas,West Virginia,100.0,completely rural
+54077,Preston,West Virginia,90.45,mostly rural
+54079,Putnam,West Virginia,35.78,mostly urban
+54081,Raleigh,West Virginia,39.26,mostly urban
+54083,Randolph,West Virginia,62.38,mostly rural
+54085,Ritchie,West Virginia,100.0,completely rural
+54087,Roane,West Virginia,79.99,mostly rural
+54089,Summers,West Virginia,72.13,mostly rural
+54091,Taylor,West Virginia,59.7,mostly rural
+54093,Tucker,West Virginia,100.0,completely rural
+54095,Tyler,West Virginia,91.05,mostly rural
+54097,Upshur,West Virginia,64.0,mostly rural
+54099,Wayne,West Virginia,65.19,mostly rural
+54101,Webster,West Virginia,100.0,completely rural
+54103,Wetzel,West Virginia,53.86,mostly rural
+54105,Wirt,West Virginia,100.0,completely rural
+54107,Wood,West Virginia,26.77,mostly urban
+54109,Wyoming,West Virginia,88.88,mostly rural
+55001,Adams,Wisconsin,100.0,completely rural
+55003,Ashland,Wisconsin,54.86,mostly rural
+55005,Barron,Wisconsin,65.93,mostly rural
+55007,Bayfield,Wisconsin,100.0,completely rural
+55009,Brown,Wisconsin,14.49,mostly urban
+55011,Buffalo,Wisconsin,100.0,completely rural
+55013,Burnett,Wisconsin,100.0,completely rural
+55015,Calumet,Wisconsin,27.53,mostly urban
+55017,Chippewa,Wisconsin,46.14,mostly urban
+55019,Clark,Wisconsin,91.73,mostly rural
+55021,Columbia,Wisconsin,60.67,mostly rural
+55023,Crawford,Wisconsin,62.42,mostly rural
+55025,Dane,Wisconsin,12.33,mostly urban
+55027,Dodge,Wisconsin,48.64,mostly urban
+55029,Door,Wisconsin,68.99,mostly rural
+55031,Douglas,Wisconsin,38.76,mostly urban
+55033,Dunn,Wisconsin,59.31,mostly rural
+55035,Eau Claire,Wisconsin,23.0,mostly urban
+55037,Florence,Wisconsin,100.0,completely rural
+55039,Fond du Lac,Wisconsin,35.13,mostly urban
+55041,Forest,Wisconsin,100.0,completely rural
+55043,Grant,Wisconsin,64.49,mostly rural
+55045,Green,Wisconsin,60.22,mostly rural
+55047,Green Lake,Wisconsin,74.33,mostly rural
+55049,Iowa,Wisconsin,79.92,mostly rural
+55051,Iron,Wisconsin,67.8,mostly rural
+55053,Jackson,Wisconsin,72.24,mostly rural
+55055,Jefferson,Wisconsin,34.05,mostly urban
+55057,Juneau,Wisconsin,83.49,mostly rural
+55059,Kenosha,Wisconsin,10.72,mostly urban
+55061,Kewaunee,Wisconsin,72.33,mostly rural
+55063,La Crosse,Wisconsin,16.83,mostly urban
+55065,Lafayette,Wisconsin,100.0,completely rural
+55067,Langlade,Wisconsin,59.16,mostly rural
+55069,Lincoln,Wisconsin,54.05,mostly rural
+55071,Manitowoc,Wisconsin,38.86,mostly urban
+55073,Marathon,Wisconsin,42.99,mostly urban
+55075,Marinette,Wisconsin,61.83,mostly rural
+55077,Marquette,Wisconsin,100.0,completely rural
+55078,Menominee,Wisconsin,100.0,completely rural
+55079,Milwaukee,Wisconsin,0.19,mostly urban
+55081,Monroe,Wisconsin,57.67,mostly rural
+55083,Oconto,Wisconsin,81.34,mostly rural
+55085,Oneida,Wisconsin,74.97,mostly rural
+55087,Outagamie,Wisconsin,24.74,mostly urban
+55089,Ozaukee,Wisconsin,24.89,mostly urban
+55091,Pepin,Wisconsin,100.0,completely rural
+55093,Pierce,Wisconsin,53.65,mostly rural
+55095,Polk,Wisconsin,85.47,mostly rural
+55097,Portage,Wisconsin,36.03,mostly urban
+55099,Price,Wisconsin,100.0,completely rural
+55101,Racine,Wisconsin,12.28,mostly urban
+55103,Richland,Wisconsin,72.14,mostly rural
+55105,Rock,Wisconsin,20.42,mostly urban
+55107,Rusk,Wisconsin,76.62,mostly rural
+55109,St. Croix,Wisconsin,53.17,mostly rural
+55111,Sauk,Wisconsin,46.15,mostly urban
+55113,Sawyer,Wisconsin,84.2,mostly rural
+55115,Shawano,Wisconsin,74.39,mostly rural
+55117,Sheboygan,Wisconsin,28.28,mostly urban
+55119,Taylor,Wisconsin,80.44,mostly rural
+55121,Trempealeau,Wisconsin,89.61,mostly rural
+55123,Vernon,Wisconsin,85.69,mostly rural
+55125,Vilas,Wisconsin,100.0,completely rural
+55127,Walworth,Wisconsin,34.2,mostly urban
+55129,Washburn,Wisconsin,83.2,mostly rural
+55131,Washington,Wisconsin,30.78,mostly urban
+55133,Waukesha,Wisconsin,9.86,mostly urban
+55135,Waupaca,Wisconsin,64.94,mostly rural
+55137,Waushara,Wisconsin,89.5,mostly rural
+55139,Winnebago,Wisconsin,13.43,mostly urban
+55141,Wood,Wisconsin,36.68,mostly urban
+56001,Albany,Wyoming,11.94,mostly urban
+56003,Big Horn,Wyoming,100.0,completely rural
+56005,Campbell,Wyoming,29.07,mostly urban
+56007,Carbon,Wyoming,41.63,mostly urban
+56009,Converse,Wyoming,55.36,mostly rural
+56011,Crook,Wyoming,100.0,completely rural
+56013,Fremont,Wyoming,51.42,mostly rural
+56015,Goshen,Wyoming,46.0,mostly urban
+56017,Hot Springs,Wyoming,31.48,mostly urban
+56019,Johnson,Wyoming,49.03,mostly urban
+56021,Laramie,Wyoming,19.78,mostly urban
+56023,Lincoln,Wyoming,82.73,mostly rural
+56025,Natrona,Wyoming,14.45,mostly urban
+56027,Niobrara,Wyoming,100.0,completely rural
+56029,Park,Wyoming,44.24,mostly urban
+56031,Platte,Wyoming,58.65,mostly rural
+56033,Sheridan,Wyoming,35.48,mostly urban
+56035,Sublette,Wyoming,100.0,completely rural
+56037,Sweetwater,Wyoming,10.92,mostly urban
+56039,Teton,Wyoming,46.43,mostly urban
+56041,Uinta,Wyoming,43.1,mostly urban
+56043,Washakie,Wyoming,35.95,mostly urban
+56045,Weston,Wyoming,54.54,mostly rural
+72001,Adjuntas,Puerto Rico,43.54,mostly urban
+72003,Aguada,Puerto Rico,0.0,mostly urban
+72005,Aguadilla,Puerto Rico,0.07,mostly urban
+72007,Aguas Buenas,Puerto Rico,10.54,mostly urban
+72009,Aibonito,Puerto Rico,12.01,mostly urban
+72011,Añasco,Puerto Rico,12.59,mostly urban
+72013,Arecibo,Puerto Rico,9.37,mostly urban
+72015,Arroyo,Puerto Rico,4.22,mostly urban
+72017,Barceloneta,Puerto Rico,2.05,mostly urban
+72019,Barranquitas,Puerto Rico,3.19,mostly urban
+72021,Bayamón,Puerto Rico,0.01,mostly urban
+72023,Cabo Rojo,Puerto Rico,4.53,mostly urban
+72025,Caguas,Puerto Rico,0.9,mostly urban
+72027,Camuy,Puerto Rico,13.49,mostly urban
+72029,Canóvanas,Puerto Rico,2.28,mostly urban
+72031,Carolina,Puerto Rico,0.16,mostly urban
+72033,Cataño,Puerto Rico,0.01,mostly urban
+72035,Cayey,Puerto Rico,9.16,mostly urban
+72037,Ceiba,Puerto Rico,11.81,mostly urban
+72039,Ciales,Puerto Rico,38.45,mostly urban
+72041,Cidra,Puerto Rico,3.89,mostly urban
+72043,Coamo,Puerto Rico,18.87,mostly urban
+72045,Comerío,Puerto Rico,12.56,mostly urban
+72047,Corozal,Puerto Rico,6.38,mostly urban
+72049,Culebra,Puerto Rico,100.0,completely rural
+72051,Dorado,Puerto Rico,0.02,mostly urban
+72053,Fajardo,Puerto Rico,2.12,mostly urban
+72054,Florida,Puerto Rico,17.91,mostly urban
+72055,Guánica,Puerto Rico,11.26,mostly urban
+72057,Guayama,Puerto Rico,9.12,mostly urban
+72059,Guayanilla,Puerto Rico,12.11,mostly urban
+72061,Guaynabo,Puerto Rico,0.01,mostly urban
+72063,Gurabo,Puerto Rico,0.36,mostly urban
+72065,Hatillo,Puerto Rico,10.84,mostly urban
+72067,Hormigueros,Puerto Rico,0.2,mostly urban
+72069,Humacao,Puerto Rico,0.48,mostly urban
+72071,Isabela,Puerto Rico,6.54,mostly urban
+72073,Jayuya,Puerto Rico,32.1,mostly urban
+72075,Juana Díaz,Puerto Rico,6.74,mostly urban
+72077,Juncos,Puerto Rico,3.21,mostly urban
+72079,Lajas,Puerto Rico,18.27,mostly urban
+72081,Lares,Puerto Rico,25.72,mostly urban
+72083,Las Marías,Puerto Rico,66.31,mostly rural
+72085,Las Piedras,Puerto Rico,2.43,mostly urban
+72087,Loíza,Puerto Rico,0.74,mostly urban
+72089,Luquillo,Puerto Rico,8.86,mostly urban
+72091,Manatí,Puerto Rico,6.93,mostly urban
+72093,Maricao,Puerto Rico,57.03,mostly rural
+72095,Maunabo,Puerto Rico,24.11,mostly urban
+72097,Mayagüez,Puerto Rico,4.06,mostly urban
+72099,Moca,Puerto Rico,12.56,mostly urban
+72101,Morovis,Puerto Rico,11.06,mostly urban
+72103,Naguabo,Puerto Rico,8.38,mostly urban
+72105,Naranjito,Puerto Rico,0.0,mostly urban
+72107,Orocovis,Puerto Rico,35.89,mostly urban
+72109,Patillas,Puerto Rico,25.58,mostly urban
+72111,Peñuelas,Puerto Rico,16.37,mostly urban
+72113,Ponce,Puerto Rico,4.41,mostly urban
+72115,Quebradillas,Puerto Rico,7.55,mostly urban
+72117,Rincón,Puerto Rico,0.0,mostly urban
+72119,Río Grande,Puerto Rico,2.56,mostly urban
+72121,Sabana Grande,Puerto Rico,8.32,mostly urban
+72123,Salinas,Puerto Rico,13.69,mostly urban
+72125,San Germán,Puerto Rico,8.9,mostly urban
+72127,San Juan,Puerto Rico,0.0,mostly urban
+72129,San Lorenzo,Puerto Rico,11.22,mostly urban
+72131,San Sebastián,Puerto Rico,13.12,mostly urban
+72133,Santa Isabel,Puerto Rico,12.8,mostly urban
+72135,Toa Alta,Puerto Rico,0.0,mostly urban
+72137,Toa Baja,Puerto Rico,0.0,mostly urban
+72139,Trujillo Alto,Puerto Rico,0.0,mostly urban
+72141,Utuado,Puerto Rico,46.93,mostly urban
+72143,Vega Alta,Puerto Rico,1.75,mostly urban
+72145,Vega Baja,Puerto Rico,4.18,mostly urban
+72147,Vieques,Puerto Rico,11.51,mostly urban
+72149,Villalba,Puerto Rico,13.46,mostly urban
+72151,Yabucoa,Puerto Rico,15.15,mostly urban
+72153,Yauco,Puerto Rico,18.41,mostly urban
