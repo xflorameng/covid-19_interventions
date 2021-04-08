@@ -23,7 +23,8 @@ for i in MAX_HOUSEHOLD_SIZE_POOR:
                 time_steps_pre_lockdown=TIME_STEPS_PRE_LOCKDOWN,
                 time_steps_post_lockdown_pre_reopening=TIME_STEPS_POST_LOCKDOWN_PRE_REOPENING,
                 rewiring_prob=REWIRING_PROB,
-                num_trials=NUM_TRIALS, filename_tag=FILENAME_TAG)
+                num_trials=NUM_TRIALS, filename_tag=FILENAME_TAG,
+                dir_name_tag=DIR_NAME_TAG, timestamp=False)
 
 # Robustness test of same-age households
 for i in MAX_HOUSEHOLD_SIZE_POOR:
@@ -35,4 +36,5 @@ for i in MAX_HOUSEHOLD_SIZE_POOR:
                 time_steps_pre_lockdown=TIME_STEPS_PRE_LOCKDOWN,
                 time_steps_post_lockdown_pre_reopening=TIME_STEPS_POST_LOCKDOWN_PRE_REOPENING,
                 rewiring_prob=REWIRING_PROB,
-                num_trials=NUM_TRIALS, filename_tag=FILENAME_TAG)
+                num_trials=NUM_TRIALS, filename_tag=FILENAME_TAG,
+                dir_name_tag=DIR_NAME_TAG+'_same_age', timestamp=False)
