@@ -1158,7 +1158,7 @@ class Simulation:
                 self.total_output[household_type].append(total_output[household_type])
                 self.total_subsidy[household_type].append(total_subsidy[household_type])
 
-    def save_to_csv(self, filename_tag='single_simulation', timestamp=True, path='../results/stats/'):
+    def save_to_csv(self, filename_tag='single_simulation', timestamp=True, path=''):
         """Save aggregate statistics to a csv file"""
         stats = ['stay_at_home_count', 'isolation_count', 'infections', 'recoveries',
                  'hospitalizations', 'hospitalizations_cumsum', 'ICU_count', 'viral_deaths', 'undertreated_deaths',
@@ -1239,7 +1239,7 @@ class Simulation:
         return res
 
     def plot_age_dist(self, households=None,
-                      figsize=(6, 4), save=False, filename_tag='age_dist', timestamp=False, path='../results/plots/'):
+                      figsize=(6, 4), save=False, filename_tag='age_dist', timestamp=False, path=''):
         """Plot the age distribution for the households specified
         If households is None, then all nodes are considered.
         """
@@ -1273,7 +1273,7 @@ class Simulation:
         plt.close()
 
     def plot_p_despair(self, average_worker_degree, p_despair_factor=5.5e-5, x_label='Output',
-                       figsize=(6, 4), save=False, filename_tag='p_despair', timestamp=False, path='../results/plots/'):
+                       figsize=(6, 4), save=False, filename_tag='p_despair', timestamp=False, path=''):
         """Plot the probability of despair as a function of output or output loss"""
         plt.figure(figsize=figsize)
         plt.style.use('seaborn-white')
@@ -1322,7 +1322,7 @@ class Simulation:
 
     def plot_time_series(self, y_strs, y_labels, title, normalized=True, household_type=None,
                          vlines=None, vline_labels=None, figsize=(6, 4),
-                         save=False, filename_tag='time_series', timestamp=False, path='../results/plots/'):
+                         save=False, filename_tag='time_series', timestamp=False, path=''):
         """Plot a single or multiple time series of recorded statistics"""
         linestyles = ['--', ':', '-.', (0, (1, 10)), (0, (5, 10))]
         if vlines is not None:
@@ -1358,7 +1358,7 @@ class Simulation:
     def plot_econ_time_series(self, title, normalized=False, household_type=None, y_lims=None,
                               vlines=None, vline_labels=None, figsize=(4, 4),
                               save=False, filename_tag='econ_measures_separate',
-                              timestamp=False, path='../results/plots/'):
+                              timestamp=False, path=''):
         """Plot all time series of economic measures in one figure"""
 
         y_strs = ['stay_at_home_count', 'active_count', 'total_output', 'total_subsidy']
@@ -1415,7 +1415,7 @@ class Simulation:
 
     def plot_all_time_series(self, title, normalized=True, household_type=None, y_lims=None,
                              vlines=None, vline_labels=None, figsize=(4, 4),
-                             save=False, filename_tag='all_measures', timestamp=False, path='../results/plots/'):
+                             save=False, filename_tag='all_measures', timestamp=False, path=''):
         """Plot all time series recorded in one figure"""
 
         y_strs_l = ['infections', 'recoveries', 'stay_at_home_count', 'isolation_count',
@@ -1507,7 +1507,7 @@ def monte_carlo_save_to_csv(household_network=True, same_age_household=False,
                             hospital_capacity=2.5e-3, undertreatment_effect=.5,
                             despair_prob_factor=5.5e-5, inactive_prob_factor=1e-2,
                             num_trials=10, normalized=True,
-                            filename_tag='', timestamp=True, path='../results/stats/'):
+                            filename_tag='', timestamp=True, path=''):
     """Perform Monte Carlo simulation and save results to a csv file"""
     assert household_network in {True, False}, 'household_network can be either True or False'
     assert same_age_household in {True, False}, 'same_age_household can be either True or False'
@@ -1711,7 +1711,7 @@ def monte_carlo_save_to_csv(household_network=True, same_age_household=False,
                     writer.writerow(values)
 
 
-def monte_carlo(create_dir=True, dir_name_tag='', timestamp=True, path='../results/stats/', **kwargs):
+def monte_carlo(create_dir=True, dir_name_tag='', timestamp=True, path='', **kwargs):
     """Perform Monte Carlo simulation for one or multiple sets of specifications, and save results to
     a directory of csv files
     """
@@ -1742,7 +1742,7 @@ def monte_carlo(create_dir=True, dir_name_tag='', timestamp=True, path='../resul
 
 
 def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
-                         by_household_type=False, drop_after_time=None, csv_path='../results/stats/'):
+                         by_household_type=False, drop_after_time=None, csv_path=''):
     """Read Monte Carlo simulation results from all csv files in the directory specified"""
     assert x_method in {None, 'min', 'max', 'average'}, 'x_method must be None, "min", "max", or "average"'
     assert y_method in {None, 'min', 'max', 'average'}, 'y_method must be None, "min", "max", or "average"'
@@ -1939,7 +1939,7 @@ def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
 
 def monte_carlo_single_plot(x, x_label, x_method, y, y_label, y_method, std=True, drop_after_time=None,
                             figsize=(6, 4), save=False, filename_tag='', timestamp=False,
-                            plot_path='../results/plots/', csv_path='../results/stats/'):
+                            plot_path='', csv_path=''):
     """Create a single plot using Monte Carlo simulation results from all csv files in the directory specified"""
     assert isinstance(filename_tag, str), 'filename_tag must be a string'
     x_values, x_std, y_values, y_std, *_ = monte_carlo_read_csv(x, x_method, y, y_method, [None, None], None,
@@ -1967,7 +1967,7 @@ def monte_carlo_multi_plots(x, x_label, x_method, ys, y_labels, y_methods, y_axi
                             y_scale=1, ylim=None, std=True, by_household_type=False, drop_after_time=None,
                             figsize=(6, 4), legend=True, ordered_legends=False, legend_kwargs=None,
                             save=False, filename_tag='', timestamp=False,
-                            plot_path='../results/plots/', csv_path='../results/stats/'):
+                            plot_path='', csv_path=''):
     """Create multiple plots in one figure using Monte Carlo simulation results from all csv files
     in the directory specified
     """
@@ -2033,7 +2033,7 @@ def monte_carlo_multi_plots(x, x_label, x_method, ys, y_labels, y_methods, y_axi
 def monte_carlo_multi_plots_approx(x, x_label, x_method, ys, y_labels, y_methods,
                                    ylim=None, std=True, by_household_type=False, drop_after_time=None,
                                    figsize=(6, 4), legend_kwargs=None, save=False, filename_tag='', timestamp=False,
-                                   plot_path='../results/plots/', csv_path='../results/stats/'):
+                                   plot_path='', csv_path=''):
     """Create multiple plots in one figure using Monte Carlo simulation results from all csv files
     in the directory specified
     """
@@ -2121,7 +2121,7 @@ def monte_carlo_multi_plots_approx(x, x_label, x_method, ys, y_labels, y_methods
 def monte_carlo_multi_controls(x, x_label, y, y_label, y_method, control, control_label,
                                y_scale=1, ylim=None, std=True, by_household_type=False, drop_after_time=None,
                                figsize=(6, 4), legend_kwargs=None, save=False, filename_tag='', timestamp=False,
-                               plot_path='../results/plots/', csv_path='../results/stats/'):
+                               plot_path='', csv_path=''):
     """Create multiple plots in one figure, with each plot corresponding to one control, using Monte Carlo simulation
     results from all csv files in the directory specified
     """
@@ -2208,7 +2208,7 @@ def monte_carlo_multi_controls(x, x_label, y, y_label, y_method, control, contro
 def monte_carlo_plot_cbar(x, x_label, x_method, y, y_label, y_method, color_by, color_by_label,
                           by_household_type=False, drop_after_time=None,
                           figsize=(6, 4), save=False, filename_tag='', timestamp=False,
-                          plot_path='../results/plots/', csv_path='../results/stats/'):
+                          plot_path='', csv_path=''):
     """Create a single plot with a color bar using Monte Carlo simulation results from all csv files
     in the directory specified
     """
@@ -2246,7 +2246,7 @@ def monte_carlo_plot_cbar(x, x_label, x_method, y, y_label, y_method, color_by, 
 
 def monte_carlo_contourf(x, x_label, y, y_label, color_by, color_by_label, color_by_method, drop_after_time=None,
                          figsize=(4, 4), save=False, filename_tag='', timestamp=False,
-                         plot_path='../results/plots/', csv_path='../results/stats/'):
+                         plot_path='', csv_path=''):
     """Plot contours using Monte Carlo simulation results from all csv files in the directory specified"""
     assert isinstance(filename_tag, str), 'filename_tag must be a string'
     x_values, _, y_values, _, color_by_values, _ = monte_carlo_read_csv(x, None, y, None, color_by, color_by_method,
