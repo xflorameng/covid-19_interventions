@@ -1,9 +1,11 @@
 import os
+import ast
 import csv
 import math
 import copy
 import glob
 import random
+import operator
 import itertools
 from datetime import datetime
 
@@ -14,6 +16,7 @@ import networkx as nx
 from networkx.generators.random_graphs import watts_strogatz_graph, fast_gnp_random_graph
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
+from matplotlib.ticker import PercentFormatter
 
 
 def sample_age():
@@ -192,10 +195,10 @@ class Simulation:
     max_hospital_after_symptoms = 12
     max_ICU_after_hospital = 14
     max_death_after_ICU = 14
-    # Probability of hospitalization conditional on showing symptoms
+    # Probability of hospitalization conditional on symptomatic infection
     hospitalization_rates = {'0-9': .001, '10-19': .003, '20-29': .012, '30-39': .032, '40-49': .049,
                              '50-59': .102, '60-69': .166, '70-79': .243, '80-120': .273}
-    # Probability of admission to the ICU conditional on hospitalization
+    # Probability of ICU admission conditional on hospitalization
     ICU_rates = {'0-9': .05, '10-19': .05, '20-29': .05, '30-39': .05, '40-49': .063,
                  '50-59': .122, '60-69': .274, '70-79': .432, '80-120': .709}
     # Probability of death conditional on admission to the ICU
@@ -257,8 +260,10 @@ class Simulation:
         for i in range(self.num_nodes):
             self.node_dict[i].connections = copy.deepcopy(self.node_dict[i].colleagues)
 
-    def household_network(self, num_households, max_household_size=5, household_type=None, personal_output_scale=1.0):
+    def household_network(self, num_households, max_household_size=5, household_type=None, personal_output_scale=1.0,
+                          same_age=False):
         """Generate a network that comprises disconnected cliques which represent household connections
+        If same_age is True, then members in the same household are in the same age group.
 
         Always the first network to generate if used.
         """
@@ -273,7 +278,15 @@ class Simulation:
         self.max_household_sizes[household_type] = max_household_size
         household_sizes = np.random.randint(low=1, high=max_household_size + 1, size=num_households)
         num_nodes = int(np.sum(household_sizes))
-        if self.node_dict is None:
+        if same_age:
+            household_ages = [sample_age() for _ in range(num_households)]
+            ages = np.repeat(household_ages, household_sizes)
+            if self.node_dict is None:
+                self.node_dict = {i: Node(ages[i], personal_output_scale) for i in range(num_nodes)}
+            else:
+                self.node_dict.update({i: Node(ages[i - self.num_nodes], personal_output_scale)
+                                       for i in range(self.num_nodes, self.num_nodes + num_nodes)})
+        elif self.node_dict is None:
             self.node_dict = {i: Node(sample_age(), personal_output_scale) for i in range(num_nodes)}
         else:
             self.node_dict.update({i: Node(sample_age(), personal_output_scale)
@@ -637,6 +650,100 @@ class Simulation:
                             node.old_output = 0
         return total_subsidy
 
+    def check_despair_limited_subsidy(self, p_despair_factor=5.5e-5, subsidy=.3,
+                                      subsidy_population_factor=.1, allocation='greedy'):
+        """Check output per capita in each household, subsidize nodes in need subject to a total budget,
+        and sample deaths of despair
+
+        If allocation is greedy, then a fixed subsidy will be given to each node among the ones that have the low output.
+        Otherwise, a uniform subsidy will be given to each node that has less than the sufficient output
+        in the amount as specified.
+        """
+        assert 0 <= p_despair_factor <= 1, 'The factor of probability of despair must be between 0 and 1'
+        legal_types = {int, np.int, np.int8, np.int16, np.int32, np.int64,
+                       float, np.float, np.float16, np.float32, np.float64, np.float128}
+        assert type(subsidy) in legal_types and subsidy >= 0, 'Subsidy must be a nonnegative number'
+        assert type(subsidy_population_factor) in legal_types and 0 <= subsidy_population_factor <= 1, \
+            'subsidy_population_factor must be between 0 and 1'
+        assert allocation in {'greedy', 'random'}, 'Allocation can be either greedy or random'
+        num_subsidies = int(subsidy_population_factor * self.num_nodes)  # Number of subsidies available per day
+        sufficient_output = (1 + 1 / self.personal_to_linkage_output_ratio) * Node.personal_output
+
+        nodes_needing_subsidy = {}  # Key: node ID. Value: the amount of subsidy needed to reach sufficient output
+        household_finance = {}
+        if not self.household_grouping:
+            total_subsidy = 0
+        else:
+            total_subsidy = {'poor': 0, 'rich': 0}
+        for h, household in self.household_dict.items():
+            household_members = household['members']
+            household_type = household['type']
+            # Check if the household currently faces despair
+            num_at_home = len(household_members)
+            household_output = 0
+            for i in household_members:
+                node = self.node_dict[i]
+                output = 0
+                if node.hospitalized or node.deceased:
+                    num_at_home -= 1
+                else:
+                    if node.active:
+                        output += node.output
+                        if not node.stay_at_home and not node.isolated:
+                            for j in node.colleagues:
+                                colleague = self.node_dict[j]
+                                if colleague.active and not colleague.stay_at_home and not colleague.isolated:
+                                    if household_type == 'rich':
+                                        output += self.colleague_linkage_output * self.rich_to_poor_output_ratio
+                                    else:
+                                        output += self.colleague_linkage_output
+                        household_output += output
+                    if output < sufficient_output:
+                        nodes_needing_subsidy[i] = sufficient_output - output
+            if num_at_home > 0:
+                household_finance[h] = {'num_at_home': num_at_home, 'household_output': household_output}
+        # Decide on nodes to subsidize
+        if len(nodes_needing_subsidy) <= num_subsidies:
+            nodes_to_subsidize = list(nodes_needing_subsidy.keys())
+        else:
+            if allocation == 'greedy':
+                sorted_dict = sorted(nodes_needing_subsidy.items(), key=operator.itemgetter(1), reverse=True)
+                nodes_to_subsidize = [sorted_dict[i][0] for i in range(num_subsidies)]
+            else:  # Random allocation
+                nodes_to_subsidize = np.random.choice(list(nodes_needing_subsidy.keys()), num_subsidies, replace=False)
+        # Subsidize chosen nodes and calculate total subsidies
+        if not self.household_grouping:
+            total_subsidy = subsidy * len(nodes_to_subsidize)
+            for i in nodes_to_subsidize:
+                node = self.node_dict[i]
+                household_finance[node.household]['household_output'] += subsidy
+        else:
+            for i in nodes_to_subsidize:
+                node = self.node_dict[i]
+                household_finance[node.household]['household_output'] += subsidy
+                total_subsidy[self.household_dict[node.household]['type']] += subsidy
+        # Sample deaths of despair
+        for h, record in household_finance.items():
+            output_loss = sufficient_output - record['household_output'] / record['num_at_home']
+            if output_loss > 0:
+                p_despair = self.sigmoid(output_loss) * p_despair_factor
+                for i in self.household_dict[h]['members']:
+                    node = self.node_dict[i]
+                    if node.hospitalized or node.deceased:
+                        continue
+                    if random.random() < p_despair:
+                        node.deceased = 'despair'
+                        node.active = False
+                        node.output = 0
+                        node.old_active = False
+                        node.old_output = 0
+
+        del nodes_needing_subsidy
+        del nodes_to_subsidize
+        del household_finance
+
+        return total_subsidy
+
     def check_output(self, total_subsidy, p_inactive_factor=1e-2):
         """Probabilistically lay off workers if the total subsidy does not cover the total output loss"""
         if type(total_subsidy) in {float, int}:
@@ -872,7 +979,8 @@ class Simulation:
 
     def simulation_step(self, p_trans_household, p_trans_other, num_viral_tests, contact_tracing_efficacy=.7,
                         hospital_capacity=2.5e-3, undertreatment_effect=.5,
-                        p_despair_factor=5.5e-5, subsidy=None, p_inactive_factor=1e-2, record_stats=True):
+                        p_despair_factor=5.5e-5, subsidy=None, subsidy_population_factor=.1, allocation=None,
+                        p_inactive_factor=1e-2, record_stats=True):
         """Execute one time step of simulation"""
         self.time += 1
         self.hospitalized_nodes = []
@@ -907,7 +1015,11 @@ class Simulation:
         del newly_infected
         self.random_testing_protocol(num_viral_tests, contact_tracing_efficacy=contact_tracing_efficacy)
         self.check_hospital_capacity(hospital_capacity, undertreatment_effect)
-        total_subsidy = self.check_despair(p_despair_factor, subsidy)
+        if allocation is None:
+            total_subsidy = self.check_despair(p_despair_factor, subsidy)
+        else:
+            total_subsidy = self.check_despair_limited_subsidy(p_despair_factor, subsidy,
+                                                               subsidy_population_factor, allocation)
         self.check_output(total_subsidy, p_inactive_factor)
         if record_stats:
             self.record_aggregate_stats(total_subsidy)
@@ -1126,20 +1238,78 @@ class Simulation:
             res = [x / raw_data[0] for x in raw_data]
         return res
 
-    def plot_p_despair(self, average_worker_degree, p_despair_factor=5.5e-5,
-                       figsize=(6, 4), save=False, filename_tag='p_despair', timestamp=False, path='../results/plots/'):
-        """Plot the probability of despair as a function of output"""
-        x = np.linspace(Node.personal_output,
-                        Node.personal_output + average_worker_degree * self.colleague_linkage_output, num=100)
-        y = np.zeros(len(x))
-        for i in range(len(x)):
-            output_loss = (1 + 1 / self.personal_to_linkage_output_ratio) * Node.personal_output - x[i]
-            y[i] = self.sigmoid(output_loss) * p_despair_factor
+    def plot_age_dist(self, households=None,
+                      figsize=(6, 4), save=False, filename_tag='age_dist', timestamp=False, path='../results/plots/'):
+        """Plot the age distribution for the households specified
+        If households is None, then all nodes are considered.
+        """
+        # noinspection PyTypeChecker
+        assert households is None or isinstance(households, (list, tuple)), 'Households must be None, a list, ' \
+                                                                            'or a tuple'
+        if households is None:
+            ages = np.empty(self.num_nodes)
+            for i in range(self.num_nodes):
+                ages[i] = int(self.node_dict[i].age.split('-')[0])
+        else:
+            ages = []
+            for j in households:
+                for i in self.household_dict[j]['members']:
+                    ages.append(int(self.node_dict[i].age.split('-')[0]))
+            ages = np.array(ages)
+        bins = [0, 10, 20, 30, 40, 50, 60, 70, 80, 120]
         plt.style.use('seaborn-whitegrid')
         plt.figure(figsize=figsize)
-        plt.plot(x, y)
-        plt.xlabel('Output')
-        plt.ylabel('Probability of despair')
+        plt.hist(ages, bins=bins, density=True)
+        plt.xlabel('Age')
+        plt.ylabel('Density')
+        if save:
+            if timestamp:
+                filename = filename_tag + '_' + datetime.now().strftime("%Y%m%d_%H%M%S") + '.pdf'
+            else:
+                filename = filename_tag + '.pdf'
+            plt.savefig(path + filename, transparent=True, bbox_inches='tight')
+        plt.show()
+        plt.pause(3)
+        plt.close()
+
+    def plot_p_despair(self, average_worker_degree, p_despair_factor=5.5e-5, x_label='Output',
+                       figsize=(6, 4), save=False, filename_tag='p_despair', timestamp=False, path='../results/plots/'):
+        """Plot the probability of despair as a function of output or output loss"""
+        plt.figure(figsize=figsize)
+        plt.style.use('seaborn-white')
+        text_color = mcolors.CSS4_COLORS['gray']
+        linewidth = 3
+        fontsize = 12
+        if x_label == 'Output':
+            x = np.linspace(Node.personal_output,
+                            Node.personal_output + average_worker_degree * self.colleague_linkage_output, num=100)
+            y = np.zeros(len(x))
+            for i in range(len(x)):
+                output_loss = (1 + 1 / self.personal_to_linkage_output_ratio) * Node.personal_output - x[i]
+                y[i] = self.sigmoid(output_loss) * p_despair_factor
+            text_y_pos = (np.min(y) + np.max(y)) / 4
+            plt.plot(x, y, linewidth=linewidth, color=mcolors.CSS4_COLORS['cornflowerblue'])
+            plt.axvline(x=np.min(x), linewidth=linewidth/2, linestyle='--', color=text_color)
+            plt.text(np.min(x) + .01, text_y_pos, r'$y$', fontsize=fontsize, color=text_color)
+            plt.axvline(x=(np.min(x) + np.max(x))/2, linewidth=linewidth/2, linestyle='--', color=text_color)
+            plt.text((np.min(x) + np.max(x))/2 - .045, text_y_pos, r'$y+\frac{nx}{2}$', fontsize=fontsize, color=text_color)
+            plt.axvline(x=np.max(x), linewidth=linewidth/2, linestyle='--', color=text_color)
+            plt.text(np.max(x) - .05, text_y_pos, r'$y+nx$', fontsize=fontsize, color=text_color)
+        elif x_label == 'Output loss':
+            x = np.linspace(0, average_worker_degree * self.colleague_linkage_output, num=100)
+            y = np.zeros(len(x))
+            for i in range(len(x)):
+                y[i] = self.sigmoid(x[i]) * p_despair_factor
+            text_y_pos = (np.min(y) + np.max(y)) / 6
+            plt.plot(x, y, linewidth=linewidth, color=mcolors.CSS4_COLORS['cornflowerblue'])
+            plt.axvline(x=(np.min(x) + np.max(x)) / 2, linewidth=linewidth / 2, linestyle='--', color=text_color)
+            plt.text((np.min(x) + np.max(x)) / 2 + .004, text_y_pos, 'Losing half of\neconomic connections',
+                     fontsize=fontsize, color=text_color)
+        else:
+            raise ValueError('x_label must be either "Output" or "Output loss"')
+        plt.xlabel(x_label, fontsize=12)
+        plt.ylabel('Probability of death of despair', fontsize=12)
+        plt.tick_params(axis='both', labelsize=12)
         if save:
             if timestamp:
                 filename = filename_tag + '_' + datetime.now().strftime("%Y%m%d_%H%M%S") + '.pdf'
@@ -1322,7 +1492,8 @@ class Simulation:
         plt.close()
 
 
-def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), max_household_sizes=4,
+def monte_carlo_save_to_csv(household_network=True, same_age_household=False,
+                            num_households=int(2.67e5), max_household_sizes=4,
                             econ_network='watts strogatz', average_worker_degree=20, rewiring_prob=.5,
                             vulnerable_group=True, vulnerable_population_fraction=.01, vulnerability=.05,
                             initial_infection_fraction=1e-3, household_transmission_prob=.25,
@@ -1332,13 +1503,14 @@ def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), 
                             occupations_staying_at_home='retiree', partial_opening=True,
                             worker_staying_at_home_prob=.4, staying_at_home_output_remaining_scale=1.0,
                             viral_test_fraction_all=1.45e-3, viral_test_fraction_poor=None,
-                            contact_tracing_efficacy=.7, subsidy=.1,
+                            contact_tracing_efficacy=.7, subsidy=.1, subsidy_population_factor=.1, allocation=None,
                             hospital_capacity=2.5e-3, undertreatment_effect=.5,
                             despair_prob_factor=5.5e-5, inactive_prob_factor=1e-2,
                             num_trials=10, normalized=True,
                             filename_tag='', timestamp=True, path='../results/stats/'):
     """Perform Monte Carlo simulation and save results to a csv file"""
     assert household_network in {True, False}, 'household_network can be either True or False'
+    assert same_age_household in {True, False}, 'same_age_household can be either True or False'
     assert isinstance(num_households, (int, dict)), 'num_households can be either an integer or a dictionary'
     assert type(num_households) is type(max_household_sizes), 'num_households and max_household_sizes must be the ' \
                                                               'same data type '
@@ -1346,8 +1518,8 @@ def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), 
     assert 0 <= rewiring_prob <= 1, 'rewiring_prob must be between 0 and 1'
     assert vulnerable_group in {True, False}, 'vulnerable_group can be either True or False'
     assert 0 < initial_infection_fraction < 1, 'initial_infection_fraction must be between 0 and 1 exclusive'
-    assert time_steps_pre_lockdown > 0 and time_steps_pre_lockdown == int(time_steps_pre_lockdown), \
-        'time_steps_pre_lockdown must be a positive integer'
+    assert time_steps_pre_lockdown >= 0 and time_steps_pre_lockdown == int(time_steps_pre_lockdown), \
+        'time_steps_pre_lockdown must be a nonnegative integer'
     assert time_steps_post_lockdown_pre_reopening >= 0 and (time_steps_post_lockdown_pre_reopening ==
                                                             int(time_steps_post_lockdown_pre_reopening)), \
         'time_steps_post_lockdown_pre_reopening must be a nonnegative integer'
@@ -1383,6 +1555,7 @@ def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), 
     with open(path + filename, mode='w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerow(['household_network', household_network])
+        writer.writerow(['same_age_household', same_age_household])
         writer.writerow(['num_households', num_households])
         writer.writerow(['max_household_sizes', max_household_sizes])
         writer.writerow(['econ_network', econ_network])
@@ -1402,6 +1575,8 @@ def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), 
         writer.writerow(['viral_test_fraction_poor', viral_test_fraction_poor])
         writer.writerow(['contact_tracing_efficacy', contact_tracing_efficacy])
         writer.writerow(['subsidy', subsidy])
+        writer.writerow(['subsidy_population_factor', subsidy_population_factor])
+        writer.writerow(['allocation', allocation])
         writer.writerow(['hospital_capacity', hospital_capacity])
         writer.writerow(['undertreatment_effect', undertreatment_effect])
         writer.writerow(['despair_prob_factor', despair_prob_factor])
@@ -1423,10 +1598,12 @@ def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), 
         # Generate networks
         if household_network:
             if not household_grouping:
-                sim.household_network(num_households, max_household_sizes, None, 1.0)
+                sim.household_network(num_households, max_household_sizes, None, 1.0, same_age_household)
             else:
-                sim.household_network(num_households['poor'], max_household_sizes['poor'], 'poor', 1.0)
-                sim.household_network(num_households['rich'], max_household_sizes['rich'], 'rich', 1.0)
+                sim.household_network(num_households['poor'], max_household_sizes['poor'], 'poor', 1.0,
+                                      same_age_household)
+                sim.household_network(num_households['rich'], max_household_sizes['rich'], 'rich', 1.0,
+                                      same_age_household)
                 sim.calc_rich_to_poor_output_ratio()
         if not sim.household_grouping:
             average_num_nodes = int(num_households * (1 + max_household_sizes) / 2)
@@ -1463,7 +1640,8 @@ def monte_carlo_save_to_csv(household_network=True, num_households=int(2.67e5), 
             sim.simulation_step(household_transmission_prob, other_transmission_prob,
                                 num_viral_tests, contact_tracing_efficacy,
                                 hospital_capacity, undertreatment_effect,
-                                despair_prob_factor, subsidy, inactive_prob_factor, record_stats=True)
+                                despair_prob_factor, subsidy, subsidy_population_factor, allocation,
+                                inactive_prob_factor, record_stats=True)
 
         # Pre-lockdown
         for _ in range(time_steps_pre_lockdown):
@@ -1560,6 +1738,7 @@ def monte_carlo(create_dir=True, dir_name_tag='', timestamp=True, path='../resul
             monte_carlo_save_to_csv(**kwargs)
     else:
         monte_carlo_save_to_csv(**kwargs)
+    print('Simulation done!')
 
 
 def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
@@ -1593,22 +1772,41 @@ def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
         df = pd.read_fwf(f, header=None)
         num_specifications = 0
         for i in range(len(df)):
-            first_entry = df.iloc[i].values[0].split(',')[0]
-            if first_entry == x and x_method is None:
-                if not by_household_type:
-                    x_values[idx] = df.iloc[i].values[0].split(',')[1]
+            row = df.iloc[i].values[0].split(',')
+            first_entry = row[0]
+            if first_entry == x[0] and x_method is None:
+                if len(row) > 2:  # Specification of this row was a dictionary
+                    dictionary = ast.literal_eval(ast.literal_eval(','.join(row[1:])))
+                    if not by_household_type:
+                        x_values[idx] = dictionary[x[1]]
+                    else:
+                        x_values['poor'][idx] = x_values['rich'][idx] = dictionary[x[1]]
+                elif not by_household_type:
+                    x_values[idx] = row[1]
                 else:
-                    x_values['poor'][idx] = x_values['rich'][idx] = df.iloc[i].values[0].split(',')[1]
-            elif first_entry == y and y_method is None:
-                if not by_household_type:
-                    y_values[idx] = df.iloc[i].values[0].split(',')[1]
+                    x_values['poor'][idx] = x_values['rich'][idx] = row[1]
+            elif first_entry == y[0] and y_method is None:
+                if len(row) > 2:  # Specification of this row was a dictionary
+                    dictionary = ast.literal_eval(ast.literal_eval(','.join(row[1:])))
+                    if not by_household_type:
+                        y_values[idx] = dictionary[y[1]]
+                    else:
+                        y_values['poor'][idx] = y_values['rich'][idx] = dictionary[y[1]]
+                elif not by_household_type:
+                    y_values[idx] = row[1]
                 else:
-                    y_values['poor'][idx] = y_values['rich'][idx] = df.iloc[i].values[0].split(',')[1]
-            if first_entry == color_by and color_by_method is None:
-                if not by_household_type:
-                    color_by_values[idx] = df.iloc[i].values[0].split(',')[1]
+                    y_values['poor'][idx] = y_values['rich'][idx] = row[1]
+            if first_entry == color_by[0] and color_by_method is None:
+                if len(row) > 2:  # Specification of this row was a dictionary
+                    dictionary = ast.literal_eval(ast.literal_eval(','.join(row[1:])))
+                    if not by_household_type:
+                        color_by_values[idx] = dictionary[color_by[1]]
+                    else:
+                        color_by_values['poor'][idx] = color_by_values['rich'][idx] = dictionary[color_by[1]]
+                elif not by_household_type:
+                    color_by_values[idx] = row[1]
                 else:
-                    color_by_values['poor'][idx] = color_by_values['rich'][idx] = df.iloc[i].values[0].split(',')[1]
+                    color_by_values['poor'][idx] = color_by_values['rich'][idx] = row[1]
             if first_entry == 'trial':
                 num_specifications = i
                 break
@@ -1636,6 +1834,7 @@ def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
             # Calculate some more measures
             df['virus_related_deaths'] = df['viral_deaths'] + df['undertreated_deaths']
             df['total_deaths'] = df['virus_related_deaths'] + df['deaths_of_despair']
+            df['infections_cumsum'] = df['infections'] + df['recoveries'] + df['virus_related_deaths']
             df['inactive_count'] = 1 - df['active_count']
             df['loss_in_output'] = 1 - df['total_output']
             recoveries_final = df.loc[df.index[-1], 'recoveries']
@@ -1655,38 +1854,40 @@ def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
                 df['hospitalization_fatality_ratio'] = 0
             # Summarize specified measures
             if x_method == 'min':
-                x_values[idx] = df.groupby('trial')[x].min().mean()
-                x_std[idx] = df.groupby('trial')[x].min().std()
+                x_values[idx] = df.groupby('trial')[x[0]].min().mean()
+                x_std[idx] = df.groupby('trial')[x[0]].min().std()
             elif x_method == 'max':
-                x_values[idx] = df.groupby('trial')[x].max().mean()
-                x_std[idx] = df.groupby('trial')[x].max().std()
+                x_values[idx] = df.groupby('trial')[x[0]].max().mean()
+                x_std[idx] = df.groupby('trial')[x[0]].max().std()
             elif x_method == 'average':
-                x_values[idx] = df.groupby('trial')[x].mean().mean()
-                x_std[idx] = df.groupby('trial')[x].mean().std()
+                x_values[idx] = df.groupby('trial')[x[0]].mean().mean()
+                x_std[idx] = df.groupby('trial')[x[0]].mean().std()
             if y_method == 'min':
-                y_values[idx] = df.groupby('trial')[y].min().mean()
-                y_std[idx] = df.groupby('trial')[y].min().std()
+                y_values[idx] = df.groupby('trial')[y[0]].min().mean()
+                y_std[idx] = df.groupby('trial')[y[0]].min().std()
             elif y_method == 'max':
-                y_values[idx] = df.groupby('trial')[y].max().mean()
-                y_std[idx] = df.groupby('trial')[y].max().std()
+                y_values[idx] = df.groupby('trial')[y[0]].max().mean()
+                y_std[idx] = df.groupby('trial')[y[0]].max().std()
             elif y_method == 'average':
-                y_values[idx] = df.groupby('trial')[y].mean().mean()
-                y_std[idx] = df.groupby('trial')[y].mean().std()
+                y_values[idx] = df.groupby('trial')[y[0]].mean().mean()
+                y_std[idx] = df.groupby('trial')[y[0]].mean().std()
             if color_by_method == 'min':
-                color_by_values[idx] = df.groupby('trial')[color_by].min().mean()
-                color_by_std[idx] = df.groupby('trial')[color_by].min().mean()
+                color_by_values[idx] = df.groupby('trial')[color_by[0]].min().mean()
+                color_by_std[idx] = df.groupby('trial')[color_by[0]].min().mean()
             elif color_by_method == 'max':
-                color_by_values[idx] = df.groupby('trial')[color_by].max().mean()
-                color_by_std[idx] = df.groupby('trial')[color_by].max().mean()
+                color_by_values[idx] = df.groupby('trial')[color_by[0]].max().mean()
+                color_by_std[idx] = df.groupby('trial')[color_by[0]].max().mean()
             elif color_by_method == 'average':
-                color_by_values[idx] = df.groupby('trial')[color_by].mean().mean()
-                color_by_std[idx] = df.groupby('trial')[color_by].mean().mean()
+                color_by_values[idx] = df.groupby('trial')[color_by[0]].mean().mean()
+                color_by_std[idx] = df.groupby('trial')[color_by[0]].mean().mean()
         else:
             assert 'infections_poor' in df.columns.tolist(), 'Household grouping must be used in simulation'
             for h in ['poor', 'rich']:
                 # Calculate some more measures
                 df['virus_related_deaths_' + h] = (df['viral_deaths_' + h] + df['undertreated_deaths_' + h])
                 df['total_deaths_' + h] = (df['virus_related_deaths_' + h] + df['deaths_of_despair_' + h])
+                df['infections_cumsum_' + h] = (df['infections_' + h] + df['recoveries_' + h]
+                                                + df['virus_related_deaths_' + h])
                 df['inactive_count_' + h] = 1 - df['active_count_' + h]
                 df['loss_in_output_' + h] = 1 - df['total_output_' + h]
                 recoveries_final = df.loc[df.index[-1], 'recoveries_' + h]
@@ -1707,32 +1908,32 @@ def monte_carlo_read_csv(x, x_method, y, y_method, color_by, color_by_method,
                     df['hospitalization_fatality_ratio_' + h] = 0
                     # Summarize specified measures
                 if x_method == 'min':
-                    x_values[h][idx] = df.groupby('trial')[x + '_' + h].min().mean()
-                    x_std[h][idx] = df.groupby('trial')[x + '_' + h].min().std()
+                    x_values[h][idx] = df.groupby('trial')[x[0] + '_' + h].min().mean()
+                    x_std[h][idx] = df.groupby('trial')[x[0] + '_' + h].min().std()
                 elif x_method == 'max':
-                    x_values[h][idx] = df.groupby('trial')[x + '_' + h].max().mean()
-                    x_std[h][idx] = df.groupby('trial')[x + '_' + h].max().std()
+                    x_values[h][idx] = df.groupby('trial')[x[0] + '_' + h].max().mean()
+                    x_std[h][idx] = df.groupby('trial')[x[0] + '_' + h].max().std()
                 elif x_method == 'average':
-                    x_values[h][idx] = df.groupby('trial')[x + '_' + h].mean().mean()
-                    x_std[h][idx] = df.groupby('trial')[x + '_' + h].mean().std()
+                    x_values[h][idx] = df.groupby('trial')[x[0] + '_' + h].mean().mean()
+                    x_std[h][idx] = df.groupby('trial')[x[0] + '_' + h].mean().std()
                 if y_method == 'min':
-                    y_values[h][idx] = df.groupby('trial')[y + '_' + h].min().mean()
-                    y_std[h][idx] = df.groupby('trial')[y + '_' + h].min().std()
+                    y_values[h][idx] = df.groupby('trial')[y[0] + '_' + h].min().mean()
+                    y_std[h][idx] = df.groupby('trial')[y[0] + '_' + h].min().std()
                 elif y_method == 'max':
-                    y_values[h][idx] = df.groupby('trial')[y + '_' + h].max().mean()
-                    y_std[h][idx] = df.groupby('trial')[y + '_' + h].max().std()
+                    y_values[h][idx] = df.groupby('trial')[y[0] + '_' + h].max().mean()
+                    y_std[h][idx] = df.groupby('trial')[y[0] + '_' + h].max().std()
                 elif y_method == 'average':
-                    y_values[h][idx] = df.groupby('trial')[y + '_' + h].mean().mean()
-                    y_std[h][idx] = df.groupby('trial')[y + '_' + h].mean().std()
+                    y_values[h][idx] = df.groupby('trial')[y[0] + '_' + h].mean().mean()
+                    y_std[h][idx] = df.groupby('trial')[y[0] + '_' + h].mean().std()
                 if color_by_method == 'min':
-                    color_by_values[h][idx] = df.groupby('trial')[color_by + '_' + h].min().mean()
-                    color_by_std[h][idx] = df.groupby('trial')[color_by + '_' + h].min().std()
+                    color_by_values[h][idx] = df.groupby('trial')[color_by[0] + '_' + h].min().mean()
+                    color_by_std[h][idx] = df.groupby('trial')[color_by[0] + '_' + h].min().std()
                 elif color_by_method == 'max':
-                    color_by_values[h][idx] = df.groupby('trial')[color_by + '_' + h].max().mean()
-                    color_by_std[h][idx] = df.groupby('trial')[color_by + '_' + h].max().std()
+                    color_by_values[h][idx] = df.groupby('trial')[color_by[0] + '_' + h].max().mean()
+                    color_by_std[h][idx] = df.groupby('trial')[color_by[0] + '_' + h].max().std()
                 elif color_by_method == 'average':
-                    color_by_values[h][idx] = df.groupby('trial')[color_by + '_' + h].mean().mean()
-                    color_by_std[h][idx] = df.groupby('trial')[color_by + '_' + h].mean().std()
+                    color_by_values[h][idx] = df.groupby('trial')[color_by[0] + '_' + h].mean().mean()
+                    color_by_std[h][idx] = df.groupby('trial')[color_by[0] + '_' + h].mean().std()
     return x_values, x_std, y_values, y_std, color_by_values, color_by_std
 
 
@@ -1741,7 +1942,7 @@ def monte_carlo_single_plot(x, x_label, x_method, y, y_label, y_method, std=True
                             plot_path='../results/plots/', csv_path='../results/stats/'):
     """Create a single plot using Monte Carlo simulation results from all csv files in the directory specified"""
     assert isinstance(filename_tag, str), 'filename_tag must be a string'
-    x_values, x_std, y_values, y_std, *_ = monte_carlo_read_csv(x, x_method, y, y_method, None, None,
+    x_values, x_std, y_values, y_std, *_ = monte_carlo_read_csv(x, x_method, y, y_method, [None, None], None,
                                                                 False, drop_after_time, csv_path)
     # Plot
     plt.style.use('seaborn-whitegrid')
@@ -1762,9 +1963,10 @@ def monte_carlo_single_plot(x, x_label, x_method, y, y_label, y_method, std=True
     plt.close()
 
 
-def monte_carlo_multi_plots(x, x_label, x_method, ys, y_labels, y_methods,
-                            std=True, by_household_type=False, drop_after_time=None,
-                            figsize=(6, 4), legend_kwargs=None, save=False, filename_tag='', timestamp=False,
+def monte_carlo_multi_plots(x, x_label, x_method, ys, y_labels, y_methods, y_axis_label,
+                            y_scale=1, ylim=None, std=True, by_household_type=False, drop_after_time=None,
+                            figsize=(6, 4), legend=True, ordered_legends=False, legend_kwargs=None,
+                            save=False, filename_tag='', timestamp=False,
                             plot_path='../results/plots/', csv_path='../results/stats/'):
     """Create multiple plots in one figure using Monte Carlo simulation results from all csv files
     in the directory specified
@@ -1772,29 +1974,222 @@ def monte_carlo_multi_plots(x, x_label, x_method, ys, y_labels, y_methods,
     assert len(ys) == len(y_labels) == len(y_methods), 'ys, y_labels, and y_methods must be the same length'
     assert legend_kwargs is None or isinstance(legend_kwargs, dict), 'legend_kwargs must be either None or a dictionary'
     assert isinstance(filename_tag, str), 'filename_tag must be a string'
-    colors = [mcolors.CSS4_COLORS['red'], mcolors.CSS4_COLORS['dodgerblue'], mcolors.CSS4_COLORS['forestgreen'],
+    colors = [mcolors.CSS4_COLORS['forestgreen'], mcolors.CSS4_COLORS['dodgerblue'], mcolors.CSS4_COLORS['red'],
               mcolors.CSS4_COLORS['darkorange'], mcolors.CSS4_COLORS['purple'], mcolors.CSS4_COLORS['gray']]
-    plt.style.use('seaborn-whitegrid')
+    plt.style.use('seaborn-white')
     plt.figure(figsize=figsize)
+    linewidth = 3
     for idx in range(len(ys)):
-        x_values, x_std, y_values, y_std, *_ = monte_carlo_read_csv(x, x_method, ys[idx], y_methods[idx], None, None,
+        x_values, x_std, y_values, y_std, *_ = monte_carlo_read_csv(x, x_method, ys[idx], y_methods[idx],
+                                                                    [None, None], None,
                                                                     by_household_type, drop_after_time, csv_path)
         if not by_household_type:
-            plt.plot(x_values, y_values, label=y_labels[idx], color=colors[idx], alpha=.7)
+            y_values *= y_scale
+            y_std *= y_scale
+            plt.plot(x_values, y_values, label=y_labels[idx], color=colors[idx], alpha=.7, linewidth=linewidth)
             if std:
                 plt.fill_between(x_values, y_values - y_std, y_values + y_std, facecolor=colors[idx], alpha=.2)
         else:
             x_values = x_values['poor']
+            for h in {'poor', 'rich'}:
+                y_values[h] *= y_scale
+                y_std[h] *= y_scale
             plt.plot(x_values, y_values['poor'], label=y_labels[idx] + ' (poor)',
-                     linestyle='-', color=colors[idx], alpha=.7)
-            plt.plot(x_values, y_values['rich'], label=y_labels[idx] + ' (rich)',
-                     linestyle='--', color=colors[idx], alpha=.7)
+                     linestyle='-', linewidth=linewidth, color=colors[idx], alpha=.7)
+            if 'COVID-19' in y_labels[idx]:
+                plt.plot(x_values, y_values['rich'], label=y_labels[idx] + ' (rich)',
+                         linestyle='--', linewidth=linewidth, color=colors[idx], alpha=.7)
             if std:
                 plt.fill_between(x_values, y_values['poor'] - y_std['poor'], y_values['poor'] + y_std['poor'],
                                  facecolor=colors[idx], alpha=.2)
+                if 'COVID-19' in y_labels[idx]:
+                    plt.fill_between(x_values, y_values['rich'] - y_std['rich'], y_values['rich'] + y_std['rich'],
+                                     facecolor=colors[idx], alpha=.2)
+    plt.xlabel(x_label, fontsize=12)
+    plt.ylabel(y_axis_label, fontsize=12)
+    if ylim is not None:
+        plt.ylim(*ylim)
+    plt.tick_params(axis='both', labelsize=12)
+    if legend:
+        handles, labels = plt.gca().get_legend_handles_labels()
+        order = [3, 2, 0, 1]
+        if legend_kwargs is None:
+            plt.legend([handles[i] for i in order], [labels[i] for i in order])
+        else:
+            plt.legend([handles[i] for i in order], [labels[i] for i in order], **legend_kwargs)
+    else:
+        plt.gca.legend_ = None
+    if save:
+        if timestamp:
+            filename = 'monte_carlo_' + filename_tag + datetime.now().strftime("%Y%m%d_%H%M%S") + '.pdf'
+        else:
+            filename = 'monte_carlo' + filename_tag + '.pdf'
+        plt.savefig(plot_path + filename, transparent=True, bbox_inches='tight')
+    plt.show()
+    plt.pause(3)
+    plt.close()
+
+
+def monte_carlo_multi_plots_approx(x, x_label, x_method, ys, y_labels, y_methods,
+                                   ylim=None, std=True, by_household_type=False, drop_after_time=None,
+                                   figsize=(6, 4), legend_kwargs=None, save=False, filename_tag='', timestamp=False,
+                                   plot_path='../results/plots/', csv_path='../results/stats/'):
+    """Create multiple plots in one figure using Monte Carlo simulation results from all csv files
+    in the directory specified
+    """
+    assert len(ys) == len(y_labels) == len(y_methods), 'ys, y_labels, and y_methods must be the same length'
+    assert legend_kwargs is None or isinstance(legend_kwargs, dict), 'legend_kwargs must be either None or a dictionary'
+    assert isinstance(filename_tag, str), 'filename_tag must be a string'
+    color = mcolors.CSS4_COLORS['darkorange']
+    plt.style.use('seaborn-white')
+    fig = plt.figure(figsize=figsize)
+    ax = fig.add_subplot()
+    linewidth = 3
+    for idx in range(len(ys)):
+        x_values, x_std, y_values, y_std, *_ = monte_carlo_read_csv(x, x_method, ys[idx], y_methods[idx],
+                                                                    [None, None], None,
+                                                                    by_household_type, drop_after_time, csv_path)
+        if not by_household_type:
+            plt.plot(x_values, y_values, label=y_labels[idx], color=color, alpha=.7, linewidth=linewidth)
+            if std:
+                plt.fill_between(x_values, y_values - y_std, y_values + y_std, facecolor=color, alpha=.2)
+        else:
+            x_values = x_values['poor']
+            plt.plot(x_values, y_values['poor'], label=y_labels[idx] + ' (poor)',
+                     linestyle='-', linewidth=linewidth, color=color, alpha=.7)
+            plt.plot(x_values, y_values['rich'], label=y_labels[idx] + ' (rich)',
+                     linestyle='--', linewidth=linewidth, color=color, alpha=.7)
+            if std:
+                plt.fill_between(x_values, y_values['poor'] - y_std['poor'], y_values['poor'] + y_std['poor'],
+                                 facecolor=color, alpha=.2)
                 plt.fill_between(x_values, y_values['rich'] - y_std['rich'], y_values['rich'] + y_std['rich'],
-                                 facecolor=colors[idx], alpha=.2)
-    plt.xlabel(x_label)
+                                 facecolor=color, alpha=.2)
+    plt.xlabel(x_label, fontsize=12)
+    plt.tick_params(axis='both', labelsize=12)
+    if ylim is not None:
+        plt.ylim(*ylim)
+    plt.ylabel('Infection rate', fontsize=12)
+    ax.yaxis.set_major_formatter(PercentFormatter(xmax=1, decimals=0))
+
+    # Mean-field approximation
+    def mean_field_approx_poor(max_household_size_poor):
+        n = (1 + max_household_size_poor) / 2  # Average household size of the poor community
+        initial_infection_fraction = 1e-3
+        leave_home_prob = .63
+        average_worker_degree = 20
+        other_transmission_prob = 5e-3
+        secondary_coeff = .25
+        total_days = 44
+        days_per_step = 11
+        exponent = total_days / days_per_step + 1
+        base = leave_home_prob ** 2 * n * average_worker_degree * other_transmission_prob * days_per_step
+        base *= 1 + base * secondary_coeff
+        res = n * initial_infection_fraction * (base ** exponent - 1) / (base - 1)
+
+        time_steps = int(total_days / days_per_step)
+        res_damped = n * initial_infection_fraction
+        for t in range(1, time_steps + 1):
+            factor = (
+                             1 - res_damped) * leave_home_prob ** 2 * n * average_worker_degree * other_transmission_prob * days_per_step
+            res_damped += n * initial_infection_fraction * (factor * (1 + secondary_coeff * factor)) ** t
+        return res, res_damped
+
+    theory_x = np.arange(3, 9, 1)
+    theory_y_poor = {'mfa': np.zeros(len(theory_x)), 'damped': np.zeros(len(theory_x))}
+    for i in range(len(theory_x)):
+        theory_y_poor['mfa'][i], theory_y_poor['damped'][i] = mean_field_approx_poor(theory_x[i])
+    plt.plot(theory_x, theory_y_poor['damped'], label='Approximation (poor)',
+             color='black', alpha=.7, linewidth=linewidth)
+    theory_y_rich = np.array([theory_y_poor['damped'][i] * 4 / (1 + theory_x[i]) for i in range(len(theory_x))])
+    plt.plot(theory_x, theory_y_rich, label='Approximation (rich)',
+             color='black', alpha=.7, linestyle='--', linewidth=linewidth)
+    if legend_kwargs is None:
+        plt.legend()
+    else:
+        plt.legend(**legend_kwargs)
+    if save:
+        if timestamp:
+            filename = 'monte_carlo_' + filename_tag + datetime.now().strftime("%Y%m%d_%H%M%S") + '.pdf'
+        else:
+            filename = 'monte_carlo' + filename_tag + '.pdf'
+        plt.savefig(plot_path + filename, transparent=True, bbox_inches='tight')
+    plt.show()
+    plt.pause(3)
+    plt.close()
+
+
+def monte_carlo_multi_controls(x, x_label, y, y_label, y_method, control, control_label,
+                               y_scale=1, ylim=None, std=True, by_household_type=False, drop_after_time=None,
+                               figsize=(6, 4), legend_kwargs=None, save=False, filename_tag='', timestamp=False,
+                               plot_path='../results/plots/', csv_path='../results/stats/'):
+    """Create multiple plots in one figure, with each plot corresponding to one control, using Monte Carlo simulation
+    results from all csv files in the directory specified
+    """
+    assert legend_kwargs is None or isinstance(legend_kwargs, dict), 'legend_kwargs must be either None or a dictionary'
+    assert isinstance(filename_tag, str), 'filename_tag must be a string'
+    color = mcolors.CSS4_COLORS['purple']
+    plt.style.use('seaborn-white')
+    plt.figure(figsize=figsize)
+    linewidth = 3
+    x_values, _, y_values, y_std, control_values, _ = monte_carlo_read_csv(x, None, y, y_method, control, None,
+                                                                           by_household_type, drop_after_time, csv_path)
+    if not by_household_type:
+        y_values *= y_scale
+        y_std *= y_scale
+        control_dict = {}
+        for c in np.unique(control_values):
+            control_dict[c] = {'x_values': [], 'y_values': [], 'y_std': []}
+        n_controls = len(control_dict)
+        alphas = np.linspace(1 / n_controls, 1, n_controls)
+        for idx, c in enumerate(control_values):
+            control_dict[c]['x_values'].append(x_values[idx])
+            control_dict[c]['y_values'].append(y_values[idx])
+            control_dict[c]['y_std'].append(y_std[idx])
+        for idx, c in enumerate(np.unique(control_values)):
+            label = f'{control_label} {c}'
+            plt.plot(control_dict[c]['x_values'], control_dict[c]['y_values'], label=label,
+                     color=color, alpha=alphas[idx], linewidth=linewidth)
+            if std:
+                lower = np.array(control_dict[c]['y_values']) - np.array(control_dict[c]['y_std'])
+                upper = np.array(control_dict[c]['y_values']) + np.array(control_dict[c]['y_std'])
+                plt.fill_between(control_dict[c]['x_values'], lower, upper, facecolor=color, alpha=.1)
+    else:
+        for h in {'poor', 'rich'}:
+            y_values[h] *= y_scale
+            y_std[h] *= y_scale
+        control_dict = {}
+        for c in np.unique(control_values['poor']):
+            control_dict[c] = {'x_values': {'poor': [], 'rich': []},
+                               'y_values': {'poor': [], 'rich': []},
+                               'y_std': {'poor': [], 'rich': []}
+                               }
+        n_controls = len(control_dict)
+        alphas = np.linspace(1 / n_controls, 1, n_controls)
+        for idx, c in enumerate(control_values['poor']):
+            for household_type in {'poor', 'rich'}:
+                control_dict[c]['x_values'][household_type].append(x_values[household_type][idx])
+                control_dict[c]['y_values'][household_type].append(y_values[household_type][idx])
+                control_dict[c]['y_std'][household_type].append(y_std[household_type][idx])
+        for idx, c in enumerate(np.unique(control_values['poor'])):
+            label = f'{control_label} {c}'
+            plt.plot(control_dict[c]['x_values']['poor'], control_dict[c]['y_values']['poor'],
+                     label=f'{label} (poor)', linestyle='-', linewidth=linewidth, color=color, alpha=alphas[idx])
+            if idx == (n_controls - 1):
+                plt.plot(control_dict[c]['x_values']['rich'], control_dict[c]['y_values']['rich'],
+                         label=f'{label} (rich)', linestyle='--', linewidth=linewidth, color=color, alpha=alphas[idx])
+            if std:
+                lower = np.array(control_dict[c]['y_values']['poor']) - np.array(control_dict[c]['y_std']['poor'])
+                upper = np.array(control_dict[c]['y_values']['poor']) + np.array(control_dict[c]['y_std']['poor'])
+                plt.fill_between(control_dict[c]['x_values']['poor'], lower, upper, facecolor=color, alpha=.1)
+                if idx == (n_controls - 1):
+                    lower = np.array(control_dict[c]['y_values']['rich']) - np.array(control_dict[c]['y_std']['rich'])
+                    upper = np.array(control_dict[c]['y_values']['rich']) + np.array(control_dict[c]['y_std']['rich'])
+                    plt.fill_between(control_dict[c]['x_values']['rich'], lower, upper, facecolor=color, alpha=.1)
+    plt.xlabel(x_label, fontsize=12)
+    plt.ylabel(y_label, fontsize=12)
+    if ylim is not None:
+        plt.ylim(*ylim)
+    plt.tick_params(axis='both', labelsize=12)
     if legend_kwargs is None:
         plt.legend()
     else:
