@@ -9,8 +9,10 @@ MAX_HOUSEHOLD_SIZES = {'poor': 5, 'rich': 3}
 NUM_TRIALS = 100
 
 monte_carlo(subsidy=np.arange(0, 0.55, 0.05),
-            num_households=NUM_HOUSEHOLDS, max_household_sizes=MAX_HOUSEHOLD_SIZES, num_trials=NUM_TRIALS)
+            num_households=NUM_HOUSEHOLDS, max_household_sizes=MAX_HOUSEHOLD_SIZES, num_trials=NUM_TRIALS,
+            dir_name_tag=DIR_NAME_TAG, timestamp=False)
 
 # Robustness test of same-age households
 monte_carlo(same_age_household=True, subsidy=np.arange(0, 0.55, 0.05),
-            num_households=NUM_HOUSEHOLDS, max_household_sizes=MAX_HOUSEHOLD_SIZES, num_trials=NUM_TRIALS)
+            num_households=NUM_HOUSEHOLDS, max_household_sizes=MAX_HOUSEHOLD_SIZES, num_trials=NUM_TRIALS,
+            dir_name_tag=DIR_NAME_TAG+'_same_age', timestamp=False)
