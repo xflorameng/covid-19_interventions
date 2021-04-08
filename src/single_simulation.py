@@ -6,6 +6,7 @@ from networkx.generators.random_graphs import watts_strogatz_graph, fast_gnp_ran
 
 from src.models import Simulation
 
+
 # Policy parameters
 OCCUPATIONS_STAYING_AT_HOME = 'retiree'
 # OCCUPATIONS_STAYING_AT_HOME = ''
@@ -21,6 +22,7 @@ SUBSIDY = .1
 
 # Network parameters
 HOUSEHOLD_NETWORK = True
+SAME_AGE_HOUSEHOLD = False
 NUM_HOUSEHOLDS = {'poor': int(6e3), 'rich': int(1e3)}
 MAX_HOUSEHOLD_SIZES = {'poor': 5, 'rich': 3}
 # NUM_HOUSEHOLDS = int(2.67e5)
@@ -68,13 +70,12 @@ print('Done')
 print('--------------------Generating networks--------------------------------')
 if HOUSEHOLD_NETWORK:
     if isinstance(NUM_HOUSEHOLDS, int):
-        sim.household_network(NUM_HOUSEHOLDS, MAX_HOUSEHOLD_SIZES, None, 1.0)
+        sim.household_network(NUM_HOUSEHOLDS, MAX_HOUSEHOLD_SIZES, None, 1.0, SAME_AGE_HOUSEHOLD)
     else:
-        sim.household_network(NUM_HOUSEHOLDS['poor'], MAX_HOUSEHOLD_SIZES['poor'], 'poor', 1.0)
-        sim.household_network(NUM_HOUSEHOLDS['rich'], MAX_HOUSEHOLD_SIZES['rich'], 'rich', 1.0)
+        sim.household_network(NUM_HOUSEHOLDS['poor'], MAX_HOUSEHOLD_SIZES['poor'], 'poor', 1.0, SAME_AGE_HOUSEHOLD)
+        sim.household_network(NUM_HOUSEHOLDS['rich'], MAX_HOUSEHOLD_SIZES['rich'], 'rich', 1.0, SAME_AGE_HOUSEHOLD)
         sim.calc_rich_to_poor_output_ratio()
 if not sim.household_grouping:
-    # noinspection PyTypeChecker
     average_num_nodes = int(NUM_HOUSEHOLDS * (1 + MAX_HOUSEHOLD_SIZES) / 2)
 else:
     average_num_nodes = int((NUM_HOUSEHOLDS['poor'] * (1 + MAX_HOUSEHOLD_SIZES['poor'])
@@ -102,11 +103,9 @@ if VIRAL_TEST_FRACTION_POOR is None:
     num_viral_tests = int(VIRAL_TEST_FRACTION_ALL * sim.num_nodes)
 else:
     rich_fraction = sim.num_nodes_rich / sim.num_nodes
-    # noinspection PyTypeChecker
     viral_test_fraction_rich = (VIRAL_TEST_FRACTION_ALL - (1 - rich_fraction)
                                 * VIRAL_TEST_FRACTION_POOR) / rich_fraction
     assert 0 <= viral_test_fraction_rich <= 1, 'Testing rate for the rich must be between 0 and 1'
-    # noinspection PyUnresolvedReferences
     num_viral_tests = {'poor': int(VIRAL_TEST_FRACTION_POOR * sim.num_nodes_poor),
                        'rich': int(viral_test_fraction_rich * sim.num_nodes_rich)}
 print('Done')
@@ -152,7 +151,9 @@ sim.save_to_csv()
 print('Done')
 
 print('--------------------Plotting results-----------------------------------')
-sim.plot_p_despair(AVERAGE_WORKER_DEGREE, DESPAIR_PROB_FACTOR, save=True)
+sim.plot_age_dist(save=True)
+sim.plot_p_despair(AVERAGE_WORKER_DEGREE, DESPAIR_PROB_FACTOR, x_label='Output loss',
+                   figsize=(4.5, 3.5), save=True)
 
 y_strs_health = ['isolation_count', 'infections', 'recoveries', 'hospitalizations', 'ICU_count',
                  'viral_deaths', 'undertreated_deaths', 'deaths_of_despair']
