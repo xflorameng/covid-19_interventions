@@ -9,7 +9,7 @@ import seaborn as sns
 # COVID-19 deaths data from Hopkins Population Center (HPC)
 covid_deaths_date = '20200731'
 
-covid = pd.read_csv('hpc_data_hub/Pandemic/casesAndDeaths.csv',
+covid = pd.read_csv('../data/hpc_data_hub/Pandemic/casesAndDeaths.csv',
                     index_col=['fips'], usecols=['fips', 'stname', 'ctyname', 'deaths_' + covid_deaths_date])
 
 covid.rename_axis('county_id')
@@ -25,7 +25,7 @@ if not covid.index.is_unique:
 covid['county_name'] = covid['county_name'].map(lambda x: x.replace(' County', '', 1))
 
 # Population data from Hopkins Population Center (HPC)
-population = pd.read_csv('hpc_data_hub/Pandemic/mobility.csv',
+population = pd.read_csv('../data/hpc_data_hub/Pandemic/mobility.csv',
                          index_col=['fips'], usecols=['fips', 'stname', 'ctyname', 'county_population_2018'])
 
 population.rename_axis('county_id')
@@ -43,10 +43,10 @@ if not population.index.is_unique:
 population['county_name'] = population['county_name'].map(lambda x: x.replace(' County', '', 1))
 
 # Household overcrowding data
-overcrowding = pd.read_csv('overcrowded_households_combined.csv', index_col=['county_id'])
+overcrowding = pd.read_csv('../data/overcrowded_households_combined.csv', index_col=['county_id'])
 
 # Rurality data
-rurality = pd.read_csv('urban_rural_classification_combined.csv', index_col=['county_id'])
+rurality = pd.read_csv('../data/urban_rural_classification_combined.csv', index_col=['county_id'])
 
 # Combining data
 df = pd.concat([covid, population, overcrowding, rurality], axis=1, join='inner')
@@ -79,6 +79,8 @@ county_rurality = 'mostly_urban'
 n_largest_states = 4
 n_counties_by_state = df.groupby('state').size()
 df = df.loc[df['state'].isin(n_counties_by_state.nlargest(n_largest_states).index)]
+
+warnings.filterwarnings('ignore')
 
 n_cols = n_largest_states
 fontsize = 18
