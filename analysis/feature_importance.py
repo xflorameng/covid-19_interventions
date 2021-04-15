@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,6 +6,10 @@ import matplotlib.colors as mcolors
 from sklearn.tree import DecisionTreeRegressor as dtr
 from dtreeviz.trees import dtreeviz
 
+
+# Save stdout to a .txt file
+with open('feature_importance_stdout.txt', 'w') as sys.stdout:
+    print('Numerical results from feature_importance.py:')
 
 # Dataframe with ZIP code-level data from New York City
 df = pd.read_csv('../data/combined_nyc_data.csv')
@@ -30,7 +35,8 @@ df['Non-white'] = df['Non-white'] * 100
 df['Health insurance'] = df['Health insurance'] * 100
 
 def trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, target_name, max_depth=6,
-                      min_samples_leaf=9, plot=True, plot_tree=True, save=False, filename_tag=''):
+                      min_samples_leaf=9, print_feature_importance=False,
+                      plot=True, plot_tree=True, save=False, filename_tag=''):
     """
     - df is the dataframe with New York City data
     - FeaturesToUse is a list of variables we want to use to predict the predictionVariable
@@ -50,7 +56,9 @@ def trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, targ
     regr = dtr(min_samples_leaf=min_samples_leaf, max_depth=max_depth)
     model = regr.fit(xTrain, yTrain)
 
-    print(f'Feature importance: {np.round(model.feature_importances_, 2)}')
+    if print_feature_importance:
+        with open('feature_importance_stdout.txt', 'a') as sys.stdout:
+            print(f'Feature importance: {np.round(model.feature_importances_, 2)}')
 
     if plot:
         plt.style.use('seaborn-white')
@@ -90,19 +98,20 @@ target_name = r'Deaths per $10^5$ people'  # This name will be displayed at the 
 
 # Full decision tree
 dt_covid = trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, target_name,
-                             save=True, filename_tag='_full')
+                             print_feature_importance=True, save=True, filename_tag='_full')
 
 df_worst = df.loc[(df['Income'] < 122.2) & (df['Age 65+'] >= 17.85)]  # Worst section of the tree
 df_best = df.loc[(df['Income'] >= 122.2) & (df['Overcrowding'] >= 3.72)]  # Best section of the tree
 
-print(f'[Worst segment] 2019 Unemployment rate {round(df_worst["Unemployment 2019"].mean(), 2)}')
-print(f'[Best segment] 2019 Unemployment rate {round(df_best["Unemployment 2019"].mean(), 2)}')
-print(f'[Worst segment] Increase in unemployment rate '
-      f'{round(df_worst["Unemployment 2020 (Projected)"].mean() - df_worst["Unemployment 2019"].mean(), 2)}')
-print(f'[Best segment] Increase in unemployment rate '
-      f'{round(df_best["Unemployment 2020 (Projected)"].mean() - df_best["Unemployment 2019"].mean(), 2)}')
-print(f'[Worst segment] Eviction rate {round(df_worst["Eviction"].mean(), 2)}')
-print(f'[Best segment] Eviction rate {round(df_best["Eviction"].mean(), 2)}')
+with open('feature_importance_stdout.txt', 'a') as sys.stdout:
+    print(f'[Worst segment] 2019 Unemployment rate {round(df_worst["Unemployment 2019"].mean(), 2)}%')
+    print(f'[Best segment] 2019 Unemployment rate {round(df_best["Unemployment 2019"].mean(), 2)}%')
+    print(f'[Worst segment] Increase in unemployment rate '
+          f'{round(df_worst["Unemployment 2020 (Projected)"].mean() - df_worst["Unemployment 2019"].mean(), 2)}%')
+    print(f'[Best segment] Increase in unemployment rate '
+          f'{round(df_best["Unemployment 2020 (Projected)"].mean() - df_best["Unemployment 2019"].mean(), 2)}%')
+    print(f'[Worst segment] Eviction rate {round(df_worst["Eviction"].mean(), 2)}%')
+    print(f'[Best segment] Eviction rate {round(df_best["Eviction"].mean(), 2)}%')
 
 # Pruned decision tree
 trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, target_name, max_depth=3, plot=False,
