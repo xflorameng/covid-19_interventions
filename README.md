@@ -35,6 +35,6 @@ Specifically, `monte_carlo_simulation_lockdown.py` conducts Monte Carlo experime
 `monte_carlo_simulation_overcrowding.py` investigates household overcrowding.
 Please use `monte_carlo_plot.py` to visualize results of the Monte Carlo experiments.
 Additionally, `single_simulation.py` gives an example that conducts in-depth analysis of one single simulation.
-The expected outputs are in the `results` directory. For the example configurations, one single simulation takes a few minutes on a standard computer, and 100 Monte Carlo trials take a few hours.
+The expected outputs are in the `results` directory. For the example configurations, the run time of one single simulation ranges from a few minutes to an hour on a standard computer.
 
-We also provide scripts in the `analysis` directory that conduct analysis of US data to corroborate simulation results. The results are in the `outputs` directory.
+We also provide scripts in the `analysis` directory that conduct analysis of US data to corroborate simulation results. The results are in the `outputs` directory. The run time of each script takes a few minutes on a standard computer.
