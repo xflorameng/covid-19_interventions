@@ -8,7 +8,7 @@ from dtreeviz.trees import dtreeviz
 
 
 # Save stdout to a .txt file
-with open('feature_importance_stdout.txt', 'w') as sys.stdout:
+with open('outputs/feature_importance_stdout.txt', 'w') as sys.stdout:
     print('Numerical results from feature_importance.py:')
 
 # Dataframe with ZIP code-level data from New York City
@@ -57,7 +57,7 @@ def trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, targ
     model = regr.fit(xTrain, yTrain)
 
     if print_feature_importance:
-        with open('feature_importance_stdout.txt', 'a') as sys.stdout:
+        with open('outputs/feature_importance_stdout.txt', 'a') as sys.stdout:
             print(f'Feature importance: {np.round(model.feature_importances_, 2)}')
 
     if plot:
@@ -70,7 +70,7 @@ def trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, targ
         plt.tick_params(axis='both', labelsize=labelsize)
         plt.ylabel('Feature importance', fontsize=fontsize)
         if save:
-            plt.savefig(f'feature_importance{filename_tag}.pdf', bbox_inches='tight')
+            plt.savefig(f'outputs/feature_importance{filename_tag}.pdf', bbox_inches='tight')
         plt.show()
 
     if plot_tree:
@@ -83,7 +83,7 @@ def trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariable, targ
                        ticks_fontsize=10
                        )
         if save:
-            viz.save(f'decision_tree{filename_tag}.svg')
+            viz.save(f'outputs/decision_tree{filename_tag}.svg')
         plt.show()
 
     return model
@@ -103,7 +103,7 @@ dt_covid = trainDecisionTree(df, FeaturesToUse, FeatureLabels, predictionVariabl
 df_worst = df.loc[(df['Income'] < 122.2) & (df['Age 65+'] >= 17.85)]  # Worst section of the tree
 df_best = df.loc[(df['Income'] >= 122.2) & (df['Overcrowding'] >= 3.72)]  # Best section of the tree
 
-with open('feature_importance_stdout.txt', 'a') as sys.stdout:
+with open('outputs/feature_importance_stdout.txt', 'a') as sys.stdout:
     print(f'[Worst segment] 2019 Unemployment rate {round(df_worst["Unemployment 2019"].mean(), 2)}%')
     print(f'[Best segment] 2019 Unemployment rate {round(df_best["Unemployment 2019"].mean(), 2)}%')
     print(f'[Worst segment] Increase in unemployment rate '
