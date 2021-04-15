@@ -1,4 +1,5 @@
 import os
+import warnings
 
 import numpy as np
 
@@ -16,7 +17,12 @@ REWIRING_PROB = .5
 TIME_STEPS_PRE_LOCKDOWN = 0
 TIME_STEPS_POST_LOCKDOWN_PRE_REOPENING = 60
 
-dir_name = 'monte_carlo_data' + DIR_NAME_TAG + '/'
+dir_name = '../results/monte_carlo_data' + DIR_NAME_TAG + '/'
+if os.path.exists(dir_name):
+    dir_name_former = f'{dir_name[:-1]}_former/'
+    os.rename(dir_name, dir_name_former)
+    warnings.warn(f'The following directory already exists: {dir_name}\n'
+                  f'It has been renamed to: {dir_name_former}')
 os.mkdir(dir_name)
 os.chdir(dir_name)
 for i in MAX_HOUSEHOLD_SIZE_POOR:
@@ -31,8 +37,13 @@ for i in MAX_HOUSEHOLD_SIZE_POOR:
                 dir_name_tag=DIR_NAME_TAG, timestamp=False)
 
 # Robustness test of same-age households
-dir_name = 'monte_carlo_data' + DIR_NAME_TAG + '_same_age/'
+dir_name = '../results/monte_carlo_data' + DIR_NAME_TAG + '_same_age/'
 os.chdir('../')
+if os.path.exists(dir_name):
+    dir_name_former = f'{dir_name[:-1]}_former/'
+    os.rename(dir_name, dir_name_former)
+    warnings.warn(f'The following directory already exists: {dir_name}\n'
+                  f'It has been renamed to: {dir_name_former}')
 os.mkdir(dir_name)
 os.chdir(dir_name)
 for i in MAX_HOUSEHOLD_SIZE_POOR:
