@@ -1,4 +1,40 @@
 # COVID-19 Interventions
 Mechanistic simulation of health and economic impacts of various interventions during the COVID-19 pandemic
 
+# Overview
 The agent-based model incorporates key elements including socioeconomic status, age-dependent risks, household transmission, asymptomatic transmission, and hospital capacity.
+
+# System Requirements
+## Hardware Requirements
+A standard computer with enough RAM to support the in-memory operations.
+## Software Requirements
+The code has been tested on macOS Big Sur (Version 11.2.3).
+## Python Dependencies
+Python 3.7 with the following packages
+```
+numpy (1.18.2)
+pandas (1.0.3)
+tqdm (4.45.0)
+networkx (2.4)
+matplotlib (3.2.1)
+seaborn (0.10.0)
+sklearn (0.0)
+dtreeviz (1.1.4)
+pytest (5.4.1)
+```
+
+# Installation Guide
+Please download the entire repository and set up a virtual environment of Python 3.7 with packages as detailed above. Installation typically takes a few minutes on a standard computer.
+
+# Demo and Instructions
+Example scripts have been provided in the `src` directory.
+Specifically, `monte_carlo_simulation_lockdown.py` conducts Monte Carlo experiments to study the effects of lockdown at various levels;
+`monte_carlo_simulation_testing.py` explores testing;
+`monte_carlo_simulation_subsidy.py` studies subsidization;
+`monte_carlo_simulation_greedy_subsidy_with_budget.py` considers greedy subsidization under a budget constraint;
+`monte_carlo_simulation_overcrowding.py` investigates household overcrowding.
+Please use `monte_carlo_plot.py` to visualize results of the Monte Carlo experiments.
+Additionally, `single_simulation.py` gives an example that conducts in-depth analysis of one single simulation.
+The expected outputs are in the `results` directory. For the example configurations, one single simulation takes a few minutes on a standard computer, and 100 Monte Carlo trials take a few hours.
+
+We also provide scripts in the `analysis` directory that conduct analysis of US data to corroborate simulation results. The results are in the `outputs` directory.
