@@ -8,7 +8,7 @@ The agent-based model incorporates key elements including socioeconomic status, 
 ## Hardware Requirements
 A standard computer with enough RAM to support the in-memory operations.
 ## Software Requirements
-The code has been tested on macOS Big Sur (Version 11.2.3).
+The code has been tested on macOS Big Sur (Version 11.2.3) and Ubuntu 20.04 (Kernel 5.8.0).
 ## Python Dependencies
 Python 3.7 with the following packages
 ```
