@@ -3,7 +3,7 @@ import warnings
 
 import numpy as np
 
-from src.models import monte_carlo
+from models import monte_carlo
 
 
 DIR_NAME_TAG = '_household_size'
