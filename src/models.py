@@ -5,6 +5,7 @@ import math
 import copy
 import glob
 import random
+import warnings
 import operator
 import itertools
 from datetime import datetime
@@ -1721,6 +1722,11 @@ def monte_carlo(create_dir=True, dir_name_tag='', timestamp=True, path='', **kwa
             dir_name += '_' + datetime.now().strftime("%Y%m%d_%H%M%S")
         dir_name += '/'
         csv_path = os.path.join(path, dir_name)
+        if os.path.exists(csv_path):
+            csv_path_former = f'{csv_path[:-1]}_former/'
+            os.rename(csv_path, csv_path_former)
+            warnings.warn(f'The following directory already exists: {csv_path}\n'
+                          f'It has been renamed to: {csv_path_former}')
         os.mkdir(csv_path)
     else:
         csv_path = path
@@ -1965,9 +1971,8 @@ def monte_carlo_single_plot(x, x_label, x_method, y, y_label, y_method, std=True
 
 def monte_carlo_multi_plots(x, x_label, x_method, ys, y_labels, y_methods, y_axis_label,
                             y_scale=1, ylim=None, std=True, by_household_type=False, drop_after_time=None,
-                            figsize=(6, 4), legend=True, ordered_legends=False, legend_kwargs=None,
-                            save=False, filename_tag='', timestamp=False,
-                            plot_path='', csv_path=''):
+                            figsize=(6, 4), legend=True, legend_kwargs=None,
+                            save=False, filename_tag='', timestamp=False, plot_path='', csv_path=''):
     """Create multiple plots in one figure using Monte Carlo simulation results from all csv files
     in the directory specified
     """
