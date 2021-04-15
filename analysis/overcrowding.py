@@ -99,5 +99,5 @@ for i in range(len(axes)):
     axes[i].tick_params(labelsize=labelsize)
     if i % n_cols == 0:
         axes[i].set_ylabel(r'Deaths per $10^5$ people', fontsize=fontsize)
-plt.savefig(f'household_overcrowding_covid_deaths_by_state_{county_rurality}.pdf',
+plt.savefig(f'outputs/household_overcrowding_covid_deaths_by_state_{county_rurality}.pdf',
             transparent=True, bbox_inches='tight')
