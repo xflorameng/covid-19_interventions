@@ -38,4 +38,4 @@ Please use `monte_carlo_plot.py` to visualize results of the Monte Carlo experim
 Additionally, `single_simulation.py` gives an example that conducts in-depth analysis of one single simulation.
 The expected outputs are in the `results` directory. For the example configurations, the run time of one single simulation ranges from a few minutes to an hour on a standard computer.
 
-We also provide scripts in the `analysis` directory that conduct analysis of US data to corroborate simulation results. The results are in the `outputs` directory. The run time of each script takes a few minutes on a standard computer.
+We also provide scripts in the `analysis` directory that conduct analysis of US data to corroborate simulation results. The results are in the `outputs` directory. The run time is a few seconds on a standard computer for `feature_importance.py` and `lockdown_tradeoffs.py`. The script `overcrowding.py` takes a few minutes to run on a standard computer.
