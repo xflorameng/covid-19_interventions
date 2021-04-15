@@ -147,13 +147,13 @@ if TIME_STEPS_POST_LOCKDOWN_PRE_REOPENING > 0:
         print('Done')
 
 print('--------------------Saving statistics to CSV---------------------------')
-sim.save_to_csv()
+sim.save_to_csv(timestamp=False, path='../results/single_simulation/')
 print('Done')
 
 print('--------------------Plotting results-----------------------------------')
-sim.plot_age_dist(save=True)
+sim.plot_age_dist(save=True, timestamp=False, path='../results/single_simulation/')
 sim.plot_p_despair(AVERAGE_WORKER_DEGREE, DESPAIR_PROB_FACTOR, x_label='Output loss',
-                   figsize=(4.5, 3.5), save=True)
+                   figsize=(4.5, 3.5), save=True, timestamp=False, path='../results/single_simulation/')
 
 y_strs_health = ['isolation_count', 'infections', 'recoveries', 'hospitalizations', 'ICU_count',
                  'viral_deaths', 'undertreated_deaths', 'deaths_of_despair']
@@ -177,30 +177,36 @@ else:
 if not sim.household_grouping:
     title = 'No household grouping'
     sim.plot_all_time_series(title, normalized=True, household_type=None, y_lims=(-.001, .011, -.05, 1.05),
-                             vlines=vlines, vline_labels=vline_labels, save=True, timestamp=False)
+                             vlines=vlines, vline_labels=vline_labels,
+                             save=True, timestamp=False, path='../results/single_simulation/')
     sim.plot_econ_time_series(title, normalized=False, household_type=None, vlines=vlines, vline_labels=vline_labels,
-                              save=True, timestamp=False)
+                              save=True, timestamp=False, path='../results/single_simulation/')
     sim.plot_time_series(y_strs_health, y_labels_health, title, normalized=True, household_type=None,
                          vlines=vlines, vline_labels=vline_labels, figsize=(5, 3),
-                         save=True, filename_tag='health_measures_', timestamp=False)
+                         save=True, filename_tag='health_measures_', timestamp=False,
+                         path='../results/single_simulation/')
     sim.plot_time_series(y_strs_econ, y_labels_econ, title, normalized=True, household_type=None,
                          vlines=vlines, vline_labels=vline_labels,
-                         figsize=(5, 3), save=True, filename_tag='econ_measures_', timestamp=False)
+                         figsize=(5, 3), save=True, filename_tag='econ_measures_', timestamp=False,
+                         path='../results/single_simulation/')
 else:
     titles = ['All', 'Poor', 'Rich']
     household_types = [None, 'poor', 'rich']
     for i in range(len(titles)):
         sim.plot_all_time_series(titles[i], normalized=True, household_type=household_types[i],
                                  y_lims=(-.001, .011, -.05, 1.05), vlines=vlines, vline_labels=vline_labels,
-                                 save=True, timestamp=False)
+                                 save=True, timestamp=False, path='../results/single_simulation/')
         sim.plot_econ_time_series(titles[i], normalized=False, household_type=household_types[i],
-                                  vlines=vlines, vline_labels=vline_labels, save=True, timestamp=False)
+                                  vlines=vlines, vline_labels=vline_labels, save=True, timestamp=False,
+                                  path='../results/single_simulation/')
         sim.plot_time_series(y_strs_health, y_labels_health, titles[i],
                              normalized=True, household_type=household_types[i],
                              vlines=vlines, vline_labels=vline_labels,
-                             figsize=(5, 3), save=True, filename_tag='health_measures', timestamp=False)
+                             figsize=(5, 3), save=True, filename_tag='health_measures', timestamp=False,
+                             path='../results/single_simulation/')
         sim.plot_time_series(y_strs_econ, y_labels_econ, titles[i],
                              normalized=True, household_type=household_types[i],
                              vlines=vlines, vline_labels=vline_labels,
-                             figsize=(5, 3), save=True, filename_tag='econ_measures', timestamp=False)
+                             figsize=(5, 3), save=True, filename_tag='econ_measures', timestamp=False,
+                             path='../results/single_simulation/')
 print('Done')
