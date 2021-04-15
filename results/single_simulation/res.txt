@@ -1,8 +1,0 @@
-Numerical results from feature_importance.py:
-Feature importance: [0.5  0.24 0.13 0.06 0.02 0.02 0.02 0.01]
-[Worst segment] 2019 Unemployment rate 3.03%
-[Best segment] 2019 Unemployment rate 2.88%
-[Worst segment] Increase in unemployment rate 5.69%
-[Best segment] Increase in unemployment rate 4.22%
-[Worst segment] Eviction rate 0.37%
-[Best segment] Eviction rate 0.3%
