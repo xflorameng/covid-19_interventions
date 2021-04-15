@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 from networkx.generators.random_graphs import watts_strogatz_graph, fast_gnp_random_graph
 
-from src.models import Simulation
+from models import Simulation
 
 
 # Policy parameters
